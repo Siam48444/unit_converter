@@ -1,6 +1,7 @@
 :root {
     --main_width: min(100%, 2000px);
     --input_width: 20em;
+    --equal_sign_width: 2em;
 }
 
 
@@ -27,7 +28,6 @@ main {
 .conversion_category_selector {
     margin-bottom: 2em;
     font-family: "Inter_Regular";
-    font-weight: 400;
     font-size: var(--fs_primary);
 }
 
@@ -42,9 +42,20 @@ main {
 }
 
 .input_output_section {
-    background-color: yellowgreen;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .input_output_section > input {
     width: var(--input_width);
+}
+
+.equal_sign {
+    font-family: "Inter_Regular";
+    font-size: var(--fs_primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: var(--equal_sign_width);
 }
