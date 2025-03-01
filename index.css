@@ -29,12 +29,21 @@ main {
     margin-bottom: 2em;
     font-family: "Inter_Regular";
     font-size: var(--fs_primary);
+    font-weight: 400;
+    color: var(--clr_txt);
 }
 
 .units_selector_section {
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+
+.units_selector {
+    font-family: "Inter_Regular";
+    font-size: var(--fs_primary);
+    font-weight: 400;
+    color: var(--clr_txt);
 }
 
 .units_selector {
@@ -49,11 +58,17 @@ main {
 
 .input_output_section > input {
     width: var(--input_width);
+    font-family: "Inter_Regular";
+    font-size: var(--fs_primary);
+    font-weight: 400;
+    color: var(--clr_txt);
 }
 
 .equal_sign {
     font-family: "Inter_Regular";
     font-size: var(--fs_primary);
+    font-weight: 400;
+    color: var(--clr_txt);
     display: flex;
     align-items: center;
     justify-content: center;
