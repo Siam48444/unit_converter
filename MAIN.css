@@ -3,18 +3,46 @@
     font-weight: 400;
     src: url("./Assets/Fonts/Inter_28pt-Regular.woff2");
 }
+
 @font-face {
     font-family: "Inter_Medium";
     font-weight: 500;
     src: url("./Assets/Fonts/Inter_28pt-Medium.woff2");
 }
+
 @font-face {
     font-family: "Inter_Bold";
     font-weight: 600;
     src: url("./Assets/Fonts/Inter_28pt-Bold.woff2");
 }
+
 @font-face {
     font-family: "Inter_ExtraBold";
     font-weight: 800;
     src: url("./Assets/Fonts/Inter_28pt-ExtraBold.woff2");
+}
+
+
+
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    position: relative;
+    background-color: var(--clr_bg);
+    overflow-x: hidden;
+}
+
+
+
+:root {
+    --clr_bg: #eeeeee;
+    --clr_main: #1f873d;
 }
