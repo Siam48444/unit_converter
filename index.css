@@ -1,5 +1,6 @@
 :root {
     --main_width: min(100%, 2000px);
+    --input_width: 20em;
 }
 
 
@@ -14,8 +15,9 @@
 main {
     height: 100vh;
     display: flex;
-    align-items: center;
+    align-items: start;
     justify-content: center;
+    padding-block: 2em;
 }
 
 .unit_converter_app {
@@ -23,5 +25,26 @@ main {
 }
 
 .conversion_category_selector {
-    background-color: red;
+    margin-bottom: 2em;
+    font-family: "Inter_Regular";
+    font-weight: 400;
+    font-size: var(--fs_primary);
+}
+
+.units_selector_section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.units_selector {
+    width: var(--input_width);
+}
+
+.input_output_section {
+    background-color: yellowgreen;
+}
+
+.input_output_section > input {
+    width: var(--input_width);
 }
