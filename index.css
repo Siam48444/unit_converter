@@ -1,0 +1,13 @@
+:root {
+    --main_width: min(100%, 2000px);
+}
+
+
+
+.whole_container {
+    position: relative;
+    background-color: var(--clr_bg);
+    width: var(--main_width);
+    margin: auto;
+    height: 100vh;
+}
