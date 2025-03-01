@@ -9,13 +9,19 @@
     background-color: var(--clr_bg);
     width: var(--main_width);
     margin: auto;
-    height: 100vh;
 }
 
 main {
-    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .unit_converter_app {
     background-color: var(--clr_bg);
+}
+
+.conversion_category_selector {
+    background-color: red;
 }
