@@ -1,5 +1,20 @@
 @font-face {
     font-family: "Inter_Regular";
     font-weight: 400;
-    src: url(./Assets/Fonts/Inter_28pt-Regular.ttf);
+    src: url("./Assets/Fonts/Inter_28pt-Regular.woff2");
+}
+@font-face {
+    font-family: "Inter_Medium";
+    font-weight: 500;
+    src: url("./Assets/Fonts/Inter_28pt-Medium.woff2");
+}
+@font-face {
+    font-family: "Inter_Bold";
+    font-weight: 600;
+    src: url("./Assets/Fonts/Inter_28pt-Bold.woff2");
+}
+@font-face {
+    font-family: "Inter_ExtraBold";
+    font-weight: 800;
+    src: url("./Assets/Fonts/Inter_28pt-ExtraBold.woff2");
 }
