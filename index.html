@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Unit Converter</title>
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="./index.css" />
+        <link rel="stylesheet" href="./MAIN.css" />
+
+        <!-- JS -->
+        <script src="./index.js" defer type="module"></script>
+    </head>
+    <body>
+        <h2>Dynamic Unit Converter</h2>
+
+        <label for="category">Select Category:</label>
+        <select id="category"></select>
+
+        <div class="converter">
+            <input type="number" id="inputValue" value="1" />
+            <select id="fromUnit"></select>
+            <span>=</span>
+            <input type="text" id="outputValue" readonly />
+            <select id="toUnit"></select>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+</html>
