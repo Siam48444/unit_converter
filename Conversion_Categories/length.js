@@ -1,4 +1,4 @@
-export const length_conversion_factors = {
+export const length = {
     centimeter: {
         centimeter: 1,
         foot: 1 / 30.48,
