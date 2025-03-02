@@ -1,64 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Unit Converter</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Unit Converter</title>
 
-        <!-- CSS -->
-        <link rel="stylesheet" href="./index.css" />
-        <link rel="stylesheet" href="./MAIN.css" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="./index.css" />
+    <link rel="stylesheet" href="./MAIN.css" />
 
-        <!-- JS -->
-        <script src="./index.js" defer type="module"></script>
-    </head>
-    <body>
-        <div class="whole_container">
-            <main>
-                <div class="unit_converter_app">
-                    <!-- Unit conversion category -->
-                    <select id="conversion_category_selector" class="conversion_category_selector">
-                        <option value="area" selected>Area</option>
-                        <option value="length" selected>Length</option>
-                    </select>
+    <!-- JS -->
+    <script src="./index.js" defer type="module"></script>
+  </head>
+  <body>
+    <div class="whole_container">
+      <main>
+        <div class="unit_converter_app">
+          <!-- Unit conversion category -->
+          <select
+            id="conversion_category_selector"
+            class="conversion_category_selector"
+          >
+            <option value="area" selected>Area</option>
+            <option value="length" selected>Length</option>
+          </select>
 
-                    <!-- Conversion section -->
-                    <div data-category="length" class="units_selector_section active_category">
-                        <select id="input_unit_selector" class="units_selector">
-                            <option value="centimeter">Centimeter</option>
-                            <option value="foot">Foot</option>
-                            <option value="inch">Inch</option>
-                            <option value="kilometer">Kilometer</option>
-                            <option value="meter" selected>Meter</option>
-                            <option value="micrometer">Micrometer</option>
-                            <option value="mile">Mile</option>
-                            <option value="millimeter">Millimeter</option>
-                            <option value="nanometer">Nanometer</option>
-                            <option value="yard">Yard</option>
-                        </select>
+          <!-- Conversion section -->
+          <div
+            data-category="length"
+            class="units_selector_section active_category"
+          >
+            <select id="input_unit_selector" class="units_selector">
+              <option value="centimeter">Centimeter</option>
+              <option value="foot">Foot</option>
+              <option value="inch">Inch</option>
+              <option value="kilometer">Kilometer</option>
+              <option value="meter" selected>Meter</option>
+              <option value="micrometer">Micrometer</option>
+              <option value="mile">Mile</option>
+              <option value="millimeter">Millimeter</option>
+              <option value="nanometer">Nanometer</option>
+              <option value="yard">Yard</option>
+            </select>
 
-                        <select id="output_unit_selector" class="units_selector">
-                            <option value="centimeter" selected>Centimeter</option>
-                            <option value="foot">Foot</option>
-                            <option value="inch">Inch</option>
-                            <option value="kilometer">Kilometer</option>
-                            <option value="meter">Meter</option>
-                            <option value="micrometer">Micrometer</option>
-                            <option value="mile">Mile</option>
-                            <option value="millimeter">Millimeter</option>
-                            <option value="nanometer">Nanometer</option>
-                            <option value="yard">Yard</option>
-                        </select>
-                    </div>
+            <select id="output_unit_selector" class="units_selector">
+              <option value="centimeter" selected>Centimeter</option>
+              <option value="foot">Foot</option>
+              <option value="inch">Inch</option>
+              <option value="kilometer">Kilometer</option>
+              <option value="meter">Meter</option>
+              <option value="micrometer">Micrometer</option>
+              <option value="mile">Mile</option>
+              <option value="millimeter">Millimeter</option>
+              <option value="nanometer">Nanometer</option>
+              <option value="yard">Yard</option>
+            </select>
+          </div>
+          <div data-category="area" class="units_selector_section">
+            <select
+              jsname="iNUlwe"
+              class="OR9QXc LNn04b gsrt"
+              jsaction="change:HtjH7c"
+              data-ved="2ahUKEwjR6-WGx-uLAxXBXWwGHfUXCvcQ6Gp6BAgJEAY"
+            >
+              <option>Square kilometre</option>
+              <option>Square metre</option>
+              <option>Square mile</option>
+              <option>Square yard</option>
+              <option>Square foot</option>
+              <option>Square inch</option>
+              <option>Hectare</option>
+              <option>Acre</option>
+            </select>
+          </div>
 
-                    <!-- Input-output section -->
-                    <div class="input_output_section">
-                        <input value="1" type="number" class="input_box" id="input_box" />
-                        <span class="equal_sign"> <-> </span>
-                        <input value="100" type="number" class="output_box" id="output_box" />
-                    </div>
-                </div>
-            </main>
+          <!-- Input-output section -->
+          <div class="input_output_section">
+            <input value="1" type="number" class="input_box" id="input_box" />
+            <span class="equal_sign"> <-> </span>
+            <input
+              value="100"
+              type="number"
+              class="output_box"
+              id="output_box"
+            />
+          </div>
         </div>
-    </body>
+      </main>
+    </div>
+  </body>
 </html>

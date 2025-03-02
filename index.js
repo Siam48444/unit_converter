@@ -1,4 +1,5 @@
 import { length_conversion_factors } from "./Conversion_Categories/length.js";
+import { area_conversion_factors } from "./Conversion_Categories/area.js";
 
 
 
@@ -52,6 +53,9 @@ function update_input(reversed = false) {
     // Get the conversion factor from the unit conversion table
     if (conversion_category_selector.value === "length") {
         conversion_factor = length_conversion_factors[input_unit][output_unit];
+    }
+    if (conversion_category_selector.value === "area") {
+        conversion_factor = area_conversion_factors[input_unit][output_unit];
     }
 
     // Convert the value using the conversion factor
