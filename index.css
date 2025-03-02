@@ -68,3 +68,6 @@ main {
     padding: var(--input_padding);
     text-align: center;
 }
+
+.units_selector_section { display: none; }
+.units_selector_section.active_category { display: grid; }
