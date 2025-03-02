@@ -1,10 +1,9 @@
 :root {
     --main_width: min(100%, 2000px);
-    --app_width: 50%;
     /* --selectors_padding: 0.3em 0.6em; */
     --input_padding: 0.4em 0.8em;
     --equal_sign_width: 3em;
-    /* --input_width: 6em; */
+    --input_width: 20em;
 }
 
 
@@ -25,7 +24,6 @@ main {
 }
 
 .unit_converter_app {
-    width: var(--app_width);
     position: relative;
 }
 
@@ -44,15 +42,14 @@ main {
 
 .units_selector_section,
 .input_output_section {
-    width: 100%;
     display: grid;
     justify-content: center;
-    grid-template-columns: 1fr var(--equal_sign_width) 1fr;
+    align-items: center;
+    grid-template-columns: var(--input_width) var(--equal_sign_width) var(--input_width);
 }
 
-.units_selector:last-child {
-    grid-column: 3 / -1;
-}
+.units_selector:first-child { grid-column: 1 / 2; }
+.units_selector:last-child { grid-column: 3 / -1; }
 
 .equal_sign {
     display: flex;
