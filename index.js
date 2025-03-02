@@ -1,4 +1,4 @@
-import { length } from "./Conversion_Categories/length.js";
+import { length_conversion_factors } from "./Conversion_Categories/length.js";
 
 
 
@@ -50,7 +50,9 @@ function update_input(reversed = false) {
 
 
     // Get the conversion factor from the unit conversion table
-    conversion_factor = length_conversion_factors[input_unit][output_unit];
+    if (conversion_category_selector.value === "length") {
+        conversion_factor = length_conversion_factors[input_unit][output_unit];
+    }
 
     // Convert the value using the conversion factor
     const covnerted_value = input_value * conversion_factor;
