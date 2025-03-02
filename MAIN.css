@@ -1,21 +1,21 @@
 @font-face {
     font-family: "Inter_Regular";
-    src: url("./Assets/Fonts/Inter_28pt-Regular.woff2");
+    src: url("./Assets/Fonts/Inter_18pt-Regular.woff2");
 }
 
 @font-face {
     font-family: "Inter_Medium";
-    src: url("./Assets/Fonts/Inter_28pt-Medium.woff2");
+    src: url("./Assets/Fonts/Inter_18pt-Medium.woff2");
 }
 
 @font-face {
     font-family: "Inter_Bold";
-    src: url("./Assets/Fonts/Inter_28pt-Bold.woff2");
+    src: url("./Assets/Fonts/Inter_18pt-Bold.woff2");
 }
 
 @font-face {
     font-family: "Inter_ExtraBold";
-    src: url("./Assets/Fonts/Inter_28pt-ExtraBold.woff2");
+    src: url("./Assets/Fonts/Inter_18pt-ExtraBold.woff2");
 }
 
 
@@ -44,5 +44,5 @@ html {
     --clr_bg: #eeeeee;
     --clr_txt: #000000;
 
-    --fs_primary: 1em;
+    --fs_normal: 1em;
 }
