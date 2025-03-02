@@ -30,20 +30,33 @@ output_unit_selector.addEventListener("change", () => { update_input(false); });
 function update_input(reversed = false) {
     let input_value, input_unit, output_unit, conversion_factor;
 
+    // Determine which input field is being updated
     if (reversed) {
-        input_value = output_box.value;
+        // Get value from output box
+        input_value = output_box.value; 
+
+        // Swap input & output units
         input_unit = output_unit_selector.value;
         output_unit = input_unit_selector.value;
     }
     else {
-        input_value = input_box.value;
+        // Get value from input box
+        input_value = input_box.value; 
+
+        // Swap input & output units
         input_unit = input_unit_selector.value;
         output_unit = output_unit_selector.value;
     }
 
+
+    // Get the conversion factor from the unit conversion table
     conversion_factor = length_conversion_factors[input_unit][output_unit];
+
+    // Convert the value using the conversion factor
     const covnerted_value = input_value * conversion_factor;
 
+
+    // Update the opposite field with the converted value
     if (reversed) {
         input_box.value = covnerted_value;
     }
