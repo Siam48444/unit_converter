@@ -2,6 +2,7 @@
     --main_width: min(100%, 2000px);
     --app_width: 50%;
     /* --selectors_padding: 0.3em 0.6em; */
+    --input_padding: 0.4em 0.8em;
     --equal_sign_width: 3em;
     /* --input_width: 6em; */
 }
@@ -43,6 +44,7 @@ main {
 
 .units_selector_section,
 .input_output_section {
+    width: 100%;
     display: grid;
     justify-content: center;
     grid-template-columns: 1fr var(--equal_sign_width) 1fr;
@@ -56,4 +58,13 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.input_box,
+.output_box {
+    font-family: "Inter_Medium", sans-serif;
+    font-size: var(--fs_medium);
+    color: var(--clr_txt);
+    padding: var(--input_padding);
+    text-align: center;
 }
