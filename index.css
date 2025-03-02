@@ -68,7 +68,3 @@ main {
     padding: var(--input_padding);
     text-align: center;
 }
-
-:is(.input_box, .output_box)::placeholder {
-    color: var(--clr_sub);
-}
