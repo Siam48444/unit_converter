@@ -21,7 +21,12 @@ main {
 }
 
 .unit_converter_app {
-    background-color: red;
     width: var(--app_width);
     position: relative;
+}
+
+.conversion_category_selector,
+.units_selector {
+    font-family: "Inter_Regular", sans-serif;
+    font-size: var(--fs_normal);    
 }
