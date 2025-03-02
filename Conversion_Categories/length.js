@@ -10,5 +10,17 @@ export const length_conversion_factors = {
         millimeter: 10,
         nanometer: 10000000,
         yard: 1 / 91.44,
-    }
+    },
+    foot: {
+        centimeter: 30.48,
+        foot: 1,
+        inch: 12,
+        kilometer: 1 / 3281,
+        meter: 1 / 3.281,
+        micrometer: 304800,
+        mile: 1 / 5280,
+        millimeter: 304.8,
+        nanometer: 304800000,
+        yard: 1 / 3,
+    },
 }

@@ -18,7 +18,7 @@ input_box.addEventListener("click", () => { input_box.select(); });
 output_box.addEventListener("click", () => { output_box.select(); });
 
 input_box.addEventListener("input", () => { update_input(); });
-// output_box.addEventListener("input", () => { update_input(); });
+output_box.addEventListener("input", () => { update_input(); });
 
 
 
