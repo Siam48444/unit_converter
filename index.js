@@ -13,16 +13,17 @@ const output_box = document.getElementById("output_box");
 
 
 
-
+// Select the number if clicked on the input box
 input_box.addEventListener("click", () => { input_box.select(); });
 output_box.addEventListener("click", () => { output_box.select(); });
 
-input_box.addEventListener("input", () => { update_input(); });
-output_box.addEventListener("input", () => { update_input(); });
+// Update the input values from both sides
+input_box.addEventListener("input", () => { update_input(false); });
+output_box.addEventListener("input", () => { update_input(true); });
 
 
 
-function update_input() {
+function update_input(reversed=false) {
     const input_value = input_box.value;
 
     const input_unit = input_unit_selector.value;
