@@ -1,7 +1,6 @@
 :root {
     --main_width: min(100%, 2000px);
-    --input_width: 20em;
-    --equal_sign_width: 2em;
+    --app_width: 60%;
 }
 
 
@@ -16,7 +15,13 @@
 main {
     height: 100vh;
     display: flex;
-    align-items: start;
+    align-items: center;
     justify-content: center;
     padding-block: 2em;
+}
+
+.unit_converter_app {
+    background-color: red;
+    width: var(--app_width);
+    position: relative;
 }
