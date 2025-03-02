@@ -23,7 +23,12 @@ input_box.addEventListener("input", () => { update_input(); });
 
 
 function update_input() {
+    const input_value = input_box.value;
+
+    const input_unit = input_unit_selector.value;
+    const output_unit = output_unit_selector.value;
+
     
 
-    console.log(output_unit_selector)
+    console.log(output_unit)
 }
