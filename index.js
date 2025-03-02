@@ -24,12 +24,24 @@ output_box.addEventListener("input", () => { update_input(true); });
 
 
 function update_input(reversed=false) {
-    const input_value = input_box.value;
+    if (reversed) {
+        const input_value = output_box.value;
+        
+        const input_unit = output_unit_selector.value;
+        const output_unit = input_unit_selector.value;
+        
+        const conversion_factor = length_conversion_factors[input_unit][output_unit];
+        output_box.value = input_value * conversion_factor;
+    }
 
-    const input_unit = input_unit_selector.value;
-    const output_unit = output_unit_selector.value;
 
-    const conversion_factor = length_conversion_factors[input_unit][output_unit];
+    else {
+        const input_value = input_box.value;
 
-    output_box.value = input_value * conversion_factor;
+        const input_unit = input_unit_selector.value;
+        const output_unit = output_unit_selector.value;
+
+        const conversion_factor = length_conversion_factors[input_unit][output_unit];
+        input_box.value = input_value * conversion_factor;
+    }
 }

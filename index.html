@@ -24,6 +24,19 @@
                     <!-- Conversion section -->
                     <div data-length class="units_selector_section">
                         <select id="input_unit_selector" class="units_selector">
+                            <option value="centimeter">Centimeter</option>
+                            <option value="foot">Foot</option>
+                            <option value="inch">Inch</option>
+                            <option value="kilometer">Kilometer</option>
+                            <option value="meter" selected>Meter</option>
+                            <option value="micrometer">Micrometer</option>
+                            <option value="mile">Mile</option>
+                            <option value="millimeter">Millimeter</option>
+                            <option value="nanometer">Nanometer</option>
+                            <option value="yard">Yard</option>
+                        </select>
+
+                        <select id="output_unit_selector" class="units_selector">
                             <option value="centimeter" selected>Centimeter</option>
                             <option value="foot">Foot</option>
                             <option value="inch">Inch</option>
@@ -35,26 +48,13 @@
                             <option value="nanometer">Nanometer</option>
                             <option value="yard">Yard</option>
                         </select>
-
-                        <select id="output_unit_selector" class="units_selector">
-                            <option value="centimeter">Centimeter</option>
-                            <option value="foot">Foot</option>
-                            <option value="inch">Inch</option>
-                            <option value="kilometer">Kilometer</option>
-                            <option value="meter">Meter</option>
-                            <option value="micrometer">Micrometer</option>
-                            <option value="mile">Mile</option>
-                            <option value="millimeter" selected>Millimeter</option>
-                            <option value="nanometer">Nanometer</option>
-                            <option value="yard">Yard</option>
-                        </select>
                     </div>
 
                     <!-- Input-output section -->
                     <div class="input_output_section">
                         <input value="1" type="number" class="input_box" id="input_box" />
                         <span class="equal_sign"> <-> </span>
-                        <input value="10" type="number" class="output_box" id="output_box" />
+                        <input value="100" type="number" class="output_box" id="output_box" />
                     </div>
                 </div>
             </main>
