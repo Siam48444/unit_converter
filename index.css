@@ -37,7 +37,7 @@ main {
 
 .conversion_category_selector {
     width: 100%;
-    margin-bottom: 1.5em;
+    margin-bottom: 2em;
 }
 
 .units_selector_section,
@@ -64,4 +64,8 @@ main {
     color: var(--clr_txt);
     padding: var(--input_padding);
     text-align: center;
+
+    &::placeholder {
+        color: var(--clr_sub);
+    }
 }

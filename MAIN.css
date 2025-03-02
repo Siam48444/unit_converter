@@ -43,7 +43,8 @@ html {
 :root {
     --clr_bg: #eeeeee;
     --clr_txt: #000000;
+    --clr_sub: #ababab;
 
-    --fs_normal: clamp(0.9em, 1.5vmin, 1.1em);
-    --fs_medium: clamp(1.1em, 2.2vmin, 1.5em);
+    --fs_normal: clamp(0.9em, 1.8vmin, 1.2em);
+    --fs_medium: clamp(1.2em, 2.5vmin, 2em);
 }
