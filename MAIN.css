@@ -35,7 +35,6 @@ html {
     box-sizing: border-box;
     position: relative;
     background-color: var(--clr_bg);
-    overflow-x: hidden;
 }
 
 
