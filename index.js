@@ -23,5 +23,6 @@ function update_input() {
     const output_unit = output_unit_selector.value;
     const input_value = input_box.value;
 
-    console.log(output_unit)
+    const length_factor = length_conversion_factors[input_unit][output_unit];
+    output_box.value = input_value * length_factor;
 }
