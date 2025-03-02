@@ -1,6 +1,9 @@
 :root {
     --main_width: min(100%, 2000px);
-    --app_width: 60%;
+    --app_width: 50%;
+    /* --selectors_padding: 0.3em 0.6em; */
+    --equal_sign_width: 3em;
+    --input_width: 6em;
 }
 
 
@@ -25,8 +28,53 @@ main {
     position: relative;
 }
 
+
+
 .conversion_category_selector,
 .units_selector {
     font-family: "Inter_Regular", sans-serif;
-    font-size: var(--fs_normal);    
+    font-size: var(--fs_normal);
+    color: var(--clr_txt); 
+    padding: var(--selectors_padding);   
+}
+
+.conversion_category_selector {
+    width: 100%;
+    margin-bottom: 1.5em;
+}
+
+
+
+.units_selector_section {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--equal_sign_width);
+    background-color: red;
+}
+
+.units_selector {
+    flex: 1;
+}
+
+
+
+.input_output_section {
+    background-color: green;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.input_box, .output_box {
+    flex: 1;
+}
+
+.equal_sign {
+    width: var(--equal_sign_width);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
