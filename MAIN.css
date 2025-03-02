@@ -45,5 +45,5 @@ html {
     --clr_txt: #000000;
 
     --fs_normal: clamp(0.9em, 1.5vmin, 1.1em);
-    --fs_medium: clamp(1.1em, 2vmin, 1.5em);
+    --fs_medium: clamp(1.1em, 2.2vmin, 1.5em);
 }

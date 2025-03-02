@@ -1,6 +1,6 @@
 :root {
     --main_width: min(100%, 2000px);
-    /* --selectors_padding: 0.3em 0.6em; */
+    --selectors_padding: 0.3em 0.6em;
     --input_padding: 0.4em 0.8em;
     --equal_sign_width: 3em;
     --input_width: 20em;
