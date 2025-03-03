@@ -5,6 +5,7 @@ import { area_conversion_factors } from "./Conversion_Categories/area.js";
 
 
 const conversion_category_selector = document.getElementById("conversion_category_selector");
+const units_selector_section = document.getElementsByClassName("units_selector_section");
 
 const input_unit_selector = document.querySelector("[data-input_unit_selector]");
 const output_unit_selector = document.querySelector("[data-output_unit_selector]");
@@ -32,7 +33,20 @@ output_box.addEventListener("input", () => { update_input(true); });
 // Update the input values if the selection changes
 input_unit_selector.addEventListener("change", () => { update_input(false); });
 output_unit_selector.addEventListener("change", () => { update_input(false); });
-conversion_category_selector.addEventListener("change", () => { update_input(false); });
+
+// Change the conversion category 
+conversion_category_selector.addEventListener("change", () => { 
+    update_input(false); 
+
+    for (let unit_section of units_selector_section) {
+        if (unit_section.dataset.category === conversion_category_selector.value) {
+            unit_section.classList.add("active_category");
+        }
+        else {
+            unit_section.classList.remove("active_category");
+        }
+    }
+});
 
 
 
