@@ -1,8 +1,10 @@
 :root {
     --main_width: min(100%, 2000px);
-    --selectors_padding: 0.3em 0.6em;
-    --input_padding: 0.3em 0.6em;
+    
+    --selectors_padding: clamp(0.5em, 2vmin, 0.6em) clamp(0.6em, 2.5vmin, 1em);
+    --input_padding: var(--selectors_padding);
     --input_width: clamp(10em, 30vw, 25em);
+    
     --equal_sign_width: 3em;
 }
 
@@ -72,3 +74,13 @@ main {
 
 .units_selector_section { display: none; }
 .units_selector_section.active_category { display: grid; }
+
+
+
+
+
+@media (width <= 800px) {
+    :root {
+        --input_width: 35vw;
+    }
+}
