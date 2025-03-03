@@ -6,8 +6,8 @@ import { area_conversion_factors } from "./Conversion_Categories/area.js";
 
 const conversion_category_selector = document.getElementById("conversion_category_selector");
 
-const input_unit_selector = document.getElementById("input_unit_selector");
-const output_unit_selector = document.getElementById("output_unit_selector");
+const input_unit_selector = document.querySelector("[data-input_unit_selector]");
+const output_unit_selector = document.querySelector("[data-output_unit_selector]");
 
 const input_box = document.getElementById("input_box");
 const output_box = document.getElementById("output_box");
@@ -33,19 +33,13 @@ function update_input(reversed = false) {
 
     // Determine which input field is being updated
     if (reversed) {
-        // Get value from output box
-        input_value = output_box.value; 
-
-        // Swap input & output units
-        input_unit = output_unit_selector.value;
+        input_value = output_box.value; // Get value from output box 
+        input_unit = output_unit_selector.value; // Swap input & output units
         output_unit = input_unit_selector.value;
     }
     else {
-        // Get value from input box
-        input_value = input_box.value; 
-
-        // Swap input & output units
-        input_unit = input_unit_selector.value;
+        input_value = input_box.value; // Get value from input box
+        input_unit = input_unit_selector.value; // Swap input & output units
         output_unit = output_unit_selector.value;
     }
 
