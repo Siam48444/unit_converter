@@ -36,10 +36,17 @@ output_unit_selector.addEventListener("change", () => { update_input(false); });
 
 
 
+// Get the unit values
 function get_conversion_values(reversed) {
     return reversed
-        ? { input_value: output_box.value, input_unit: output_unit_selector.value, output_unit: input_unit_selector.value }
-        : { input_value: input_box.value, input_unit: input_unit_selector.value, output_unit: output_unit_selector.value };
+        ? { input_value: output_box.value, 
+            input_unit: output_unit_selector.value, 
+            output_unit: input_unit_selector.value 
+        }
+        : { input_value: input_box.value, 
+            input_unit: input_unit_selector.value, 
+            output_unit: output_unit_selector.value 
+        };
 }
 
 
