@@ -56,6 +56,7 @@ function update_input(reversed = false) {
     // Get the necessary values
     const { input_value, input_unit, output_unit } = get_conversion_values(reversed);
 
+
     // Get the conversion factor from the unit conversion table
     const conversion_factor = conversion_object[conversion_category_selector.value][input_unit][output_unit];
 
@@ -83,6 +84,10 @@ conversion_category_selector.addEventListener("change", () => {
             // Update the unit selectors to the ones inside the active section
             input_unit_selector = unit_section.querySelector("[data-input_unit_selector]");
             output_unit_selector = unit_section.querySelector("[data-output_unit_selector]");
+
+            // Update the input values if the selection changes
+            input_unit_selector.addEventListener("change", () => { update_input(false); });
+            output_unit_selector.addEventListener("change", () => { update_input(false); });
         }
         else {
             unit_section.classList.remove("active_category");
