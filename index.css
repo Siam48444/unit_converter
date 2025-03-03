@@ -2,8 +2,11 @@
     --main_width: min(100%, 2000px);
     
     --selectors_padding: clamp(0.5em, 2vmin, 0.6em) clamp(0.6em, 2.5vmin, 1em);
+    --selectors_border: solid 0.05em var(--clr_txt);
+
     --input_padding: var(--selectors_padding);
     --input_width: clamp(10em, 30vw, 25em);
+    --input_border: solid 0.05em var(--clr_txt);
     
     --equal_sign_width: 3em;
 }
@@ -37,6 +40,13 @@ main {
     padding: var(--selectors_padding); 
     cursor: pointer;  
     background-color: var(--clr_bg);
+    outline: none;
+    border: var(--selectors_border);
+    /* appearance: none; */
+
+    & > option {
+        background-color: var(--clr_bg);
+    }
 }
 
 .conversion_category_selector {
@@ -71,6 +81,9 @@ main {
     color: var(--clr_txt);
     padding: var(--input_padding);
     text-align: center;
+    background-color: var(--clr_bg);
+    outline: none;
+    border: var(--input_border);
 }
 
 
