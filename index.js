@@ -46,7 +46,7 @@ conversion_category_selector.addEventListener("change", () => {
         }
     }
 
-    // Reset unit selectors to the first available unit in the new category
+    update_input(false);
 });
 
 
