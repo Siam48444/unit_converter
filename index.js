@@ -36,12 +36,17 @@ output_unit_selector.addEventListener("change", () => { update_input(false); });
 
 // Change the conversion category 
 conversion_category_selector.addEventListener("change", () => { 
-    update_input(false); 
-
-    // Hide all unit sections and show the relevant one
+   // Hide all unit sections and show the relevant one
     for (let unit_section of units_selector_section) {
-        console.log(unit_section.dateset.category)
+        if (unit_section.getAttribute("data-category") === conversion_category_selector.value) {
+            unit_section.classList.add("active_category");
+        }
+        else {
+            unit_section.classList.remove("active_category");
+        }
     }
+
+    // Reset unit selectors to the first available unit in the new category
 });
 
 
