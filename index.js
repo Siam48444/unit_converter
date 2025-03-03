@@ -7,8 +7,8 @@ import { area_conversion_factors } from "./Conversion_Categories/area.js";
 const conversion_category_selector = document.getElementById("conversion_category_selector");
 const units_selector_section = document.getElementsByClassName("units_selector_section");
 
-const input_unit_selector = document.querySelector("[data-input_unit_selector]");
-const output_unit_selector = document.querySelector("[data-output_unit_selector]");
+var input_unit_selector = document.querySelector("[data-input_unit_selector]");
+var output_unit_selector = document.querySelector("[data-output_unit_selector]");
 
 const input_box = document.getElementById("input_box");
 const output_box = document.getElementById("output_box");
@@ -80,12 +80,15 @@ conversion_category_selector.addEventListener("change", () => {
     for (let unit_section of units_selector_section) {
         if (unit_section.getAttribute("data-category") === conversion_category_selector.value) {
             unit_section.classList.add("active_category");
+
+            // Update the unit selectors to the ones inside the active section
+            input_unit_selector = unit_section.querySelector("[data-input_unit_selector]");
+            output_unit_selector = unit_section.querySelector("[data-output_unit_selector]");
         }
         else {
             unit_section.classList.remove("active_category");
         }
     }
-
 
     // Update the input
     update_input(false);
