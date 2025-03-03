@@ -48,11 +48,12 @@ main {
     & > option { background-color: var(--clr_bg); }
 
     &::after {
-        position: absolute;
         content: "";
-        right: clamp(0.6em, 2.5vmin, 1em);
-        width: var(--fs_normal);
+        position: absolute;
+        inset: 0;
+        width: 1em;
         aspect-ratio: 1;
+        background-color: var(--clr_txt);
     }
 }
 
@@ -91,6 +92,7 @@ main {
     background-color: var(--clr_bg);
     outline: none;
     border: var(--input_border);
+    border-top: none;
 }
 
 
