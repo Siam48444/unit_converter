@@ -43,18 +43,8 @@ main {
     outline: none;
     border: var(--selectors_border);
     appearance: none;
-    position: relative;
 
     & > option { background-color: var(--clr_bg); }
-
-    &::after {
-        content: "";
-        position: absolute;
-        inset: 0;
-        width: 1em;
-        aspect-ratio: 1;
-        background-color: var(--clr_txt);
-    }
 }
 
 .conversion_category_selector {
