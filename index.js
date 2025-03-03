@@ -12,6 +12,13 @@ const output_unit_selector = document.querySelector("[data-output_unit_selector]
 const input_box = document.getElementById("input_box");
 const output_box = document.getElementById("output_box");
 
+// Unit conversion object for all the categories
+const conversion_object = {
+    length: length_conversion_factors,
+    area: area_conversion_factors,
+}
+console.log(conversion_object.length)
+
 
 
 // Select the number if clicked on the input box
@@ -45,12 +52,7 @@ function update_input(reversed = false) {
 
 
     // Get the conversion factor from the unit conversion table
-    if (conversion_category_selector.value === "length") {
-        conversion_factor = length_conversion_factors[input_unit][output_unit];
-    }
-    if (conversion_category_selector.value === "area") {
-        conversion_factor = area_conversion_factors[input_unit][output_unit];
-    }
+    conversion_factor = length_conversion_factors[input_unit][output_unit];
 
     // Convert the value using the conversion factor
     const covnerted_value = input_value * conversion_factor;
