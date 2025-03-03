@@ -34,23 +34,9 @@ output_box.addEventListener("input", () => { update_input(true); });
 input_unit_selector.addEventListener("change", () => { update_input(false); });
 output_unit_selector.addEventListener("change", () => { update_input(false); });
 
-// Change the conversion category 
-conversion_category_selector.addEventListener("change", () => { 
-   // Hide all unit sections and show the relevant one
-    for (let unit_section of units_selector_section) {
-        if (unit_section.getAttribute("data-category") === conversion_category_selector.value) {
-            unit_section.classList.add("active_category");
-        }
-        else {
-            unit_section.classList.remove("active_category");
-        }
-    }
-
-    update_input(false);
-});
 
 
-
+// Update the user input
 function update_input(reversed = false) {
     let input_value, input_unit, output_unit, conversion_factor;
 
@@ -82,3 +68,20 @@ function update_input(reversed = false) {
         output_box.value = covnerted_value;
     }
 }
+
+
+
+// Change the conversion category 
+conversion_category_selector.addEventListener("change", () => { 
+   // Hide all unit sections and show the relevant one
+    for (let unit_section of units_selector_section) {
+        if (unit_section.getAttribute("data-category") === conversion_category_selector.value) {
+            unit_section.classList.add("active_category");
+        }
+        else {
+            unit_section.classList.remove("active_category");
+        }
+    }
+
+    update_input(false);
+});
