@@ -34,7 +34,9 @@ main {
     font-family: "Inter_Regular", sans-serif;
     font-size: var(--fs_normal);
     color: var(--clr_txt); 
-    padding: var(--selectors_padding);   
+    padding: var(--selectors_padding); 
+    cursor: pointer;  
+    background-color: var(--clr_bg);
 }
 
 .conversion_category_selector {
