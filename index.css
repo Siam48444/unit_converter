@@ -77,6 +77,10 @@ main {
     color: var(--clr_txt);
 }
 
+.equal_sign > svg {
+    
+}
+
 .input_box,
 .output_box {
     font-family: "Inter_Medium", sans-serif;
