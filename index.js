@@ -1,5 +1,6 @@
 import { length_conversion_factors } from "./Conversion_Categories/length.js";
 import { area_conversion_factors } from "./Conversion_Categories/area.js";
+import { mass_conversion_factors } from "./Conversion_Categories/mass.js";
 
 
 
@@ -18,6 +19,7 @@ const output_box = document.getElementById("output_box");
 const conversion_object = {
     length: length_conversion_factors,
     area: area_conversion_factors,
+    mass: mass_conversion_factors,
 }
 
 
@@ -74,6 +76,7 @@ function update_input(reversed = false) {
 }
 
 
+
 // Change the conversion category 
 conversion_category_selector.addEventListener("change", () => { 
    // Hide all unit sections and show the relevant one
@@ -93,7 +96,6 @@ conversion_category_selector.addEventListener("change", () => {
             unit_section.classList.remove("active_category");
         }
     }
-
 
     // Update the input
     update_input(false);
