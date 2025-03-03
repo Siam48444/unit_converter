@@ -83,5 +83,7 @@ conversion_category_selector.addEventListener("change", () => {
         }
     }
 
+
+    // Update the input
     update_input(false);
 });
