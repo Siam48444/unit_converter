@@ -38,13 +38,9 @@ output_unit_selector.addEventListener("change", () => { update_input(false); });
 conversion_category_selector.addEventListener("change", () => { 
     update_input(false); 
 
+    // Hide all unit sections and show the relevant one
     for (let unit_section of units_selector_section) {
-        if (unit_section.dataset.category === conversion_category_selector.value) {
-            unit_section.classList.add("active_category");
-        }
-        else {
-            unit_section.classList.remove("active_category");
-        }
+        console.log(unit_section.dateset.category)
     }
 });
 

@@ -70,5 +70,5 @@ main {
 }
 
 
-/* .units_selector_section { display: none; }
-.units_selector_section.active_category { display: grid; } */
+.units_selector_section { display: none; }
+.units_selector_section.active_category { display: grid; }
