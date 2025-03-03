@@ -29,9 +29,10 @@ output_box.addEventListener("click", () => { output_box.select(); });
 input_box.addEventListener("input", () => { update_input(false); });
 output_box.addEventListener("input", () => { update_input(true); });
 
-// Update the input values if the unit selection changes
+// Update the input values if the selection changes
 input_unit_selector.addEventListener("change", () => { update_input(false); });
 output_unit_selector.addEventListener("change", () => { update_input(false); });
+conversion_category_selector.addEventListener("change", () => { update_input(false); });
 
 
 
