@@ -72,13 +72,12 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: "Inter_Medium", sans-serif;
-    font-size: var(--fs_medium);
-    color: var(--clr_txt);
 }
 
 .equal_sign > svg {
-    
+    width: var(--fs_normal);
+    rotate: 90deg;
+    fill: var(--clr_txt);
 }
 
 .input_box,
