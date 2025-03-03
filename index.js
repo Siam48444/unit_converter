@@ -36,25 +36,21 @@ output_unit_selector.addEventListener("change", () => { update_input(false); });
 
 
 
+function get_conversion_values(reversed) {
+    return reversed
+        ? { input_value: output_box.value, input_unit: output_unit_selector.value, output_unit: input_unit_selector.value }
+        : { input_value: input_box.value, input_unit: input_unit_selector.value, output_unit: output_unit_selector.value };
+}
+
+
+
 // Update the user input
 function update_input(reversed = false) {
-    let input_value, input_unit, output_unit, conversion_factor;
-
-    // Determine which input field is being updated
-    if (reversed) {
-        input_value = output_box.value; // Get value from output box 
-        input_unit = output_unit_selector.value; // Swap input & output units
-        output_unit = input_unit_selector.value;
-    }
-    else {
-        input_value = input_box.value; // Get value from input box
-        input_unit = input_unit_selector.value; // Swap input & output units
-        output_unit = output_unit_selector.value;
-    }
-
+    // Get the necessary values
+    const { input_value, input_unit, output_unit } = get_conversion_values(reversed);
 
     // Get the conversion factor from the unit conversion table
-    conversion_factor = conversion_object[conversion_category_selector.value][input_unit][output_unit];
+    const conversion_factor = conversion_object[conversion_category_selector.value][input_unit][output_unit];
 
     // Convert the value using the conversion factor
     const covnerted_value = input_value * conversion_factor;
