@@ -57,7 +57,7 @@ conversion_category_selector.addEventListener("change", () => {
 
             // Update the input values if the selection changes
             input_unit_selector.addEventListener("change", () => { update_input(false); });
-            output_unit_selector.addEventListener("change", () => { update_input(false); });
+            output_unit_selector.addEventListener("change", () => { update_input(false); }); 
         }
         else {
             unit_section.classList.remove("active_category");
@@ -82,14 +82,13 @@ clear_button.addEventListener("click", () => {
 function update_input(is_reversed = false) {
     // Get the necessary values
     const { input_value, input_unit, output_unit } = get_conversion_values(is_reversed);
-
+    console.log(get_conversion_values(is_reversed))
 
     // Get the conversion factor from the unit conversion table
     const conversion_factor = conversion_object[conversion_category_selector.value][input_unit][output_unit];
 
     // Convert the value using the conversion factor
     const covnerted_value = input_value * conversion_factor;
-
 
     // Update the opposite field with the converted value
     if (is_reversed) {
@@ -102,15 +101,20 @@ function update_input(is_reversed = false) {
 
 
 
-// Get the unit values
+// Get the unit values and units
 function get_conversion_values(is_reversed) {
-    return is_reversed
-        ? { input_value: output_box.value, 
+    if (is_reversed) {
+        return {
+            input_value: output_box.value, 
             input_unit: output_unit_selector.value, 
-            output_unit: input_unit_selector.value 
-        }
-        : { input_value: input_box.value, 
+            output_unit: input_unit_selector.value,
+        };
+    }
+    else {
+        return {
+            input_value: input_box.value, 
             input_unit: input_unit_selector.value, 
             output_unit: output_unit_selector.value 
         };
+    }
 }
