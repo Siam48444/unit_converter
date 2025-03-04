@@ -72,8 +72,13 @@ conversion_category_selector.addEventListener("change", () => {
 
 // Reset the inputs by clicking the clear button
 clear_button.addEventListener("click", () => {
-    input_box.value = ""; // Reset the input value
-    output_box.value = ""; // Reset the input value
+    // Reset the input and output values
+    input_box.value = ""; 
+    output_box.value = ""; 
+    
+    // Add input output placeholders
+    input_box.placeholder = "Input";
+    output_box.placeholder = "Output";
 });
 
 
