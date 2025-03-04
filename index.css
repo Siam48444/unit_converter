@@ -8,7 +8,7 @@
     --input_padding: clamp(0.6em, 2.2vmin, 0.8em) clamp(0.8em, 2.5vmin, 1.2em);
     --input_border: solid 0.07em var(--clr_sub);
     
-    --equal_sign_width: 3em;
+    --equal_sign_width: calc(var(--fs_medium) * 1.5);
 }
 
 
@@ -63,9 +63,9 @@ main {
 }
 
 .equal_sign > svg {
-    width: var(--fs_normal);
-    rotate: 90deg;
-    fill: var(--clr_txt); 
+    width: 50%;
+    stroke: var(--clr_txt); 
+    stroke-width: 0.5em;
 }
 
 .input_box,
