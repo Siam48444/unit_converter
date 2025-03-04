@@ -49,5 +49,5 @@ html {
     --fs_normal: clamp(0.9em, 1.5vmin, 1.2em);
     --fs_medium: clamp(1.3em, 3vmin, 1.8em);
 
-    --transition_100: 100ms;
+    --transition_fast: 100ms;
 }

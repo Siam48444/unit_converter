@@ -48,7 +48,7 @@ main {
     width: 100%;
     background-color: var(--clr_main);
 
-    transition: filter var(--transition_100);
+    transition: filter var(--transition_fast);
     
     & > option { background-color: var(--clr_main); }
 }
@@ -130,7 +130,7 @@ main {
     color: var(--clr_txt);
     cursor: pointer;
 
-    transition: filter var(--transition_100);
+    transition: filter var(--transition_fast);
 }
 
 
