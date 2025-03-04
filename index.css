@@ -42,11 +42,11 @@ main {
     color: var(--clr_txt); 
     padding: var(--selectors_padding); 
     cursor: pointer;  
-    background-color: var(--clr_bg);
     outline: none;
     border: var(--selectors_border);
     appearance: none;
     width: 100%;
+    background-color: var(--clr_main);
     
     & > option { background-color: var(--clr_bg); }
 }
@@ -119,7 +119,7 @@ main {
 .clear_button {
     margin-top: calc(var(--fs_medium) * 1.5);
     width: 100%;
-    background-color: var(--clr_bg);
+    background-color: var(--clr_main);
     padding: var(--ac_button_padding);
     outline: none;
     border: var(--ac_button_border);
@@ -138,7 +138,7 @@ main {
 
 @media (width >= 1000px) {
     :is(.conversion_category_selector, .units_selector, .clear_button):hover {
-        background-color: var(--clr_sub_alt);
+        background-color: var(--clr_main);
     }
 }
 
