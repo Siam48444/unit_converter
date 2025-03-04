@@ -32,13 +32,49 @@ const conversion_object = {
 input_box.addEventListener("click", () => { input_box.select(); });
 output_box.addEventListener("click", () => { output_box.select(); });
 
+
 // Update the input values from both sides
 input_box.addEventListener("input", () => { update_input(false); });
 output_box.addEventListener("input", () => { update_input(true); });
 
+
 // Update the input values if the selection changes
 input_unit_selector.addEventListener("change", () => { update_input(false); });
 output_unit_selector.addEventListener("change", () => { update_input(false); });
+
+
+
+// Change the conversion category 
+conversion_category_selector.addEventListener("change", () => { 
+   // Hide all unit sections and show the relevant one
+    for (let unit_section of units_selector_section) {
+        if (unit_section.getAttribute("data-category") === conversion_category_selector.value) {
+            unit_section.classList.add("active_category");
+
+            // Update the unit selectors to the ones inside the active section
+            input_unit_selector = unit_section.querySelector("[data-input_unit_selector]");
+            output_unit_selector = unit_section.querySelector("[data-output_unit_selector]");
+
+            // Update the input values if the selection changes
+            input_unit_selector.addEventListener("change", () => { update_input(false); });
+            output_unit_selector.addEventListener("change", () => { update_input(false); });
+        }
+        else {
+            unit_section.classList.remove("active_category");
+        }
+    }
+
+    // Update the input
+    update_input(false);
+});
+
+
+
+// Reset the inputs by clicking the clear button
+clear_button.addEventListener("click", () => {
+    input_box.value = ""; // Reset the input value
+    output_box.value = ""; // Reset the input value
+});
 
 
 
@@ -78,37 +114,3 @@ function get_conversion_values(is_reversed) {
             output_unit: output_unit_selector.value 
         };
 }
-
-
-
-// Change the conversion category 
-conversion_category_selector.addEventListener("change", () => { 
-   // Hide all unit sections and show the relevant one
-    for (let unit_section of units_selector_section) {
-        if (unit_section.getAttribute("data-category") === conversion_category_selector.value) {
-            unit_section.classList.add("active_category");
-
-            // Update the unit selectors to the ones inside the active section
-            input_unit_selector = unit_section.querySelector("[data-input_unit_selector]");
-            output_unit_selector = unit_section.querySelector("[data-output_unit_selector]");
-
-            // Update the input values if the selection changes
-            input_unit_selector.addEventListener("change", () => { update_input(false); });
-            output_unit_selector.addEventListener("change", () => { update_input(false); });
-        }
-        else {
-            unit_section.classList.remove("active_category");
-        }
-    }
-
-    // Update the input
-    update_input(false);
-});
-
-
-
-// Reset the inputs by clicking the clear button
-clear_button.addEventListener("click", () => {
-    input_box.value = ""; // Reset the input value
-    output_box.value = ""; // Reset the input value
-});
