@@ -40,14 +40,22 @@ html {
 
 
 :root {
-    --clr_bg: #efefef;
+    --clr_bg: #ececec;
     --clr_txt: #101010;
-    --clr_main: #dd8874;
+    --clr_main: #eb8d82;
     --clr_sub: #bbbbbb;
     --clr_sub_alt: #d1d9e0;
-
+    
     --fs_normal: clamp(0.9em, 1.5vmin, 1.2em);
     --fs_medium: clamp(1.3em, 3vmin, 1.8em);
 
     --transition_fast: 100ms;
+}
+
+body.dark {
+    --clr_bg: #101010;
+    --clr_txt: #ececec;
+    --clr_main: #eb8d82;
+    --clr_sub: #a5a5a5;
+    --clr_sub_alt: #d1d9e0;
 }
