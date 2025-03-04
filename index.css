@@ -47,6 +47,8 @@ main {
     appearance: none;
     width: 100%;
     background-color: var(--clr_main);
+
+    transition: filter var(--transition_100);
     
     & > option { background-color: var(--clr_bg); }
 }
@@ -127,6 +129,8 @@ main {
     font-size: var(--fs_normal);
     color: var(--clr_txt);
     cursor: pointer;
+
+    transition: filter var(--transition_100);
 }
 
 
@@ -138,7 +142,7 @@ main {
 
 @media (width >= 1000px) {
     :is(.conversion_category_selector, .units_selector, .clear_button):hover {
-        background-color: var(--clr_main);
+        filter: brightness(0.93);
     }
 }
 

@@ -41,11 +41,13 @@ html {
 
 :root {
     --clr_bg: #eeeeee;
-    --clr_txt: #000000;
-    --clr_main: #ffdd8d8a;
+    --clr_txt: #1a1a1a;
+    --clr_main: #ffdd8da1;
     --clr_sub: #bbbbbb;
     --clr_sub_alt: #d1d9e0;
 
     --fs_normal: clamp(0.9em, 1.5vmin, 1.2em);
     --fs_medium: clamp(1.3em, 3vmin, 1.8em);
+
+    --transition_100: 100ms;
 }
