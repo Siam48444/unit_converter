@@ -2,6 +2,7 @@ import { length_conversion_factors } from "./Conversion_Categories/length.js";
 import { area_conversion_factors } from "./Conversion_Categories/area.js";
 import { mass_conversion_factors } from "./Conversion_Categories/mass.js";
 import { frequency_conversion_factors } from "./Conversion_Categories/frequency.js";
+import { speed_conversion_factors } from "./Conversion_Categories/speed.js";
 
 
 
@@ -24,6 +25,7 @@ const conversion_object = {
     area: area_conversion_factors,
     mass: mass_conversion_factors,
     frequency: frequency_conversion_factors,
+    speed: speed_conversion_factors,
 }
 
 
