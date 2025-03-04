@@ -82,7 +82,6 @@ clear_button.addEventListener("click", () => {
 function update_input(is_reversed = false) {
     // Get the necessary values
     const { input_value, input_unit, output_unit } = get_conversion_values(is_reversed);
-    console.log(get_conversion_values(is_reversed))
 
     // Get the conversion factor from the unit conversion table
     const conversion_factor = conversion_object[conversion_category_selector.value][input_unit][output_unit];
