@@ -91,7 +91,7 @@ main {
 
 .conversion_category_selector_wrapper {
     position: relative;
-    margin-bottom: var(--fs_medium);
+    margin-bottom: calc(var(--fs_medium) * 1.5);
 }
 
 .units_selector_wrapper {
@@ -115,7 +115,7 @@ main {
 
 
 .clear_button {
-    margin-top: var(--fs_medium);
+    margin-top: calc(var(--fs_medium) * 1.5);
     width: 100%;
     background-color: var(--clr_bg);
     padding: var(--ac_button_padding);
@@ -133,6 +133,12 @@ main {
 
 
 
+
+@media (width >= 1000px) {
+    :is(.conversion_category_selector, .units_selector, .clear_button):hover {
+        background-color: var(--clr_sub_alt);
+    }
+}
 
 
 @media (width <= 800px) {

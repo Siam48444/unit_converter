@@ -43,7 +43,8 @@ html {
     --clr_bg: #eeeeee;
     --clr_txt: #000000;
     --clr_main: #ffde91;
-    --clr_sub: #cccccc;
+    --clr_sub: #bbbbbb;
+    --clr_sub_alt: #e7e7e7;
 
     --fs_normal: clamp(0.9em, 1.5vmin, 1.2em);
     --fs_medium: clamp(1.2em, 3vmin, 1.8em);
