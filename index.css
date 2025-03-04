@@ -77,7 +77,7 @@ main {
 .equal_sign > svg {
     width: var(--fs_normal);
     rotate: 90deg;
-    fill: var(--clr_txt);
+    fill: var(--clr_txt); 
 }
 
 .input_box,
