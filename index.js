@@ -15,6 +15,8 @@ var output_unit_selector = document.querySelector("[data-output_unit_selector]")
 const input_box = document.getElementById("input_box");
 const output_box = document.getElementById("output_box");
 
+const clear_button = document.getElementById("clear_button");
+
 
 // Unit conversion object for all the categories
 const conversion_object = {
@@ -41,9 +43,9 @@ output_unit_selector.addEventListener("change", () => { update_input(false); });
 
 
 // Update the user input
-function update_input(reversed = false) {
+function update_input(is_reversed = false) {
     // Get the necessary values
-    const { input_value, input_unit, output_unit } = get_conversion_values(reversed);
+    const { input_value, input_unit, output_unit } = get_conversion_values(is_reversed);
 
 
     // Get the conversion factor from the unit conversion table
@@ -54,7 +56,7 @@ function update_input(reversed = false) {
 
 
     // Update the opposite field with the converted value
-    if (reversed) {
+    if (is_reversed) {
         input_box.value = covnerted_value;
     }
     else {
@@ -65,8 +67,8 @@ function update_input(reversed = false) {
 
 
 // Get the unit values
-function get_conversion_values(reversed) {
-    return reversed
+function get_conversion_values(is_reversed) {
+    return is_reversed
         ? { input_value: output_box.value, 
             input_unit: output_unit_selector.value, 
             output_unit: input_unit_selector.value 
@@ -100,5 +102,14 @@ conversion_category_selector.addEventListener("change", () => {
     }
 
     // Update the input
+    update_input(false);
+});
+
+
+
+// Reset the inputs by clicking the clear button
+clear_button.addEventListener("click", () => {
+    input_box.value = 1;
+
     update_input(false);
 });
