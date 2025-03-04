@@ -39,7 +39,7 @@ main {
 .units_selector {
     font-family: "Inter_Regular", sans-serif;
     font-size: var(--fs_normal);
-    color: var(--clr_txt); 
+    color: var(--clr_bg); 
     padding: var(--selectors_padding); 
     cursor: pointer;  
     outline: none;
@@ -127,7 +127,7 @@ main {
     border: var(--ac_button_border);
     font-family: "Inter_Regular", sans-serif;
     font-size: var(--fs_normal);
-    color: var(--clr_txt);
+    color: var(--clr_bg);
     cursor: pointer;
 
     transition: filter var(--transition_fast);
