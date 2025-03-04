@@ -123,7 +123,7 @@ main {
     padding: var(--ac_button_padding);
     outline: none;
     border: var(--ac_button_border);
-    font-family: "Inter_Medium", sans-serif;
+    font-family: "Inter_Regular", sans-serif;
     font-size: var(--fs_normal);
     color: var(--clr_txt);
     cursor: pointer;

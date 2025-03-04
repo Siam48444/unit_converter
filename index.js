@@ -95,11 +95,13 @@ function update_input(is_reversed = false) {
     const covnerted_value = input_value * conversion_factor;
 
     // Update the opposite field with the converted value
-    if (is_reversed) {
+    if (input_value) {
+        if (is_reversed) {
         input_box.value = covnerted_value;
-    }
-    else {
-        output_box.value = covnerted_value;
+        }
+        else {
+            output_box.value = covnerted_value;
+        }
     }
 }
 
