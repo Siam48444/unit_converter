@@ -45,6 +45,10 @@ input_unit_selector.addEventListener("change", () => { update_input(false); });
 output_unit_selector.addEventListener("change", () => { update_input(false); });
 
 
+// Reset the inputs by clicking the clear button
+clear_button.addEventListener("click", clear_inputs);
+
+
 
 // Change the conversion category 
 conversion_category_selector.addEventListener("change", () => { 
@@ -68,19 +72,6 @@ conversion_category_selector.addEventListener("change", () => {
 
     // Update the input
     update_input(false);
-});
-
-
-
-// Reset the inputs by clicking the clear button
-clear_button.addEventListener("click", () => {
-    // Reset the input and output values
-    input_box.value = ""; 
-    output_box.value = ""; 
-    
-    // Add input output placeholders
-    input_box.placeholder = "Input";
-    output_box.placeholder = "Output";
 });
 
 
@@ -126,3 +117,16 @@ function get_conversion_values(is_reversed) {
         };
     }
 }
+
+
+
+// Clear the inputs by clicking the clear button
+function clear_inputs() {
+    // Clear the input and output values
+    input_box.value = ""; 
+    output_box.value = ""; 
+    
+    // Add input output placeholders
+    input_box.placeholder = "Input";
+    output_box.placeholder = "Output";
+};
