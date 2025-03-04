@@ -3,15 +3,15 @@
     --input_width: clamp(10em, 30vw, 25em);
     
     --selectors_padding: clamp(0.6em, 2.2vmin, 0.8em) clamp(0.8em, 2.5vmin, 1.2em);
-    --selectors_border: solid 0.1em var(--clr_txt);
+    --selectors_border: none;
     
     --input_padding: clamp(0.6em, 2.2vmin, 0.8em) clamp(0.8em, 2.5vmin, 1.2em);
-    --input_border: solid 0.07em var(--clr_sub);
+    --input_border: solid 0.1em var(--clr_main);
     
     --equal_sign_width: calc(var(--fs_medium) * 1.5);
 
     --ac_button_padding: clamp(0.6em, 2.2vmin, 0.8em) clamp(0.8em, 2.5vmin, 1.2em);
-    --ac_button_border: solid 0.1em var(--clr_txt);
+    --ac_button_border: none;
 }
 
 
