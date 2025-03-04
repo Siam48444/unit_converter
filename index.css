@@ -50,7 +50,7 @@ main {
 
     transition: filter var(--transition_100);
     
-    & > option { background-color: var(--clr_bg); }
+    & > option { background-color: var(--clr_main); }
 }
 
 .units_selector_section,
