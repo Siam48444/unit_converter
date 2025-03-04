@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Unit Converter</title>
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="./index.css" />
+        <link rel="stylesheet" href="./MAIN.css" />
+
+        <!-- JS -->
+        <script src="./index.js" defer type="module"></script>
+    </head>
+    <body>
+        <div class="whole_container">
+            <main>
+                <section class="unit_converter_app">
+                    <!-- Unit conversion category -->
+                    <div class="conversion_category_selector_wrapper">
+                        <select id="conversion_category_selector" class="conversion_category_selector">
+                            <option value="area">Area</option>
+                            <option value="frequency">Frequency</option>
+                            <option value="length" selected>Length</option>
+                            <option value="mass">Mass</option>
+                        </select>
+                    </div>
+
+                    <!-- Conversion section -->
+                    <!-- Length -->
+                    <div data-category="length" class="units_selector_section active_category">
+                        <div class="units_selector_wrapper">
+                            <select data-input_unit_selector class="units_selector">
+                                <option value="centimeter">Centimeter</option>
+                                <option value="foot">Foot</option>
+                                <option value="inch">Inch</option>
+                                <option value="kilometer" selected>Kilometer</option>
+                                <option value="meter">Meter</option>
+                                <option value="micrometer">Micrometer</option>
+                                <option value="mile">Mile</option>
+                                <option value="millimeter">Millimeter</option>
+                                <option value="nanometer">Nanometer</option>
+                                <option value="yard">Yard</option>
+                            </select>
+                        </div>
+
+                        <div class="units_selector_wrapper">
+                            <select data-output_unit_selector class="units_selector">
+                                <option value="centimeter">Centimeter</option>
+                                <option value="foot">Foot</option>
+                                <option value="inch">Inch</option>
+                                <option value="kilometer">Kilometer</option>
+                                <option value="meter" selected>Meter</option>
+                                <option value="micrometer">Micrometer</option>
+                                <option value="mile">Mile</option>
+                                <option value="millimeter">Millimeter</option>
+                                <option value="nanometer">Nanometer</option>
+                                <option value="yard">Yard</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Area -->
+                    <div data-category="area" class="units_selector_section">
+                        <div class="units_selector_wrapper">
+                            <select data-input_unit_selector class="units_selector">
+                                <option value="acre">Acre</option>
+                                <option value="square_foot">Sqr. foot</option>
+                                <option value="hectare">Hectare</option>
+                                <option value="square_inch">Sqr. inch</option>
+                                <option value="square_kilometer" selected>Sqr. kilometer</option>
+                                <option value="square_meter">Sqr. meter</option>
+                                <option value="square_mile">Sqr. mile</option>
+                                <option value="square_yard">Sqr. yard</option>
+                            </select>
+                        </div>
+
+                        <div class="units_selector_wrapper">
+                            <select data-output_unit_selector class="units_selector">
+                                <option value="acre">Acre</option>
+                                <option value="square_foot">Sqr. foot</option>
+                                <option value="hectare">Hectare</option>
+                                <option value="square_inch">Sqr. inch</option>
+                                <option value="square_kilometer">Sqr. kilometer</option>
+                                <option value="square_meter" selected>Sqr. meter</option>
+                                <option value="square_mile">Sqr. mile</option>
+                                <option value="square_yard">Sqr. yard</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Mass -->
+                    <div data-category="mass" class="units_selector_section">
+                        <div class="units_selector_wrapper">
+                            <select data-input_unit_selector class="units_selector">
+                                <option value="gram">Gram</option>
+                                <option value="imperial_ton">Imperial ton</option>
+                                <option value="kilogram" selected>Kilogram</option>
+                                <option value="metric_ton">Metric ton</option>
+                                <option value="microgram">Microgram</option>
+                                <option value="milligram">Milligram</option>
+                                <option value="ounce">Ounce</option>
+                                <option value="pound">Pound</option>
+                                <option value="us_ton">US ton</option>
+                            </select>
+                        </div>
+
+                        <div class="units_selector_wrapper">
+                            <select data-output_unit_selector class="units_selector">
+                                <option value="gram" selected>Gram</option>
+                                <option value="imperial_ton">Imperial ton</option>
+                                <option value="kilogram">Kilogram</option>
+                                <option value="metric_ton">Metric ton</option>
+                                <option value="microgram">Microgram</option>
+                                <option value="milligram">Milligram</option>
+                                <option value="ounce">Ounce</option>
+                                <option value="pound">Pound</option>
+                                <option value="us_ton">US ton</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Frequency -->
+                    <div data-category="frequency" class="units_selector_section">
+                        <div class="units_selector_wrapper">
+                            <select data-input_unit_selector class="units_selector">
+                                <option value="hertz">Hertz</option>
+                                <option value="kilohertz" selected>Kilohertz</option>
+                                <option value="megahertz">Megahertz</option>
+                                <option value="gigahertz">Gigahertz</option>
+                            </select>
+                        </div>
+
+                        <div class="units_selector_wrapper">
+                            <select data-output_unit_selector class="units_selector">
+                                <option value="hertz" selected>Hertz</option>
+                                <option value="kilohertz">Kilohertz</option>
+                                <option value="megahertz">Megahertz</option>
+                                <option value="gigahertz">Gigahertz</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Input-output section -->
+                    <div class="input_output_section">
+                        <input placeholder="Input..." type="number" class="input_box" id="input_box" />
+                        <span class="equal_sign">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                                <line x1="0" y1="30" x2="100" y2="30"></line>
+                                <line x1="0" y1="70" x2="100" y2="70"></line>
+                            </svg>
+                        </span>
+                        <input placeholder="Output..." type="number" class="output_box" id="output_box" />
+                    </div>
+
+                    <!-- Clear all button -->
+                    <button id="clear_button" class="clear_button">All Clear (AC)</button>
+                </section>
+            </main>
+        </div>
+    </body>
+</html>

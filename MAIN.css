@@ -1,0 +1,51 @@
+@font-face {
+    font-family: "Inter_Regular";
+    src: url("./Assets/Fonts/Inter_18pt-Regular.woff2");
+}
+
+@font-face {
+    font-family: "Inter_Medium";
+    src: url("./Assets/Fonts/Inter_18pt-Medium.woff2");
+}
+
+@font-face {
+    font-family: "Inter_Bold";
+    src: url("./Assets/Fonts/Inter_18pt-Bold.woff2");
+}
+
+@font-face {
+    font-family: "Inter_ExtraBold";
+    src: url("./Assets/Fonts/Inter_18pt-ExtraBold.woff2");
+}
+
+
+
+*, 
+*::after, 
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    position: relative;
+    background-color: var(--clr_bg);
+}
+
+
+
+:root {
+    --clr_bg: #eeeeee;
+    --clr_txt: #000000;
+    --clr_main: #ffde91;
+    --clr_sub: #bbbbbb;
+    --clr_sub_alt: #e7e7e7;
+
+    --fs_normal: clamp(0.9em, 1.5vmin, 1.2em);
+    --fs_medium: clamp(1.2em, 3vmin, 1.8em);
+}
