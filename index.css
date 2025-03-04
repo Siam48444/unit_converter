@@ -78,7 +78,7 @@ main {
     background-color: var(--clr_bg);
     outline: none;
     border: var(--input_border);
-    border-top: none;
+    border-top: transparent;
 }
 
 
