@@ -84,6 +84,8 @@ main {
     border-top: transparent;
 }
 
+:is(.input_box, .output_box)::placeholder { color: var(--clr_sub); }
+
 
 .units_selector_section { display: none; }
 .units_selector_section.active_category { display: grid; }
