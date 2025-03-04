@@ -100,7 +100,7 @@ function update_input(is_reversed = false) {
 
 
 
-// Get the unit values and units
+// Returns the appropriate input value and unit based on the conversion direction.
 function get_conversion_values(is_reversed) {
     if (is_reversed) {
         return {
@@ -113,7 +113,7 @@ function get_conversion_values(is_reversed) {
         return {
             input_value: input_box.value, 
             input_unit: input_unit_selector.value, 
-            output_unit: output_unit_selector.value 
+            output_unit: output_unit_selector.value,
         };
     }
 }
