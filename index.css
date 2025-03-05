@@ -39,7 +39,7 @@ main {
 
 .conversion_category_selector,
 .units_selector {
-    font-family: "Inter_Regular", sans-serif;
+    font-family: "Inter_Medium", sans-serif;
     font-size: var(--fs_normal);
     color: var(--clr_bg); 
     padding: var(--selectors_padding); 
@@ -129,7 +129,7 @@ main {
     outline: none;
     border: var(--ac_button_border);
     border-radius: var(--ac_button_border_radius);
-    font-family: "Inter_Regular", sans-serif;
+    font-family: "Inter_Medium", sans-serif;
     font-size: var(--fs_normal);
     color: var(--clr_bg);
     cursor: pointer;

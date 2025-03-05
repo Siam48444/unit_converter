@@ -3,6 +3,7 @@ import { area_conversion_factors } from "./Conversion_Categories/area.js";
 import { mass_conversion_factors } from "./Conversion_Categories/mass.js";
 import { frequency_conversion_factors } from "./Conversion_Categories/frequency.js";
 import { speed_conversion_factors } from "./Conversion_Categories/speed.js";
+import { plane_angle_conversion_factors } from "./Conversion_Categories/plane_angle.js";
 
 
 
@@ -26,6 +27,7 @@ const conversion_object = {
     mass: mass_conversion_factors,
     frequency: frequency_conversion_factors,
     speed: speed_conversion_factors,
+    plane_angle: plane_angle_conversion_factors,
 }
 
 

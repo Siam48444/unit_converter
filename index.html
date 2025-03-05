@@ -23,6 +23,7 @@
                             <option value="frequency">Frequency</option>
                             <option value="length" selected>Length</option>
                             <option value="mass">Mass</option>
+                            <option value="plane_angle">Plane Angle</option>
                             <option value="speed">Speed</option>
                         </select>
                     </div>
@@ -139,7 +140,7 @@
                                 <option value="megahertz">Megahertz</option>
                                 <option value="gigahertz">Gigahertz</option>
                             </select>
-                        </div> 
+                        </div>
                     </div>
 
                     <!-- Speed -->
@@ -159,7 +160,32 @@
                                 <option value="kilometer_per_hour" selected>Kilometer / hour</option>
                                 <option value="meter_per_second">Meter / second</option>
                                 <option value="mile_per_hour">Mile / hour</option>
-                            </select>  
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Plane Angle -->
+                    <div data-category="plane_angle" class="units_selector_section">
+                        <div class="units_selector_wrapper">
+                            <select data-input_unit_selector class="units_selector">
+                                <option value="arcsecond">Arcsecond</option>
+                                <option value="degree">Degree</option>
+                                <option value="gradian">Gradian</option>
+                                <option value="milliradian">Milliradian</option>
+                                <option value="minute_of_arc">Minute of arc</option>
+                                <option value="radian" selected>Radian</option>
+                            </select>
+                        </div>
+
+                        <div class="units_selector_wrapper">
+                            <select data-output_unit_selector class="units_selector">
+                                <option value="arcsecond">Arcsecond</option>
+                                <option value="degree" selected>Degree</option>
+                                <option value="gradian">Gradian</option>
+                                <option value="milliradian">Milliradian</option>
+                                <option value="minute_of_arc">Minute of arc</option>
+                                <option value="radian">Radian</option>
+                            </select>
                         </div>
                     </div>
 
