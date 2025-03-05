@@ -45,15 +45,17 @@ nav {
     font-family: "Inter_Medium", sans-serif;
     font-size: var(--fs_normal);
     position: relative;
+    padding: 0.2em;
 }
 
 a.active_nav::after {
     content: '';
     position: absolute;
-    inset: auto 0 -80% 0;
+    inset: auto 0 -30% 0;
     background-color: var(--clr_main);
-    height: 0.2em;
+    height: 0.1em;
     border-radius: 10em;
+    pointer-events: none;
 }
 
 main {
@@ -147,7 +149,7 @@ main {
     aspect-ratio: 1;
     background-color: var(--clr_bg);
     top: 50%;
-    right: var(--fs_normal);
+    right: clamp(1em, 2.5vmin, 1.2em);
     transform: translateY(-50%);
     clip-path: polygon(50% 75%, 0 30%, 100% 30%);
 }
