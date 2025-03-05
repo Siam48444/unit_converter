@@ -10,9 +10,4 @@ function adjustHeights() {
 
     // Adjust the main height
     main.style.height = `${window.innerHeight - nav.offsetHeight}px`;
-
-    // Handle the edge cases
-    if (unit_converter_app.getBoundingClientRect().top < 200) {
-        main.style.height = "auto";
-    }
 }
