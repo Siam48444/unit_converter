@@ -27,11 +27,34 @@
 }
 
 nav {
+    z-index: 999;
     background-color: var(--clr_bg);
+    background-color: red;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: var(--nav_padding);
+}
+
+.nav_middle ul li {
+    list-style: none;
+}
+
+.nav_middle ul li a {
+    text-decoration: none;
+    color: var(--clr_txt);
+    font-family: "Inter_Medium", sans-serif;
+    font-size: var(--fs_normal);
+    position: relative;
+}
+
+a.active_nav::after {
+    content: '';
+    position: absolute;
+    inset: auto 0 -80% 0;
+    background-color: var(--clr_main);
+    height: 0.2em;
+    border-radius: 10em;
 }
 
 main {
@@ -39,10 +62,12 @@ main {
     align-items: center;
     justify-content: center;
     padding-block: 2em;
+    overflow: auto;
 }
 
 .unit_converter_app {
     position: relative;
+    background-color: var(--clr_bg);
 }
 
 .conversion_category_selector,
