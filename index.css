@@ -29,7 +29,6 @@
 nav {
     z-index: 999;
     background-color: var(--clr_bg);
-    background-color: red;
     display: flex;
     align-items: center;
     justify-content: space-between;
