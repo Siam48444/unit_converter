@@ -1,6 +1,8 @@
 :root {
     --main_width: min(100%, 2000px);
     --input_width: clamp(10em, 30vw, 25em);
+
+    --nav_padding: clamp(0.6em, 3vmin, 1em) clamp(1em, 4vmin, 1.5em);
     
     --selectors_padding: clamp(0.6em, 2.2vmin, 0.8em) clamp(0.8em, 2.5vmin, 1.2em);
     --selectors_border: solid 0.1em transparent;
@@ -25,7 +27,11 @@
 }
 
 nav {
-    background-color: red;
+    background-color: var(--clr_bg);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--nav_padding);
 }
 
 main {
