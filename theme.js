@@ -8,12 +8,11 @@ function adjustHeights() {
     const main = document.getElementById("main");
     const unit_converter_app = document.getElementById("unit_converter_app");
 
-    // Handle the edge cases
-    if (unit_converter_app.getBoundingClientRect().top === nav.offsetHeight * 2) {
-        alert();
-        // main.style.height = "auto";
-    }
-
-    // Adjust the main hright
+    // Adjust the main height
     main.style.height = `${window.innerHeight - nav.offsetHeight}px`;
+
+    // Handle the edge cases
+    if (unit_converter_app.getBoundingClientRect().top < 200) {
+        main.style.height = "auto";
+    }
 }
