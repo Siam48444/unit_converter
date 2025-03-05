@@ -17,7 +17,6 @@
 }
 
 
-
 .whole_container {
     position: relative;
     background-color: var(--clr_bg);
@@ -25,8 +24,11 @@
     margin: auto;
 }
 
+nav {
+    background-color: red;
+}
+
 main {
-    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
