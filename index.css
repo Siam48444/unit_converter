@@ -4,6 +4,7 @@
     
     --selectors_padding: clamp(0.6em, 2.2vmin, 0.8em) clamp(0.8em, 2.5vmin, 1.2em);
     --selectors_border: solid 0.1em transparent;
+    --selectors_border_radius: 10em;
     
     --input_padding: clamp(0.6em, 2.2vmin, 0.8em) clamp(0.8em, 2.5vmin, 1.2em);
     --input_border: solid 0.1em var(--clr_main);
@@ -12,6 +13,7 @@
 
     --ac_button_padding: clamp(0.6em, 2.2vmin, 0.8em) clamp(0.8em, 2.5vmin, 1.2em);
     --ac_button_border: solid 0.1em transparent;
+    --ac_button_border_radius: 10em;
 }
 
 
@@ -44,6 +46,7 @@ main {
     cursor: pointer;  
     outline: none;
     border: var(--selectors_border);
+    border-radius: var(--selectors_border_radius);
     appearance: none;
     width: 100%;
     background-color: var(--clr_main);
@@ -82,8 +85,8 @@ main {
     text-align: center;
     background-color: var(--clr_bg);
     outline: none;
-    border: var(--input_border);
-    border-top: transparent;
+    border: none;
+    border-bottom: var(--input_border);
 }
 
 :is(.input_box, .output_box)::placeholder { color: var(--clr_sub); }
@@ -125,6 +128,7 @@ main {
     padding: var(--ac_button_padding);
     outline: none;
     border: var(--ac_button_border);
+    border-radius: var(--ac_button_border_radius);
     font-family: "Inter_Regular", sans-serif;
     font-size: var(--fs_normal);
     color: var(--clr_bg);
