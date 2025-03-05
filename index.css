@@ -4,7 +4,7 @@
 
     --nav_padding: clamp(0.6em, 3vmin, 1em) clamp(1em, 4vmin, 1.5em);
     
-    --selectors_padding: clamp(0.6em, 2.2vmin, 0.8em) clamp(0.8em, 2.5vmin, 1.2em);
+    --selectors_padding: clamp(0.6em, 2.2vmin, 0.8em) clamp(1em, 2.5vmin, 1.2em);
     --selectors_border: solid 0.1em transparent;
     --selectors_border_radius: 10em;
     
@@ -13,7 +13,7 @@
     
     --equal_sign_width: calc(var(--fs_medium) * 1.5);
 
-    --ac_button_padding: clamp(0.6em, 2.2vmin, 0.8em) clamp(0.8em, 2.5vmin, 1.2em);
+    --ac_button_padding: clamp(0.6em, 2.2vmin, 0.8em) clamp(1em, 2.5vmin, 1.2em);
     --ac_button_border: solid 0.1em transparent;
     --ac_button_border_radius: 10em;
 }
