@@ -124,6 +124,7 @@ main {
 
 .input_box,
 .output_box {
+    position: relative;
     font-family: "Inter_Medium", sans-serif;
     font-size: var(--fs_medium);
     color: var(--clr_txt);
@@ -168,7 +169,7 @@ main {
 
 
 .clear_button {
-    margin-top: calc(var(--fs_medium) * 2.5);
+    margin-top: calc(var(--fs_medium) * 3);
     width: 100%;
     background-color: var(--clr_sub_main);
     padding: var(--ac_button_padding);

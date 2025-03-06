@@ -45,7 +45,7 @@ html {
     --clr_main: #0b57d0;
     --clr_sub_main: #dae4fd;
     --clr_sub_alt_main: #d0dcfa;
-    --clr_sub: #aaaaaa;
+    --clr_sub: #bbbbbb;
     
     --fs_normal: clamp(0.9em, 1.5vmin, 1.2em);
     --fs_medium: clamp(1.3em, 3vmin, 1.8em);

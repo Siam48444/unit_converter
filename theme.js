@@ -16,7 +16,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
 
 // Function to adjust the heights of different sections
-function adjust_heights() {
+function adjust_heights() { 
     // Adjust the main height
     main.style.height = `${window.innerHeight - nav.clientHeight}px`;
 
