@@ -9,7 +9,7 @@
     --selectors_border_radius: 10em;
     
     --input_padding: clamp(1em, 2.5vmin, 1.5em) clamp(0.5em, 1.5vmin, 1em);
-    --input_border: solid 0.1em var(--clr_sub_main);
+    --input_border: none;
     
     --equal_sign_width: calc(var(--fs_medium) * 1.5);
 
