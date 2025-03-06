@@ -81,6 +81,7 @@ main {
 .unit_converter_app {
     position: relative;
     background-color: var(--clr_bg);
+    padding-inline: 1em;
 }
 
 .conversion_category_selector,
@@ -199,6 +200,12 @@ main {
 
 @media (width <= 800px) {
     :root {
-        --input_width: 35vw;
+        --input_width: 45vw;
+    }
+}
+
+@media (width <= 500px) {
+    :root {
+        --input_width: 41vw;
     }
 }
