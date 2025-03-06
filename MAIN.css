@@ -43,7 +43,7 @@ html {
     --clr_bg: #ffffff;
     --clr_txt: #001d35;
     --clr_main: #0b57d0;
-    --clr_sub_main: #dae4fd;
+    --clr_sub_main: #dce5fc;
     --clr_sub_alt_main: #d0dcfa;
     --clr_sub: #bbbbbb;
     
@@ -51,9 +51,14 @@ html {
     --fs_medium: clamp(1.3em, 3vmin, 1.8em);
 }
 
-/* body.dark {
-    
-} */
+body.dark {
+    --clr_bg: #0f1117;
+    --clr_txt: #ffffff;
+    --clr_main: #a8c7fa;
+    --clr_sub_main: #2c303d;
+    --clr_sub_alt_main: #373c4d;
+    --clr_sub: #888888;
+}
 
 
 
