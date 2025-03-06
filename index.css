@@ -84,11 +84,11 @@ main {
     border-radius: var(--selectors_border_radius);
     appearance: none;
     width: 100%;
-    background-color: var(--clr_btn_bg);
+    background-color: var(--clr_sub_main);
 
     transition: filter var(--transition_fast);
     
-    & > option { background-color: var(--clr_btn_bg); }
+    & > option { background-color: var(--clr_sub_main); }
 }
 
 .units_selector_section,
@@ -159,7 +159,7 @@ main {
 .clear_button {
     margin-top: calc(var(--fs_medium) * 2.5);
     width: 100%;
-    background-color: var(--clr_btn_bg);
+    background-color: var(--clr_sub_main);
     padding: var(--ac_button_padding);
     outline: none;
     border: var(--ac_button_border);
@@ -179,6 +179,11 @@ main {
 
 
 
+@media (width >= 1000px) {
+    :is(.conversion_category_selector, .units_selector, .clear_button):hover {
+        background-color: var(--clr_sub_alt_main);
+    }
+}
 
 @media (width <= 800px) {
     :root {
