@@ -58,6 +58,18 @@ nav {
     padding: 0.2em;
 }
 
+.nav_right > svg {
+    cursor: pointer;
+    fill: var(--clr_txt);
+    width: 1.3em;
+    aspect-ratio: 1;
+}
+
+.nav_right > .dark_svg { display: none; }
+
+.nav_right.dark > .dark_svg { display: inline; }
+.nav_right.dark > .light_svg { display: none; }
+
 a.active_nav::after {
     content: '';
     position: absolute;
