@@ -27,7 +27,7 @@
 }
 
 nav {
-    z-index: 999;
+    z-index: 99;
     background-color: var(--clr_bg);
     display: flex;
     align-items: center;
@@ -59,6 +59,7 @@ a.active_nav::after {
 }
 
 main {
+    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -177,12 +178,6 @@ main {
 
 
 
-
-@media (width >= 1000px) {
-    :is(.conversion_category_selector, .units_selector, .clear_button):hover {
-        filter: brightness(0.9);
-    }
-}
 
 
 @media (width <= 800px) {
