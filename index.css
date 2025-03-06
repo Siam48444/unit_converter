@@ -24,6 +24,11 @@
     background-color: var(--clr_bg);
     width: var(--main_width);
     margin: auto;
+
+    /* For fade animation done in javascript */
+    opacity: 0;
+
+    transition: opacity 500ms;
 }
 
 nav {
@@ -33,6 +38,12 @@ nav {
     align-items: center;
     justify-content: space-between;
     padding: var(--nav_padding);
+}
+
+.nav_middle {
+    display: flex;
+    align-items: start;
+    justify-content: center;
 }
 
 .nav_middle li {
@@ -86,7 +97,7 @@ main {
     width: 100%;
     background-color: var(--clr_sub_main);
 
-    transition: filter var(--transition_fast);
+    transition: filter 100ms;
     
     & > option { background-color: var(--clr_sub_main); }
 }
