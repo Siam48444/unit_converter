@@ -106,7 +106,7 @@ main {
 }
 
 .equal_sign > svg {
-    width: 65%;
+    width: 60%;
     stroke: var(--clr_txt); 
     stroke-width: 0.4em;
 }
