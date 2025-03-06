@@ -9,7 +9,6 @@
     --selectors_border_radius: 10em;
     
     --input_padding: clamp(1em, 2.5vmin, 1.5em) clamp(0.5em, 1.5vmin, 1em);
-    --input_border: none;
     
     --equal_sign_width: calc(var(--fs_medium) * 1.5);
 
@@ -125,7 +124,6 @@ main {
 
 .input_box,
 .output_box {
-    position: relative;
     font-family: "Inter_Medium", sans-serif;
     font-size: var(--fs_medium);
     color: var(--clr_txt);
@@ -134,7 +132,7 @@ main {
     background-color: var(--clr_bg);
     outline: none;
     border: none;
-    border-bottom: var(--input_border);
+    border-bottom: solid 0.05em var(--clr_main);
 }
 
 :is(.input_box, .output_box)::placeholder { color: var(--clr_sub); }
