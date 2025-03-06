@@ -35,11 +35,11 @@ nav {
     padding: var(--nav_padding);
 }
 
-.nav_middle ul li {
+.nav_middle li {
     list-style: none;
 }
 
-.nav_middle ul li a {
+.nav_middle li a {
     text-decoration: none;
     color: var(--clr_txt);
     font-family: "Inter_Medium", sans-serif;
@@ -76,7 +76,7 @@ main {
 .units_selector {
     font-family: "Inter_Medium", sans-serif;
     font-size: var(--fs_normal);
-    color: var(--clr_bg); 
+    color: var(--clr_txt); 
     padding: var(--selectors_padding); 
     cursor: pointer;  
     outline: none;
@@ -84,11 +84,11 @@ main {
     border-radius: var(--selectors_border_radius);
     appearance: none;
     width: 100%;
-    background-color: var(--clr_main);
+    background-color: var(--clr_btn_bg);
 
     transition: filter var(--transition_fast);
     
-    & > option { background-color: var(--clr_main); }
+    & > option { background-color: var(--clr_btn_bg); }
 }
 
 .units_selector_section,
@@ -107,7 +107,7 @@ main {
 
 .equal_sign > svg {
     width: 65%;
-    stroke: var(--clr_txt); 
+    stroke: var(--clr_main); 
     stroke-width: 0.4em;
 }
 
@@ -148,7 +148,7 @@ main {
     content: "";
     width: calc(var(--fs_normal) * 0.8);
     aspect-ratio: 1;
-    background-color: var(--clr_bg);
+    background-color: var(--clr_txt);
     top: 50%;
     right: clamp(1em, 2.5vmin, 1.2em);
     transform: translateY(-50%);
@@ -159,14 +159,14 @@ main {
 .clear_button {
     margin-top: calc(var(--fs_medium) * 2.5);
     width: 100%;
-    background-color: var(--clr_main);
+    background-color: var(--clr_btn_bg);
     padding: var(--ac_button_padding);
     outline: none;
     border: var(--ac_button_border);
     border-radius: var(--ac_button_border_radius);
     font-family: "Inter_Medium", sans-serif;
     font-size: var(--fs_normal);
-    color: var(--clr_bg);
+    color: var(--clr_main);
     cursor: pointer;
 
     transition: filter var(--transition_fast);
