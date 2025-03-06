@@ -150,7 +150,7 @@ main {
     aspect-ratio: 1;
     background-color: var(--clr_txt);
     top: 50%;
-    right: clamp(1em, 2.5vmin, 1.2em);
+    right: clamp(1.2em, 3vmin, 1.8em);
     transform: translateY(-50%);
     clip-path: polygon(50% 75%, 0 30%, 100% 30%);
 }
