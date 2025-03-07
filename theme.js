@@ -3,6 +3,8 @@ const main = document.getElementById("main");
 const whole_container = document.getElementById("whole_container");
 const unit_converter_app = document.getElementById("unit_converter_app");
 
+const nav_right = document.getElementById("nav_right");
+
 
 // Adjust heights whenever the window is resized
 window.addEventListener("resize", adjust_heights); 
@@ -10,7 +12,7 @@ window.addEventListener("resize", adjust_heights);
 // Adjust heights when the page loads
 window.addEventListener("DOMContentLoaded", () => {
     adjust_heights();
-    fade_animation();
+    whole_container.style.opacity = "1"; // Fade animation after the page loads
 }); 
 
 
@@ -28,7 +30,7 @@ function adjust_heights() {
 
 
 
-// Fade animation after the page loads
-function fade_animation() {
-    whole_container.style.opacity = "1";
-}
+// Theme changing interaction
+nav_right.addEventListener("click", () => {
+    document.body.classList.toggle("dark");
+});

@@ -54,17 +54,20 @@ nav {
     padding: 0.2em;
 }
 
-.nav_right > svg {
+.nav_right {
     cursor: pointer;
+}
+
+.nav_right > svg {
     fill: var(--clr_txt);
-    width: 1.3em;
+    width: calc(var(--fs_normal) * 1.5);
     aspect-ratio: 1;
 }
 
 .nav_right > .dark_svg { display: none; }
 
-.nav_right.dark > .dark_svg { display: inline; }
-.nav_right.dark > .light_svg { display: none; }
+body.dark  .dark_svg { display: inline; }
+body.dark  .light_svg { display: none; }
 
 a.active_nav::after {
     content: '';
@@ -140,7 +143,7 @@ main {
     background-color: var(--clr_bg);
     outline: none;
     border: none;
-    border-bottom: solid 0.05em var(--clr_main);
+    border-bottom: solid 0.1em var(--clr_main);
 }
 
 :is(.input_box, .output_box)::placeholder { color: var(--clr_sub); }
