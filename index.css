@@ -6,10 +6,9 @@
     --selectors_padding: clamp(0.8em, 2.2vmin, 1.1em) clamp(1.2em, 3vmin, 1.8em);
     --input_padding: clamp(1em, 2.5vmin, 1.5em) clamp(0.5em, 1.5vmin, 1em);
     --theme_button_padding: clamp(0.6em, 1.5vmin, 0.9em);
+    --ac_button_padding: clamp(0.8em, 2.2vmin, 1.1em) clamp(1.2em, 3vmin, 1.8em);
     
     --equal_sign_width: calc(var(--fs_medium) * 1.5);
-
-    --ac_button_padding: clamp(0.8em, 2.2vmin, 1.1em) clamp(1.2em, 3vmin, 1.8em);
 }
 
 
@@ -22,11 +21,16 @@
     /* For fade animation done in javascript */
     opacity: 0;
 
-    transition: opacity 500ms;
+    transition:
+        opacity 500ms,
+        background-color var(--transition_fast);
 }
 
 main {
     background-color: var(--clr_bg);
+
+    transition: 
+        background-color var(--transition_fast);
 }
 
 nav {
@@ -36,6 +40,9 @@ nav {
     align-items: center;
     justify-content: space-between;
     padding: var(--nav_padding);
+
+    transition:
+        background-color var(--transition_fast);
 }
 
 .nav_middle {
@@ -58,7 +65,7 @@ nav {
     border-radius: 5em;
     background-color: transparent;
 
-    transition: background-color 200ms;
+    transition: background-color var(--transition_fast);
 
     &:hover { background-color: var(--clr_sub_main); }
 }
@@ -126,7 +133,7 @@ main {
     width: 100%;
     background-color: var(--clr_sub_main);
 
-    transition: background-color 200ms;
+    transition: background-color var(--transition_fast);
     
     & > option { background-color: var(--clr_sub_main); }
 }
