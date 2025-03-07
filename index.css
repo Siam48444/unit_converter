@@ -3,10 +3,9 @@
     --input_width: clamp(10em, 30vw, 25em);
 
     --nav_padding: clamp(0.6em, 3vmin, 1em) clamp(1em, 4vmin, 1.5em);
-    
     --selectors_padding: clamp(0.8em, 2.2vmin, 1.1em) clamp(1.2em, 3vmin, 1.8em);
-    
     --input_padding: clamp(1em, 2.5vmin, 1.5em) clamp(0.5em, 1.5vmin, 1em);
+    --theme_button_padding: clamp(0.6em, 2vmin, 0.9em);
     
     --equal_sign_width: calc(var(--fs_medium) * 1.5);
 
@@ -56,11 +55,20 @@ nav {
 
 .nav_right {
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--clr_sub_main);
+    padding: var(--theme_button_padding);
+    border-radius: 10em;
+    aspect-ratio: 1;
 }
+
+.nav_right:hover { background-color: var(--clr_sub_alt_main); }
 
 .nav_right > svg {
     fill: var(--clr_txt);
-    width: calc(var(--fs_normal) * 1.5);
+    width: calc(var(--fs_normal) * 1.3);
     aspect-ratio: 1;
 }
 
