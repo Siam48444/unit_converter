@@ -20,10 +20,10 @@ window.addEventListener("DOMContentLoaded", () => {
 // Function to adjust the heights of different sections
 function adjust_heights() { 
     // Adjust the main height
-    main.style.height = `${window.innerHeight - nav.clientHeight}px`;
+    main.style.height = `${window.innerHeight - nav.offsetHeight}px`;
 
     // Control the edge cases
-    if (unit_converter_app.getBoundingClientRect().top < nav.clientHeight * 2.2) {
+    if (unit_converter_app.getBoundingClientRect().top < nav.offsetHeight * 2.2) {
         main.style.height = "auto";
     }
 }

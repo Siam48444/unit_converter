@@ -40,6 +40,7 @@ nav {
     align-items: center;
     justify-content: space-between;
     padding: var(--nav_padding);
+    border-bottom: solid 0.1em var(--clr_sub_alt);
 
     transition:
         background-color var(--transition_fast);
@@ -92,7 +93,7 @@ nav {
 
 .nav_right > svg {
     fill: var(--clr_txt);
-    width: calc(var(--fs_normal) * 1.3);
+    width: calc(var(--fs_normal) * 1.2);
     aspect-ratio: 1;
 
     transition: fill var(--transition_fast);
@@ -246,12 +247,6 @@ main {
 
 @media (width <= 800px) {
     :root {
-        --input_width: 45vw;
-    }
-}
-
-@media (width <= 500px) {
-    :root {
-        --input_width: 41vw;
+        --input_width: 43vw;
     }
 }
