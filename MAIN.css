@@ -32,7 +32,7 @@
     --fs_normal: clamp(0.9em, 1.5vmin, 1.2em);
     --fs_medium: clamp(1.3em, 3vmin, 1.8em);
 
-    --transition_fast: 200ms;
+    --transition_fast: 2000ms;
     --transition_medium: 500ms;
 }
 
@@ -43,7 +43,7 @@ body.dark {
     --clr_sub_main: #2c303d;
     --clr_sub_alt_main: #373c4d;
     --clr_sub: #888888;
-    --clr_sub_alt: #5a5a5a;
+    --clr_sub_alt: #4d4d4d;
 }
 
 

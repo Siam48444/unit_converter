@@ -49,6 +49,7 @@ nav {
     display: flex;
     align-items: start;
     justify-content: center;
+    gap: 1em;
 }
 
 .nav_middle li {
@@ -60,15 +61,20 @@ nav {
     color: var(--clr_txt);
     font-family: "Inter_Medium", sans-serif;
     font-size: var(--fs_normal);
-    position: relative;
-    padding: 0.4em 0.9em;
+    padding: 0.4em 1em;
     border-radius: 5em;
 
     transition: 
         color var(--transition_fast),
         background-color var(--transition_fast);
+}
 
-    &:hover { background-color: var(--clr_sub_alt); }
+.nav_middle li a:not(.active_nav):hover {
+    background-color: var(--clr_sub_alt);
+}
+
+.nav_middle li a.active_nav {
+    background-color: var(--clr_sub_main);
 }
 
 .nav_right {
@@ -98,15 +104,6 @@ nav {
 body.dark  .dark_svg { display: inline; }
 body.dark  .light_svg { display: none; }
 
-a.active_nav::after {
-    content: '';
-    position: absolute;
-    inset: auto 0 -30% 0;
-    background-color: var(--clr_main);
-    height: 0.1em;
-    border-radius: 10em;
-    pointer-events: none;
-}
 
 main {
     height: 100vh;
