@@ -63,11 +63,12 @@ nav {
     position: relative;
     padding: 0.4em 0.9em;
     border-radius: 5em;
-    background-color: transparent;
 
-    transition: background-color var(--transition_fast);
+    transition: 
+        color var(--transition_fast),
+        background-color var(--transition_fast);
 
-    &:hover { background-color: var(--clr_sub_main); }
+    &:hover { background-color: var(--clr_sub_alt); }
 }
 
 .nav_right {
@@ -79,9 +80,9 @@ nav {
     padding: var(--theme_button_padding);
     border-radius: 10em;
     aspect-ratio: 1;
-}
 
-.nav_right:hover { background-color: var(--clr_sub_alt_main); }
+    transition: background-color var(--transition_fast);
+}
 
 .nav_right > svg {
     fill: var(--clr_txt);
@@ -91,6 +92,7 @@ nav {
 
 .nav_right .dark_svg { display: none; }
 
+/* Change the theme logo based on the theme */
 body.dark  .dark_svg { display: inline; }
 body.dark  .light_svg { display: none; }
 
@@ -115,7 +117,6 @@ main {
 
 .unit_converter_app {
     position: relative;
-    background-color: var(--clr_bg);
     padding-inline: 1em;
 }
 
@@ -133,7 +134,9 @@ main {
     width: 100%;
     background-color: var(--clr_sub_main);
 
-    transition: background-color var(--transition_fast);
+    transition: 
+        color var(--transition_fast),
+        background-color var(--transition_fast);
     
     & > option { background-color: var(--clr_sub_main); }
 }
@@ -227,7 +230,7 @@ main {
 
 
 @media (width >= 1000px) {
-    :is(.conversion_category_selector, .units_selector, .clear_button):hover {
+    :is(.conversion_category_selector, .units_selector, .clear_button, .nav_right):hover {
         background-color: var(--clr_sub_alt_main);
     }
 }
