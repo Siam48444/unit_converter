@@ -33,6 +33,7 @@
     --fs_medium: clamp(1.3em, 3vmin, 1.8em);
 
     --transition_fast: 200ms;
+    --transition_medium: 500ms;
 }
 
 body.dark {

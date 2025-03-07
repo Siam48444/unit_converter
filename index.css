@@ -22,7 +22,7 @@
     opacity: 0;
 
     transition:
-        opacity 500ms,
+        opacity var(--transition_medium),
         background-color var(--transition_fast);
 }
 
@@ -88,6 +88,8 @@ nav {
     fill: var(--clr_txt);
     width: calc(var(--fs_normal) * 1.3);
     aspect-ratio: 1;
+
+    transition: fill var(--transition_fast);
 }
 
 .nav_right .dark_svg { display: none; }
@@ -159,6 +161,8 @@ main {
     width: 60%;
     stroke: var(--clr_txt); 
     stroke-width: 0.4em;
+
+    transition: stroke var(--transition_fast);
 }
 
 .input_box,
@@ -168,10 +172,14 @@ main {
     color: var(--clr_txt);
     padding: var(--input_padding);
     text-align: center;
-    background-color: var(--clr_bg);
+    background-color: transparent;
     outline: none;
     border: none;
     border-bottom: solid 0.1em var(--clr_main);
+
+    transition: 
+        border-color var(--transition_fast),
+        color var(--transition_fast);
 }
 
 :is(.input_box, .output_box)::placeholder { color: var(--clr_sub); }
@@ -203,6 +211,8 @@ main {
     right: clamp(1.2em, 3vmin, 1.8em);
     transform: translateY(-50%);
     clip-path: polygon(50% 75%, 0 30%, 100% 30%);
+
+    transition: background-color var(--transition_fast);
 }
 
 
@@ -219,7 +229,9 @@ main {
     color: var(--clr_main);
     cursor: pointer;
 
-    transition: filter var(--transition_fast);
+    transition:
+        color var(--transition_fast),
+        background-color var(--transition_fast);
 }
 
 
