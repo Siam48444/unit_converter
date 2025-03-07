@@ -36,4 +36,7 @@ nav_right.addEventListener("click", () => {
 
     // Store the theme in the local storage
     localStorage.setItem("theme", "dark");
+    if (document.body.classList.contains("dark")) {
+        localStorage.setItem("theme", null);
+    }
 });
