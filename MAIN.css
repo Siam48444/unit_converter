@@ -20,25 +20,6 @@
 
 
 
-*, 
-*::after, 
-*::before {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body,
-html {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    position: relative;
-    background-color: var(--clr_bg);
-}
-
-
-
 :root {
     --clr_bg: #ffffff;
     --clr_txt: #001d35;
@@ -62,6 +43,22 @@ body.dark {
 
 
 
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    position: relative;
+    background-color: var(--clr_bg);
+}
 
 
 

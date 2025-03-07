@@ -25,6 +25,10 @@
     transition: opacity 500ms;
 }
 
+main {
+    background-color: var(--clr_bg);
+}
+
 nav {
     z-index: 99;
     background-color: var(--clr_bg);
