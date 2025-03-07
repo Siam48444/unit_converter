@@ -33,4 +33,7 @@ function adjust_heights() {
 // Theme changing interaction
 nav_right.addEventListener("click", () => {
     document.body.classList.toggle("dark");
+
+    // Store the theme in the local storage
+    localStorage.setItem("theme", "dark");
 });
