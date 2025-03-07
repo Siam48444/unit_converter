@@ -13,8 +13,6 @@ window.addEventListener("resize", adjust_heights);
 window.addEventListener("DOMContentLoaded", () => {
     adjust_heights();
     whole_container.style.opacity = "1"; // Fade animation after the page loads
-
-    update_theme();
 }); 
 
 
@@ -33,15 +31,12 @@ function adjust_heights() {
 
 
 // Check for the theme when the page loads
-function update_theme() {
-    const theme = localStorage.getItem("theme");
-
-    if (theme) {
-        document.body.classList.add("dark");
-    }
-    else {
-        document.body.classList.remove("dark");
-    }
+const theme = localStorage.getItem("theme");
+if (theme === "dark") {
+    document.body.classList.add("dark");
+}
+else {
+    document.body.classList.remove("dark");
 }
 
 
@@ -51,8 +46,10 @@ nav_right.addEventListener("click", () => {
     document.body.classList.toggle("dark");
 
     // Store the theme in the local storage
-    localStorage.setItem("theme", "dark");
     if (document.body.classList.contains("dark")) {
-        localStorage.setItem("theme", null);
+        localStorage.setItem("theme", "dark");
+    }
+    else {
+        localStorage.setItem("theme", "light");
     }
 });
