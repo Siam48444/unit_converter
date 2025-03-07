@@ -13,6 +13,8 @@ window.addEventListener("resize", adjust_heights);
 window.addEventListener("DOMContentLoaded", () => {
     adjust_heights();
     whole_container.style.opacity = "1"; // Fade animation after the page loads
+
+    update_theme();
 }); 
 
 
@@ -25,6 +27,20 @@ function adjust_heights() {
     // Control the edge cases
     if (unit_converter_app.getBoundingClientRect().top < nav.clientHeight * 2.2) {
         main.style.height = "auto";
+    }
+}
+
+
+
+// Check for the theme when the page loads
+function update_theme() {
+    const theme = localStorage.getItem("theme");
+
+    if (theme) {
+        document.body.classList.add("dark");
+    }
+    else {
+        document.body.classList.remove("dark");
     }
 }
 
