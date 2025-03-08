@@ -22,30 +22,6 @@ else {
 nav_right.addEventListener("click", change_theme);
 
 
-// Adjust heights whenever the window is resized
-window.addEventListener("resize", adjust_heights); 
-
-// Adjust heights when the page loads
-window.addEventListener("DOMContentLoaded", () => {
-    adjust_heights();
-    whole_container.style.opacity = "1"; // Fade animation after the page loads
-}); 
-
-    
-    
-    
-// Function to adjust the heights of different sections
-function adjust_heights() { 
-    // Adjust the main height
-    main.style.height = `${window.innerHeight - nav.offsetHeight}px`;
-
-    // Control the edge cases
-    if (unit_converter_app.getBoundingClientRect().top < nav.offsetHeight * 2.2) {
-        main.style.height = "auto";
-    }
-}
-
-
 
 // Theme changing interaction
 function change_theme() {
@@ -60,3 +36,30 @@ function change_theme() {
         localStorage.setItem("theme", "light");
     }
 };
+
+
+
+// Adjust heights whenever the window is resized
+window.addEventListener("resize", adjust_heights); 
+
+// Adjust heights when the page loads
+window.addEventListener("DOMContentLoaded", () => {
+    adjust_heights();
+    whole_container.style.opacity = "1"; // Fade animation after the page loads
+}); 
+    
+
+    
+// Function to adjust the heights of different sections
+function adjust_heights() { 
+    // Adjust the main height
+    main.style.height = `${window.innerHeight - nav.offsetHeight}px`;
+
+    // Control the edge cases
+    if (unit_converter_app.getBoundingClientRect().top < nav.offsetHeight * 2.2) {
+        main.style.height = "auto";
+    }
+}
+
+
+

@@ -63,9 +63,6 @@ html {
     box-sizing: border-box;
     position: relative;
     background-color: var(--clr_bg);
-
-    transition: 
-        background-color var(--transition_fast);
 }
 
 
