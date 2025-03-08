@@ -19,12 +19,7 @@ else {
 
 
 // Change the theme 
-nav_right.addEventListener("click", change_theme);
-
-
-
-// Theme changing interaction
-function change_theme() {
+nav_right.addEventListener("click", () => {
     // Toggle the theme
     document.body.classList.toggle("dark");
 
@@ -35,7 +30,7 @@ function change_theme() {
     else {
         localStorage.setItem("theme", "light");
     }
-};
+});
 
 
 
@@ -45,7 +40,10 @@ window.addEventListener("resize", adjust_heights);
 // Adjust heights when the page loads
 window.addEventListener("DOMContentLoaded", () => {
     adjust_heights();
-    whole_container.style.opacity = "1"; // Fade animation after the page loads
+
+    // Fade animation after the page loads
+    whole_container.style.opacity = "1"; 
+    whole_container.style.pointerEvents = "all";
 }); 
     
 

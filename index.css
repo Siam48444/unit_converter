@@ -20,6 +20,7 @@
 
     /* For fade animation done in javascript */
     opacity: 0;
+    pointer-events: none;
 
     transition:
         opacity var(--transition_medium),
@@ -105,7 +106,7 @@ nav {
     opacity: 0;
 
     transition: 
-    rotate var(--transition_fast),
+    rotate var(--transition_medium),
     opacity var(--transition_fast),
     fill var(--transition_fast);
 }
@@ -120,7 +121,7 @@ nav {
 /* Change the theme logo based on the theme */
 body:not(.dark) .light_svg { 
     opacity: 1;
-    rotate: 360deg;
+    rotate: -360deg;
 }
 body.dark .dark_svg { 
     opacity: 1;
