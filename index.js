@@ -17,6 +17,8 @@ var output_unit_selector = document.querySelector("[data-output_unit_selector]")
 const input_box = document.getElementById("input_box");
 const output_box = document.getElementById("output_box");
 
+const formula_text = document.getElementById("formula_text");
+
 const clear_button = document.getElementById("clear_button");
 
 
@@ -99,6 +101,9 @@ function update_input(is_reversed = false) {
             output_box.value = covnerted_value;
         }
     }
+
+    // Update the formula incstruction
+    if (formula_text) update_formula(conversion_factor);
 }
 
 
@@ -133,3 +138,10 @@ function clear_inputs() {
     input_box.placeholder = "Input";
     output_box.placeholder = "Output";
 };
+
+
+
+// Update the formula incstruction
+function update_formula(foctor) {
+    return;
+}

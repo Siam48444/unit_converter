@@ -275,6 +275,12 @@ main {
     border-radius: 10em;
 }
 
+.formula_text {
+    color: var(--clr_txt);
+    font-family: "Inter_Regular", sans-serif;
+    font-size: var(--fs_normal);
+}
+
 
 
 
