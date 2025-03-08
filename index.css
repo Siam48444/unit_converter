@@ -203,10 +203,6 @@ main {
     transition: background-color var(--transition_fast);
 }
 
-.input_output_wrapper:has(:is(.input_box, .output_box):focus-visible)::after {
-    background-color: var(--clr_main);
-}
-
 .input_box,
 .output_box {
     width: 100%;
@@ -217,9 +213,14 @@ main {
     text-align: center;
     background-color: transparent;
     border: none;
+    outline: none;
 
     transition: 
         color var(--transition_fast);
+}
+
+.input_output_wrapper:has(:is(.input_box, .output_box):focus-visible)::after {
+    background-color: var(--clr_main);
 }
 
 :is(.input_box, .output_box)::placeholder { color: var(--clr_sub); }
