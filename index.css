@@ -17,9 +17,9 @@
 
 .whole_container {
     position: relative;
-    background-color: var(--clr_bg);
     width: var(--main_width);
     margin: auto;
+    background-color: var(--clr_bg);
     
     /* For fade animation done in javascript */
     opacity: 0;
@@ -342,6 +342,6 @@ body.dark .dark_svg {
 
 @media (height <= 500px) {
     main {
-        height: max-content;
+        height: auto;
     }
 }
