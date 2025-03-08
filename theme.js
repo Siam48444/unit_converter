@@ -6,6 +6,22 @@ const unit_converter_app = document.getElementById("unit_converter_app");
 const nav_right = document.getElementById("nav_right");
 
 
+
+// Check for the theme when the page loads
+const theme = localStorage.getItem("theme");
+if (theme === "dark") {
+    document.body.classList.add("dark");
+}
+else {
+    document.body.classList.remove("dark");
+}
+
+
+
+// Change the theme 
+nav_right.addEventListener("click", change_theme);
+
+
 // Adjust heights whenever the window is resized
 window.addEventListener("resize", adjust_heights); 
 
@@ -15,8 +31,9 @@ window.addEventListener("DOMContentLoaded", () => {
     whole_container.style.opacity = "1"; // Fade animation after the page loads
 }); 
 
-
-
+    
+    
+    
 // Function to adjust the heights of different sections
 function adjust_heights() { 
     // Adjust the main height
@@ -30,19 +47,9 @@ function adjust_heights() {
 
 
 
-// Check for the theme when the page loads
-const theme = localStorage.getItem("theme");
-if (theme === "dark") {
-    document.body.classList.add("dark");
-}
-else {
-    document.body.classList.remove("dark");
-}
-
-
-
 // Theme changing interaction
-nav_right.addEventListener("click", () => {
+function change_theme() {
+    // Toggle the theme
     document.body.classList.toggle("dark");
 
     // Store the theme in the local storage
@@ -52,4 +59,4 @@ nav_right.addEventListener("click", () => {
     else {
         localStorage.setItem("theme", "light");
     }
-});
+};
