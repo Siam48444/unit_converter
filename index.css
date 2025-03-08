@@ -199,7 +199,7 @@ main {
     background-color: transparent;
     outline: none;
     border: none;
-    border-bottom: solid 0.1em var(--clr_sub);
+    border-bottom: solid 0.1em var(--clr_sub_main);
 
     transition: 
         border-color var(--transition_fast),
@@ -260,6 +260,10 @@ main {
 
 .formula_section {
     margin-top: var(--fs_medium);
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 1em;
 }
 
 .formula_icon {
