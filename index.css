@@ -1,6 +1,6 @@
 :root {
     --main_width: min(100%, 2000px);
-    --input_width: clamp(10em, 30vw, 25em);
+    --input_width: clamp(10em, 30vw, 33em);
 
     --nav_padding: clamp(0.6em, 1.2vmin, 1em) clamp(1em, 4vmin, 1.5em);
     --selectors_padding: clamp(0.8em, 2.2vmin, 1.1em) clamp(1.2em, 3vmin, 1.8em);
@@ -190,8 +190,28 @@ main {
     transition: stroke var(--transition_fast);
 }
 
+.input_output_wrapper {
+    position: relative;
+}
+
+.input_output_wrapper::after {
+    position: absolute;
+    content: "";
+    inset: auto 0 0 0;
+    height: 0.2em;
+    border-radius: 10em;
+    background-color: var(--clr_sub_main);
+
+    transition: background-color var(--transition_fast);
+}
+
+.input_output_wrapper:has(:is(.input_box, .output_box):focus-visible)::after {
+    background-color: var(--clr_main);
+}
+
 .input_box,
 .output_box {
+    width: 100%;
     font-family: "Inter_Medium", sans-serif;
     font-size: var(--fs_medium);
     color: var(--clr_txt);
@@ -200,14 +220,11 @@ main {
     background-color: transparent;
     outline: none;
     border: none;
-    border-bottom: solid 0.1em var(--clr_sub_main);
 
     transition: 
-        border-color var(--transition_fast),
         color var(--transition_fast);
 }
 
-:is(.input_box, .output_box):focus-visible { border-color: var(--clr_main); }
 :is(.input_box, .output_box)::placeholder { color: var(--clr_sub); }
 
 
@@ -230,6 +247,7 @@ main {
 :is(.conversion_category_selector_wrapper, .units_selector_wrapper)::after {
     position: absolute;
     content: "";
+    pointer-events: none;
     width: calc(var(--fs_normal) * 0.8);
     aspect-ratio: 1;
     background-color: var(--clr_txt);
@@ -274,8 +292,13 @@ main {
     padding: var(--formula_padding);
     border-radius: 10em 0 0 10em;
     border: solid 0.1em var(--clr_main);
-}
 
+    transition: 
+        border-color var(--transition_fast),
+        color var(--transition_fast),
+        background-color var(--transition_fast);
+    }
+    
 .formula_text {
     color: var(--clr_txt);
     font-family: "Inter_Regular", sans-serif;
@@ -283,6 +306,11 @@ main {
     padding: var(--formula_padding);
     border-radius: 0 10em 10em 0;
     border: solid 0.1em var(--clr_main);
+    
+    transition: 
+        border-color var(--transition_fast),
+        color var(--transition_fast),
+        background-color var(--transition_fast);
 }
 
 

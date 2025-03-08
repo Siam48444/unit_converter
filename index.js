@@ -145,7 +145,7 @@ function clear_inputs() {
 
 // Update the formula incstruction
 function update_formula(factor) {
-    const category = conversion_category_selector.value;
+    const category = conversion_category_selector.value.replace("_", " ");
 
     if (factor === 1) {
         formula_text.innerText = `Both unit values are the same`;
