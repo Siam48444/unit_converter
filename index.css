@@ -72,7 +72,7 @@ nav {
     display: flex;
     align-items: start;
     justify-content: center;
-    gap: 1em;
+    gap: 0.5em;
 }
 
 .nav_middle li {
@@ -82,23 +82,26 @@ nav {
 .nav_middle li a {
     text-decoration: none;
     color: var(--clr_txt);
-    font-family: "Inter_Medium", sans-serif;
     font-size: var(--fs_normal);
     padding: 0.4em 1em;
     border-radius: 5em;
     text-align: center;
-
+    
     transition: 
-        color var(--transition_fast),
-        background-color var(--transition_fast);
+    color var(--transition_fast),
+    background-color var(--transition_fast);
+}
+
+.nav_middle li a:not(.active_nav) {
+    font-family: "Inter_Regular", sans-serif;
+}
+.nav_middle li a.active_nav {
+    font-family: "Inter_Medium", sans-serif;
+    background-color: var(--clr_sub_main);
 }
 
 .nav_middle li a:not(.active_nav):hover {
     background-color: var(--clr_sub_alt);
-}
-
-.nav_middle li a.active_nav {
-    background-color: var(--clr_sub_main);
 }
 
 .nav_right {
