@@ -103,7 +103,9 @@ function update_input(is_reversed = false) {
     }
 
     // Update the formula incstruction
-    if (formula_text) update_formula(conversion_factor);
+    if (formula_text) {
+        update_formula(conversion_factor);
+    }
 }
 
 
@@ -142,6 +144,14 @@ function clear_inputs() {
 
 
 // Update the formula incstruction
-function update_formula(foctor) {
-    return;
+function update_formula(factor) {
+    const category = conversion_category_selector.value;
+
+    if (factor > 0) {
+        formula_text.innerText = `Multiply the ${category} value by ${factor}`;
+        console.log(factor)
+    }
+    if (factor < 0) {
+        formula_text.innerText = `Divide the ${category} value by ${1 / factor}`;
+    }
 }
