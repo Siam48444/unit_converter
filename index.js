@@ -147,11 +147,13 @@ function clear_inputs() {
 function update_formula(factor) {
     const category = conversion_category_selector.value;
 
-    if (factor > 0) {
-        formula_text.innerText = `Multiply the ${category} value by ${factor}`;
-        console.log(factor)
+    if (factor === 1) {
+        formula_text.innerText = `Both unit values are the same`;
     }
-    if (factor < 0) {
+    else if (factor > 1) {
+        formula_text.innerText = `Multiply the ${category} value by ${factor}`;
+    }
+    else {
         formula_text.innerText = `Divide the ${category} value by ${1 / factor}`;
     }
 }
