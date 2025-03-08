@@ -2,8 +2,6 @@
     --main_width: min(100%, 2000px);
     --input_width: clamp(10em, 30vw, 33em);
 
-    /* --nav_height: 2em; */
-
     --nav_padding: clamp(0.6em, 1.2vmin, 1em) clamp(1em, 4vmin, 1.5em);
     --selectors_padding: clamp(0.8em, 2.2vmin, 1.1em) clamp(1.2em, 3vmin, 1.8em);
     --input_padding: clamp(1em, 2.5vmin, 1.5em) clamp(0.5em, 1.5vmin, 1em);
@@ -32,8 +30,6 @@
 
 main {
     background-color: var(--clr_bg);
-    /* margin-top: var(--nav_height); */
-    background-color: red;
 
     transition: 
         background-color var(--transition_fast);
@@ -41,10 +37,10 @@ main {
 
 nav {
     position: fixed;
+    width: 100%;
+    margin: auto;
     inset: 0 0 auto 0;
     width: var(--main_width);
-    height: var(--nav_height);
-    margin: auto;
     z-index: 9999;
     background-color: var(--clr_bg);
     display: flex;
@@ -334,10 +330,6 @@ main {
 
 
 @media (width <= 800px) {
-    /* :root {
-        --input_width: 43vw;
-    } */
-
     .unit_converter_app {
         width: 100%;
     }
