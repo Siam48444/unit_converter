@@ -139,6 +139,9 @@ function clear_inputs() {
     // Add input output placeholders
     input_box.placeholder = "Input";
     output_box.placeholder = "Output";
+
+    // Clear the formula text
+    formula_text.innerText = "Input a value to see the result"
 };
 
 
