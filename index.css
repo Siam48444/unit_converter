@@ -85,7 +85,6 @@ nav {
 .nav_right {
     cursor: pointer;
     border: none;
-    outline: none;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -154,7 +153,6 @@ main {
     color: var(--clr_txt); 
     padding: var(--selectors_padding); 
     cursor: pointer;  
-    outline: none;
     border: none;
     border-radius: 10em;
     appearance: none;
@@ -218,7 +216,6 @@ main {
     padding: var(--input_padding);
     text-align: center;
     background-color: transparent;
-    outline: none;
     border: none;
 
     transition: 
@@ -264,7 +261,6 @@ main {
     width: 100%;
     background-color: var(--clr_sub_main);
     padding: var(--ac_button_padding);
-    outline: none;
     border: none;
     border-radius: 10em;
     font-family: "Inter_Medium", sans-serif;
