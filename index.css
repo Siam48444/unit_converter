@@ -143,7 +143,7 @@ main {
 
 .unit_converter_app {
     position: relative;
-    padding-inline: 1em;
+    padding-inline: 0.5em;
 }
 
 .conversion_category_selector,
@@ -326,7 +326,16 @@ main {
 
 
 @media (width <= 800px) {
-    :root {
+    /* :root {
         --input_width: 43vw;
+    } */
+
+    .unit_converter_app {
+        width: 100%;
+    }
+
+    .units_selector_section,
+    .input_output_section {
+        grid-template-columns: 1fr 0.18fr 1fr;
     }
 }
