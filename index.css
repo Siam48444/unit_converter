@@ -7,6 +7,7 @@
     --input_padding: clamp(1em, 2.5vmin, 1.5em) clamp(0.5em, 1.5vmin, 1em);
     --theme_button_padding: clamp(0.7em, 1.8vmin, 0.9em);
     --ac_button_padding: clamp(0.8em, 2.2vmin, 1.1em) clamp(1.2em, 3vmin, 1.8em);
+    --formula_padding: clamp(0.3em, 0.5vmin, 0.5em) clamp(0.8em, 1vmin, 1.1em);
     
     --equal_sign_width: calc(var(--fs_medium) * 1.5);
 }
@@ -263,7 +264,6 @@ main {
     display: flex;
     align-items: center;
     justify-content: start;
-    gap: 1em;
 }
 
 .formula_icon {
@@ -271,14 +271,18 @@ main {
     color: var(--clr_bg);
     font-family: "Inter_Medium", sans-serif;
     font-size: var(--fs_normal);
-    padding: 0.4em 1em;
-    border-radius: 10em;
+    padding: var(--formula_padding);
+    border-radius: 10em 0 0 10em;
+    border: solid 0.1em var(--clr_main);
 }
 
 .formula_text {
     color: var(--clr_txt);
     font-family: "Inter_Regular", sans-serif;
     font-size: var(--fs_normal);
+    padding: var(--formula_padding);
+    border-radius: 0 10em 10em 0;
+    border: solid 0.1em var(--clr_main);
 }
 
 
