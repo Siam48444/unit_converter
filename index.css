@@ -36,6 +36,10 @@ main {
 }
 
 nav {
+    position: fixed;
+    inset: 0 0 auto 0;
+    width: var(--main_width);
+    margin: auto;
     z-index: 99;
     background-color: var(--clr_bg);
     display: flex;

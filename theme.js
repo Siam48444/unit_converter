@@ -7,6 +7,15 @@ const nav_right = document.getElementById("nav_right");
 
 
 
+// Adjust heights when the page loads
+window.addEventListener("DOMContentLoaded", () => {
+    // Fade animation after the page loads
+    whole_container.style.opacity = "1"; 
+    whole_container.style.pointerEvents = "all";
+}); 
+
+
+
 // Check for the theme when the page loads
 const theme = localStorage.getItem("theme");
 if (theme === "dark") {
@@ -31,33 +40,3 @@ nav_right.addEventListener("click", () => {
         localStorage.setItem("theme", "light");
     }
 });
-
-
-
-// Adjust heights whenever the window is resized
-window.addEventListener("resize", adjust_heights); 
-
-// Adjust heights when the page loads
-window.addEventListener("DOMContentLoaded", () => {
-    adjust_heights();
-
-    // Fade animation after the page loads
-    whole_container.style.opacity = "1"; 
-    whole_container.style.pointerEvents = "all";
-}); 
-    
-
-    
-// Function to adjust the heights of different sections
-function adjust_heights() { 
-    // Adjust the main height
-    main.style.height = `${window.innerHeight - nav.offsetHeight}px`;
-
-    // Control the edge cases
-    if (unit_converter_app.getBoundingClientRect().top < nav.offsetHeight * 2.2) {
-        main.style.height = "auto";
-    }
-}
-
-
-
