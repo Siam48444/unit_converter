@@ -96,6 +96,9 @@ nav {
 
 .nav_right > svg {
     fill: var(--clr_txt);
+    stroke: var(--clr_txt);
+    stroke-width: 0.5em;
+    stroke-linecap: round;
     width: calc(var(--fs_normal) * 1.2);
     aspect-ratio: 1;
     position: absolute;
