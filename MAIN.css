@@ -35,6 +35,7 @@ html {
     box-sizing: border-box;
     position: relative;
     background-color: var(--clr_bg);
+    overflow-x: hidden;
 
     transition: background-color var(--transition_fast);
 }
