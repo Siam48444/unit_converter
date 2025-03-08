@@ -65,6 +65,7 @@ nav {
     font-size: var(--fs_normal);
     padding: 0.4em 1em;
     border-radius: 5em;
+    text-align: center;
 
     transition: 
         color var(--transition_fast),
@@ -86,6 +87,7 @@ nav {
     justify-content: center;
     background-color: var(--clr_sub_main);
     padding: var(--theme_button_padding);
+    width: calc(var(--fs_normal) * 2.8);
     border-radius: 10em;
     aspect-ratio: 1;
 
@@ -96,15 +98,26 @@ nav {
     fill: var(--clr_txt);
     width: calc(var(--fs_normal) * 1.2);
     aspect-ratio: 1;
+    position: absolute;
 
-    transition: fill var(--transition_fast);
+    opacity: 0;
+
+    transition: 
+        rotate var(--transition_fast),
+        opacity var(--transition_fast),
+        fill var(--transition_fast);
 }
 
-.nav_right .dark_svg { display: none; }
-
 /* Change the theme logo based on the theme */
-body.dark  .dark_svg { display: inline; }
-body.dark  .light_svg { display: none; }
+body:not(.dark) .light_svg { 
+    opacity: 1;
+    rotate: 360deg;
+}
+body.dark .dark_svg { 
+    opacity: 1;
+    rotate: 360deg;
+}
+
 
 
 main {
