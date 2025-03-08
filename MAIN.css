@@ -20,6 +20,26 @@
 
 
 
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    position: relative;
+    background-color: var(--clr_bg);
+
+    transition: background-color var(--transition_fast);
+}
+
+
 :root {
     --clr_bg: #ffffff;
     --clr_txt: #001d35;
@@ -43,29 +63,12 @@ body.dark {
     --clr_sub_main: #2c303d;
     --clr_sub_alt_main: #3a4052;
     --clr_sub: #888888;
-    --clr_sub_alt: #4d4d4d;
+    --clr_sub_alt: #414141;
 }
 
 
 
-*,
-*::after,
-*::before {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
-body,
-html {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    position: relative;
-    background-color: var(--clr_bg);
-
-    transition: background-color var(--transition_fast);
-}
 
 
 

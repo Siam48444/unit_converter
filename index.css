@@ -83,6 +83,8 @@ nav {
 
 .nav_right {
     cursor: pointer;
+    border: none;
+    outline: none;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -238,9 +240,8 @@ main {
     transition: background-color var(--transition_fast);
 }
 
-
 .clear_button {
-    margin-top: calc(var(--fs_medium) * 3);
+    margin-top: calc(var(--fs_medium) * 2);
     width: 100%;
     background-color: var(--clr_sub_main);
     padding: var(--ac_button_padding);
@@ -257,6 +258,18 @@ main {
         background-color var(--transition_fast);
 }
 
+.formula_section {
+    margin-top: var(--fs_medium);
+}
+
+.formula_icon {
+    background-color: var(--clr_main);
+    color: var(--clr_bg);
+    font-family: "Inter_Medium", sans-serif;
+    font-size: var(--fs_normal);
+    padding: 0.4em 1em;
+    border-radius: 10em;
+}
 
 
 
@@ -269,6 +282,9 @@ main {
         background-color: var(--clr_sub_alt_main);
     }
 }
+
+
+
 
 @media (width <= 800px) {
     :root {
