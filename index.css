@@ -95,10 +95,10 @@ nav {
 }
 
 .nav_middle li a:not(.active_nav) {
-    font-family: "Inter_Regular", sans-serif;
+    font-family: var(--ff_regular);
 }
 .nav_middle li a.active_nav {
-    font-family: "Inter_Medium", sans-serif;
+    font-family: var(--ff_medium);
     background-color: var(--clr_sub_main);
 }
 
@@ -152,7 +152,7 @@ body.dark .dark_svg {
 
 .conversion_category_selector,
 .units_selector {
-    font-family: "Inter_Medium", sans-serif;
+    font-family: var(--ff_medium);
     font-size: var(--fs_normal);
     color: var(--clr_txt); 
     padding: var(--selectors_padding); 
@@ -210,7 +210,7 @@ body.dark .dark_svg {
 .input_box,
 .output_box {
     width: 100%;
-    font-family: "Inter_Medium", sans-serif;
+    font-family: var(--ff_medium);
     font-size: var(--fs_medium);
     color: var(--clr_txt);
     padding: var(--input_padding);
@@ -269,7 +269,7 @@ body.dark .dark_svg {
     padding: var(--ac_button_padding);
     border: none;
     border-radius: 10em;
-    font-family: "Inter_Medium", sans-serif;
+    font-family: var(--ff_medium);
     font-size: var(--fs_normal);
     color: var(--clr_main);
     cursor: pointer;
@@ -290,7 +290,7 @@ body.dark .dark_svg {
 .formula_icon {
     background-color: var(--clr_main);
     color: var(--clr_bg);
-    font-family: "Inter_Medium", sans-serif;
+    font-family: var(--ff_medium);
     font-size: var(--fs_normal);
     padding: var(--formula_padding);
     border-radius: 10em;
@@ -303,7 +303,7 @@ body.dark .dark_svg {
     
 .formula_text {
     color: var(--clr_txt);
-    font-family: "Inter_Regular", sans-serif;
+    font-family: var(--ff_regular);
     font-size: var(--fs_normal);
     
     transition: 
