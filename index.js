@@ -148,18 +148,22 @@ function clear_inputs() {
 
 // Update the formula incstruction
 function update_formula(factor) {
+    // Get the selected conversion category and replace underscores with spaces for readability
     const category = conversion_category_selector.value.replace("_", " ");
 
-    console.log(factor)
-
+    // If the factor is 1, the units are the same, so no conversion is needed
     if (factor === 1) {
         formula_text.innerText = `Both unit values are the same`;
         return;
     }
+
+    // If the factor is greater than 1, multiplication is required
     else if (factor > 1) {
         formula_text.innerText = `Multiply the ${category} value by ${factor}`;
         return;
     }
+
+    // Otherwise, provide an exact division instruction
     else {
         formula_text.innerText = `Divide the ${category} value by ${1 / factor}`;
         return;
