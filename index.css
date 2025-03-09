@@ -26,7 +26,7 @@
     pointer-events: none;
     
     transition:
-        opacity var(--transition_medium),
+        opacity var(--transition_medium) var(--transition_fast),
         background-color var(--transition_fast);
 }
 
@@ -63,7 +63,12 @@ nav {
     padding: var(--nav_padding);
     border-bottom: solid 0.1em var(--clr_sub_alt);
 
+    /* For fade animation done in javascript */
+    opacity: 0;
+    pointer-events: none;
+
     transition:
+        opacity var(--transition_medium) var(--transition_fast),
         border-color var(--transition_fast),
         background-color var(--transition_fast);
 }

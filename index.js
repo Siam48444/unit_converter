@@ -141,7 +141,7 @@ function clear_inputs() {
     output_box.placeholder = "Output";
 
     // Clear the formula text
-    formula_text.innerText = "Input a value to see the result"
+    formula_text.innerText = "Input a value to see the conversion formula"
 };
 
 

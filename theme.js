@@ -11,6 +11,8 @@ window.addEventListener("DOMContentLoaded", () => {
     // Fade animation after the page loads
     whole_container.style.opacity = "1"; 
     whole_container.style.pointerEvents = "all";
+    nav.style.opacity = "1"; 
+    nav.style.pointerEvents = "all";
 }); 
 
 
