@@ -2,7 +2,7 @@
     --main_width: min(100%, 2000px);
     --input_width: clamp(10em, 35vw, 33em);
 
-    --nav_padding: clamp(0.6em, 1.2vmin, 1em) clamp(1em, 4vmin, 1.5em);
+    --nav_padding: clamp(0.9em, 1.2vmin, 1.1em) clamp(1em, 4vmin, 1.5em);
     --selectors_padding: clamp(0.8em, 2.2vmin, 1.1em) clamp(1.2em, 3vmin, 1.8em);
     --input_padding: clamp(1.2em, 3vmin, 1.8em) clamp(0.5em, 1.5vmin, 1em);
     --theme_button_padding: clamp(1.2em, 2.2vmin, 1.3em);
@@ -72,14 +72,13 @@ nav {
 }
 
 .nav_left {
-    background-color: red;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .nav_left > svg {
-    width: calc(var(--fs_normal) * 2.5);
+    width: calc(var(--fs_normal) * 2.2);
     
     /* transition: 
         stroke var(--transition_fast),
@@ -354,10 +353,19 @@ body.dark .dark_svg {
 }
 
 @media (width <= 500px) {
-    .equal_sign>svg {
-        width: 100%;
+    .nav_middle {
+        flex-direction: column;
+        align-items: center;
+        gap: 1em;
     }
 
+    main {
+        padding-top: 8em;
+    }
+    
+    .equal_sign > svg {
+        width: 100%;
+    }
 }
 
 @media (height <= 500px) {
