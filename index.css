@@ -210,7 +210,7 @@ body.dark .dark_svg {
 .input_box,
 .output_box {
     width: 100%;
-    font-family: var(--ff_medium);
+    font-family: var(--ff_bold);
     font-size: var(--fs_medium);
     color: var(--clr_txt);
     padding: var(--input_padding);
@@ -228,7 +228,7 @@ body.dark .dark_svg {
 }
 
 :is(.input_box, .output_box)::placeholder { color: var(--clr_sub); }
-:is(.input_box, .output_box):focus-visible { color: var(--clr_main); }
+:is(.input_box, .output_box):focus-visible::placeholder { color: transparent; }
 
 
 .units_selector_section { display: none; }
@@ -290,7 +290,7 @@ body.dark .dark_svg {
 .formula_icon {
     background-color: var(--clr_main);
     color: var(--clr_bg);
-    font-family: var(--ff_medium);
+    font-family: var(--ff_bold);
     font-size: var(--fs_normal);
     padding: var(--formula_padding);
     border-radius: 10em;

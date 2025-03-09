@@ -1,21 +1,21 @@
 @font-face {
-    font-family: "Inter_Regular";
-    src: url("./Assets/Fonts/Inter_18pt-Regular.woff2");
+    font-family: "JetBrainsMono_Regular";
+    src: url("./Assets/Fonts/JetBrainsMono-Regular.woff2");
 }
 
 @font-face {
-    font-family: "Inter_Medium";
-    src: url("./Assets/Fonts/Inter_18pt-Medium.woff2");
+    font-family: "JetBrainsMono_Medium";
+    src: url("./Assets/Fonts/JetBrainsMono-Medium.woff2");
 }
 
 @font-face {
-    font-family: "Inter_Bold";
-    src: url("./Assets/Fonts/Inter_18pt-Bold.woff2");
+    font-family: "JetBrainsMono_Bold";
+    src: url("./Assets/Fonts/JetBrainsMono-Bold.woff2");
 }
 
 @font-face {
-    font-family: "Inter_ExtraBold";
-    src: url("./Assets/Fonts/Inter_18pt-ExtraBold.woff2");
+    font-family: "JetBrainsMono_ExtraBold";
+    src: url("./Assets/Fonts/18pt-ExtraBold.woff2");
 }
 
 
@@ -43,18 +43,19 @@ html {
 
 :root {
     --clr_bg: #ffffff;
-    --clr_txt: #001d35;
+    --clr_txt: #001220;
     --clr_main: #2461c2;
     --clr_sub_main: #dce5fc;
     --clr_sub_alt_main: #d0dcfa;
     --clr_sub: #bbbbbb;
     --clr_sub_alt: #e9e9e9;
     
-    --fs_normal: clamp(0.9em, 1.5vmin, 1.2em);
+    --fs_normal: clamp(0.9em, 1.6vmin, 1.1em);
     --fs_medium: clamp(1.3em, 3vmin, 1.8em);
 
-    --ff_regular: "Inter_Regular", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    --ff_medium: "Inter_Medium", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    --ff_regular: "JetBrainsMono_Regular", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    --ff_medium: "JetBrainsMono_Medium", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    --ff_bold: "JetBrainsMono_Bold", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 
     --transition_fast: 200ms;
     --transition_medium: 500ms;
