@@ -281,6 +281,7 @@ body.dark .dark_svg {
     display: flex;
     align-items: center;
     justify-content: start;
+    gap: var(--fs_normal);
 }
 
 .formula_icon {
