@@ -262,23 +262,6 @@ body.dark .dark_svg {
     transition: background-color var(--transition_fast);
 }
 
-.clear_button {
-    margin-top: calc(var(--fs_medium) * 2);
-    width: 100%;
-    background-color: var(--clr_sub_main);
-    padding: var(--ac_button_padding);
-    border: none;
-    border-radius: 10em;
-    font-family: var(--ff_medium);
-    font-size: var(--fs_normal);
-    color: var(--clr_main);
-    cursor: pointer;
-
-    transition:
-        color var(--transition_fast),
-        background-color var(--transition_fast);
-}
-
 .formula_section {
     margin-top: var(--fs_medium);
     display: flex;
@@ -312,6 +295,22 @@ body.dark .dark_svg {
         background-color var(--transition_fast);
 }
 
+.clear_button {
+    margin-top: calc(var(--fs_medium) * 2);
+    width: 100%;
+    background-color: var(--clr_sub_main);
+    padding: var(--ac_button_padding);
+    border: none;
+    border-radius: 10em;
+    font-family: var(--ff_bold);
+    font-size: var(--fs_normal);
+    color: var(--clr_main);
+    cursor: pointer;
+
+    transition:
+        color var(--transition_fast),
+        background-color var(--transition_fast);
+}
 
 
 
