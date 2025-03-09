@@ -228,6 +228,7 @@ body.dark .dark_svg {
 }
 
 :is(.input_box, .output_box)::placeholder { color: var(--clr_sub); }
+:is(.input_box, .output_box):focus-visible { color: var(--clr_main); }
 
 
 .units_selector_section { display: none; }
