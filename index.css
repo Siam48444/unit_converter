@@ -114,7 +114,6 @@ nav {
 }
 .nav_middle li a.active_nav {
     font-family: var(--ff_bold);
-    background-color: var(--clr_sub_main);
 }
 
 .nav_middle li a:not(.active_nav):hover {
@@ -364,7 +363,7 @@ body.dark .dark_svg {
     }
     
     .equal_sign > svg {
-        width: 100%;
+        width: 90%;
     }
 }
 
