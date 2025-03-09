@@ -57,6 +57,7 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 0.5em;
     padding: var(--nav_padding);
     border-bottom: solid 0.1em var(--clr_sub_alt);
 
@@ -68,6 +69,19 @@ nav {
         opacity var(--transition_medium) var(--transition_fast),
         border-color var(--transition_fast),
         background-color var(--transition_fast);
+}
+
+.nav_left {
+    background-color: red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav_left > svg {
+    width: calc(var(--fs_normal) * 2.5);
+    
+    transition: fill var(--transition_fast);
 }
 
 .nav_middle {
