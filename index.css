@@ -349,12 +349,20 @@ body.dark .dark_svg {
 
     .units_selector_section,
     .input_output_section {
-        grid-template-columns: 1fr 0.12fr 1fr;
+        grid-template-columns: 1fr 0.13fr 1fr;
     }
+}
+
+@media (width <= 500px) {
+    .equal_sign>svg {
+        width: 100%;
+    }
+
 }
 
 @media (height <= 500px) {
     main {
         height: auto;
     }
+
 }
