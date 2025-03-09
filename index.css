@@ -81,7 +81,9 @@ nav {
 .nav_left > svg {
     width: calc(var(--fs_normal) * 2.5);
     
-    transition: fill var(--transition_fast);
+    transition: 
+        stroke var(--transition_fast),
+        fill var(--transition_fast);
 }
 
 .nav_middle {
@@ -112,7 +114,7 @@ nav {
     font-family: var(--ff_regular);
 }
 .nav_middle li a.active_nav {
-    font-family: var(--ff_medium);
+    font-family: var(--ff_bold);
     background-color: var(--clr_sub_main);
 }
 
@@ -166,7 +168,7 @@ body.dark .dark_svg {
 
 .conversion_category_selector,
 .units_selector {
-    font-family: var(--ff_medium);
+    font-family: var(--ff_bold);
     font-size: var(--fs_normal);
     color: var(--clr_txt); 
     padding: var(--selectors_padding); 
