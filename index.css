@@ -126,6 +126,7 @@ nav {
     stroke-linecap: round;
     aspect-ratio: 1;
     position: absolute;
+    width: calc(var(--fs_normal) * 1.3);
 
     opacity: 0;
 
@@ -135,12 +136,6 @@ nav {
     fill var(--transition_fast);
 }
 
-.nav_right .light_svg {
-    width: calc(var(--fs_normal) * 1.3);
-}
-.nav_right .dark_svg {
-    width: calc(var(--fs_normal) * 1.2);
-}
 
 /* Change the theme logo based on the theme */
 body:not(.dark) .light_svg { 
@@ -294,8 +289,7 @@ body.dark .dark_svg {
     font-family: "Inter_Medium", sans-serif;
     font-size: var(--fs_normal);
     padding: var(--formula_padding);
-    border-radius: 10em 0 0 10em;
-    border: solid 0.1em var(--clr_main);
+    border-radius: 10em;
 
     transition: 
         border-color var(--transition_fast),
@@ -307,9 +301,6 @@ body.dark .dark_svg {
     color: var(--clr_txt);
     font-family: "Inter_Regular", sans-serif;
     font-size: var(--fs_normal);
-    padding: var(--formula_padding);
-    border-radius: 0 10em 10em 0;
-    border: solid 0.1em var(--clr_main);
     
     transition: 
         border-color var(--transition_fast),
