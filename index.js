@@ -150,6 +150,8 @@ function clear_inputs() {
 function update_formula(factor) {
     const category = conversion_category_selector.value.replace("_", " ");
 
+    console.log(factor)
+
     if (factor === 1) {
         formula_text.innerText = `Both unit values are the same`;
         return;
