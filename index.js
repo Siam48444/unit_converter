@@ -152,11 +152,14 @@ function update_formula(factor) {
 
     if (factor === 1) {
         formula_text.innerText = `Both unit values are the same`;
+        return;
     }
     else if (factor > 1) {
         formula_text.innerText = `Multiply the ${category} value by ${factor}`;
+        return;
     }
     else {
         formula_text.innerText = `Divide the ${category} value by ${1 / factor}`;
+        return;
     }
 }
