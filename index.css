@@ -1,6 +1,6 @@
 :root {
     --main_width: min(100%, 2000px);
-    --input_width: clamp(10em, 30vw, 33em);
+    --input_width: clamp(10em, 35vw, 33em);
 
     --nav_padding: clamp(0.6em, 1.2vmin, 1em) clamp(1em, 4vmin, 1.5em);
     --selectors_padding: clamp(0.8em, 2.2vmin, 1.1em) clamp(1.2em, 3vmin, 1.8em);
@@ -43,7 +43,7 @@ main {
 
 .unit_converter_app {
     position: relative;
-    padding-inline: 0.5em;
+    padding-inline: 0.8em;
 }
 
 nav {
@@ -333,7 +333,7 @@ body.dark .dark_svg {
 
     .units_selector_section,
     .input_output_section {
-        grid-template-columns: 1fr 0.18fr 1fr;
+        grid-template-columns: 1fr 0.12fr 1fr;
     }
 }
 
