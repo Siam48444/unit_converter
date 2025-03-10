@@ -42,7 +42,7 @@ main {
 }
 
 .unit_converter_app {
-    position: relative;
+    position: relative; 
     padding-inline: 0.8em;
 }
 
@@ -73,30 +73,16 @@ nav {
 
 .nav_left {
     display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.nav_left > svg {
-    width: calc(var(--fs_normal) * 2.2);
-    
-    /* transition: 
-        stroke var(--transition_fast),
-        fill var(--transition_fast); */
-}
-
-.nav_middle {
-    display: flex;
     align-items: start;
     justify-content: center;
     gap: 0.8em;
 }
 
-.nav_middle li {
+.nav_left li {
     list-style: none;
 }
 
-.nav_middle li a {
+.nav_left li a {
     text-decoration: none;
     color: var(--clr_txt);
     font-size: var(--fs_normal);
@@ -109,14 +95,14 @@ nav {
         background-color var(--transition_fast);
 }
 
-.nav_middle li a:not(.active_nav) {
+.nav_left li a:not(.active_nav) {
     font-family: var(--ff_regular);
 }
-.nav_middle li a.active_nav {
+.nav_left li a.active_nav {
     font-family: var(--ff_bold);
 }
 
-.nav_middle li a:not(.active_nav):hover {
+.nav_left li a:not(.active_nav):hover {
     background-color: var(--clr_sub_alt);
 }
 
@@ -352,11 +338,6 @@ body.dark .dark_svg {
 }
 
 @media (width <= 500px) {
-    .nav_middle {
-        flex-direction: column;
-        align-items: center;
-    }
-
     main {
         padding-top: 8em;
     }
