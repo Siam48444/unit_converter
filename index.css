@@ -2,9 +2,10 @@
     --main_width: min(100%, 2000px);
     --input_width: clamp(10em, 35vw, 33em);
     --equal_sign_width: calc(var(--fs_medium) * 1.5);
+    --theme_svg_width: clamp(1.25em, 2.2vmin, 1.5em);
 
     --nav_padding: clamp(0.9em, 1.2vmin, 1.1em) clamp(1em, 4vmin, 1.5em);
-    --theme_button_padding: clamp(1.3em, 2.5vmin, 1.4em);
+    --theme_button_padding: clamp(1.35em, 2.5vmin, 1.4em);
     --selectors_padding: clamp(0.8em, 2.2vmin, 1.1em) clamp(1.2em, 3vmin, 1.8em);
     --input_padding: clamp(1.2em, 3vmin, 1.8em) clamp(0.5em, 1.5vmin, 1em);
     --ac_button_padding: clamp(0.8em, 2.2vmin, 1.1em) clamp(1.2em, 3vmin, 1.8em);
@@ -129,7 +130,7 @@ nav {
     stroke-linecap: round;
     aspect-ratio: 1;
     position: absolute;
-    width: calc(var(--fs_normal) * 1.3);
+    width: var(--theme_svg_width);
 
     opacity: 0;
 
