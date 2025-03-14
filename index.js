@@ -84,7 +84,10 @@ conversion_category_selector.addEventListener("change", () => {
 function update_input(is_reversed = false) {
     // Get the necessary values
     const { input_value, input_unit, output_unit } = get_conversion_values(is_reversed);
-    
+	
+	// Handle the condition if the user types any alphabet
+	handle_wrong_input(input_value);
+	
     // Get the conversion factor from the unit conversion table
     const desired_conversion_object = conversion_object[conversion_category_selector.value];
     const conversion_factor = desired_conversion_object[input_unit][output_unit];
@@ -93,17 +96,15 @@ function update_input(is_reversed = false) {
     const covnerted_value = input_value * conversion_factor;
 
     // Update the opposite field with the converted value
-    if (is_reversed) {
+    if (is_reversed) {	
         input_box.value = covnerted_value;
-    }
+    }		
     else {
         output_box.value = covnerted_value;
     }
 
     // Update the formula incstruction
-    if (formula_text) {
-        update_formula(conversion_factor);
-    }
+	update_formula(conversion_factor);
 }
 
 
@@ -128,6 +129,15 @@ function get_conversion_values(is_reversed) {
 
 
 
+// Handle the condition if the user types any alphabet
+function handle_wrong_input(input_value) {
+    if (!Number(input_value)) {
+		formula_text.innerText = "Please enter a number!";
+	}	
+}
+
+
+
 // Clear the inputs by clicking the clear button
 function clear_inputs() {
     // Clear the input and output values
@@ -139,7 +149,7 @@ function clear_inputs() {
     output_box.placeholder = "Output";
 
     // Clear the formula text
-    formula_text.innerText = "Input a value to see the conversion formula"
+    formula_text.innerText = "Input a value to see the conversion formula";
 };
 
 
@@ -163,7 +173,7 @@ function update_formula(factor) {
 
     // Otherwise, provide an exact division instruction
     else {
-        formula_text.innerText = `Divide the ${category} value by ${1 / factor}`;
-        return;
+		formula_text.innerText = `Divide the ${category} value by ${1 / factor}`;
+		return;
     }
 }
