@@ -85,9 +85,6 @@ function update_input(is_reversed = false) {
     // Get the necessary values
     const { input_value, input_unit, output_unit } = get_conversion_values(is_reversed);
 	
-	// Handle the condition if the user types any alphabet
-	handle_wrong_input(input_value);
-	
     // Get the conversion factor from the unit conversion table
     const desired_conversion_object = conversion_object[conversion_category_selector.value];
     const conversion_factor = desired_conversion_object[input_unit][output_unit];
@@ -125,15 +122,6 @@ function get_conversion_values(is_reversed) {
             output_unit: output_unit_selector.value,
         };
     }
-}
-
-
-
-// Handle the condition if the user types any alphabet
-function handle_wrong_input(input_value) {
-    if (!Number(input_value)) {
-		formula_text.innerText = "Please enter a number!";
-	}	
 }
 
 
