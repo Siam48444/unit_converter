@@ -84,7 +84,7 @@ conversion_category_selector.addEventListener("change", () => {
 function update_input(is_reversed = false) {
     // Get the necessary values
     const { input_value, input_unit, output_unit } = get_conversion_values(is_reversed);
-
+    
     // Get the conversion factor from the unit conversion table
     const desired_conversion_object = conversion_object[conversion_category_selector.value];
     const conversion_factor = desired_conversion_object[input_unit][output_unit];
@@ -93,13 +93,11 @@ function update_input(is_reversed = false) {
     const covnerted_value = input_value * conversion_factor;
 
     // Update the opposite field with the converted value
-    if (input_value) {
-        if (is_reversed) {
-            input_box.value = covnerted_value;
-        }
-        else {
-            output_box.value = covnerted_value;
-        }
+    if (is_reversed) {
+        input_box.value = covnerted_value;
+    }
+    else {
+        output_box.value = covnerted_value;
     }
 
     // Update the formula incstruction
