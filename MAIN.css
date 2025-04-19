@@ -208,3 +208,11 @@ body.dark .dark_svg {
     rotate: 360deg;
 }
 
+
+
+
+@media (width <=400px) {
+    .nav_left {
+        flex-direction: column;
+    }
+}
