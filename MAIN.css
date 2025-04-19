@@ -1,16 +1,16 @@
 @font-face {
     font-family: "JetBrainsMono_Regular";
-    src: url("./Assets/Fonts/JetBrainsMono-Regular.woff2");
+    src: url("./Assets/Fonts/JetBrainsMono-Regular.woff2") format('woff2');
 }
 
 @font-face {
     font-family: "JetBrainsMono_Medium";
-    src: url("./Assets/Fonts/JetBrainsMono-Medium.woff2");
+    src: url("./Assets/Fonts/JetBrainsMono-Medium.woff2") format('woff2');
 }
 
 @font-face {
     font-family: "JetBrainsMono_Bold";
-    src: url("./Assets/Fonts/JetBrainsMono-Bold.woff2");
+    src: url("./Assets/Fonts/JetBrainsMono-Bold.woff2") format('woff2');
 }
 
 
@@ -53,6 +53,11 @@ html {
 
     --transition_fast: 200ms;
     --transition_medium: 500ms;
+
+    --main_width: min(100%, 2000px);
+    --theme_svg_width: clamp(1.25em, 2.2vmin, 1.5em);
+    --theme_button_padding: clamp(1.35em, 2.5vmin, 1.4em);
+    --nav_padding: clamp(0.9em, 1.2vmin, 1.1em) clamp(1em, 4vmin, 1.5em);
 }
 
 body.dark {
@@ -80,7 +85,7 @@ body.dark {
     pointer-events: none;
 
     transition:
-        opacity var(--transition_medium) var(--transition_fast),
+        opacity var(--transition_medium),
         background-color var(--transition_fast);
 }
 
@@ -117,7 +122,7 @@ nav {
     pointer-events: none;
 
     transition:
-        opacity var(--transition_medium) var(--transition_fast),
+        opacity var(--transition_medium),
         border-color var(--transition_fast),
         background-color var(--transition_fast);
 }
