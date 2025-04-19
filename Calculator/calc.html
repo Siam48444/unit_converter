@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Simple Calculator</title>
+        <style>
+            body {
+                font-family: sans-serif;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                min-height: 100vh;
+                background-color: #f0f0f0;
+            }
+
+            .calculator {
+                background-color: #333;
+                border-radius: 8px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+                overflow: hidden;
+                width: 300px;
+            }
+
+            #display {
+                width: 100%;
+                padding: 20px;
+                font-size: 24px;
+                text-align: right;
+                border: none;
+                background-color: #444;
+                color: #fff;
+                box-sizing: border-box;
+            }
+
+            .buttons {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+            }
+
+            button {
+                padding: 15px;
+                font-size: 20px;
+                border: none;
+                background-color: #555;
+                color: #fff;
+                cursor: pointer;
+                transition: background-color 0.3s ease;
+            }
+
+            button:hover {
+                background-color: #666;
+            }
+
+            .zero {
+                grid-column: span 2;
+            }
+
+            button:last-child {
+                background-color: #f9a825;
+            }
+
+            button:last-child:hover {
+                background-color: #f48c06;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="calculator">
+            <input type="text" id="display" disabled />
+            <div class="buttons">
+                <button onclick="clearDisplay()">C</button>
+                <button onclick="deleteLast()">DEL</button>
+                <button onclick="appendOperator('/')">/</button>
+                <button onclick="appendOperator('*')">*</button>
+
+                <button onclick="appendNumber('7')">7</button>
+                <button onclick="appendNumber('8')">8</button>
+                <button onclick="appendNumber('9')">9</button>
+                <button onclick="appendOperator('-')">-</button>
+
+                <button onclick="appendNumber('4')">4</button>
+                <button onclick="appendNumber('5')">5</button>
+                <button onclick="appendNumber('6')">6</button>
+                <button onclick="appendOperator('+')">+</button>
+
+                <button onclick="appendNumber('1')">1</button>
+                <button onclick="appendNumber('2')">2</button>
+                <button onclick="appendNumber('3')">3</button>
+                <button onclick="calculate()">=</button>
+
+                <button onclick="appendNumber('0')" class="zero">0</button>
+                <button onclick="appendDecimal()">.</button>
+            </div>
+        </div>
+
+        <script>
+            let display = document.getElementById("display");
+            let currentInput = "";
+            let firstOperand = null;
+            let operator = null;
+
+            function appendNumber(number) {
+                currentInput += number;
+                display.value = currentInput;
+            }
+
+            function appendOperator(op) {
+                if (currentInput === "") return;
+                if (operator !== null) {
+                    calculate();
+                }
+                firstOperand = currentInput;
+                operator = op;
+                currentInput = "";
+            }
+
+            function appendDecimal() {
+                if (currentInput.includes(".")) return;
+                currentInput += ".";
+                display.value = currentInput;
+            }
+
+            function clearDisplay() {
+                currentInput = "";
+                firstOperand = null;
+                operator = null;
+                display.value = "";
+            }
+
+            function deleteLast() {
+                currentInput = currentInput.slice(0, -1);
+                display.value = currentInput;
+            }
+
+            function calculate() {
+                if (operator === null || firstOperand === null) return;
+                let secondOperand = currentInput;
+                let result;
+
+                switch (operator) {
+                    case "+":
+                        result = parseFloat(firstOperand) + parseFloat(secondOperand);
+                        break;
+                    case "-":
+                        result = parseFloat(firstOperand) - parseFloat(secondOperand);
+                        break;
+                    case "*":
+                        result = parseFloat(firstOperand) * parseFloat(secondOperand);
+                        break;
+                    case "/":
+                        if (parseFloat(secondOperand) === 0) {
+                            result = "Error";
+                        } else {
+                            result = parseFloat(firstOperand) / parseFloat(secondOperand);
+                        }
+                        break;
+                    default:
+                        return;
+                }
+
+                currentInput = String(result);
+                operator = null;
+                firstOperand = null;
+                display.value = currentInput;
+            }
+        </script>
+    </body>
+</html>
