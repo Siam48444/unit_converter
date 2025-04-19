@@ -69,5 +69,137 @@ body.dark {
 
 
 
+.whole_container {
+    position: relative;
+    width: var(--main_width);
+    margin: auto;
+    background-color: var(--clr_bg);
 
+    /* For fade animation done in javascript */
+    opacity: 0;
+    pointer-events: none;
+
+    transition:
+        opacity var(--transition_medium) var(--transition_fast),
+        background-color var(--transition_fast);
+}
+
+main {
+    min-height: 100vh;
+    background-color: var(--clr_bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-block: 6em 2em;
+    overflow: auto;
+
+    transition:
+        background-color var(--transition_fast);
+}
+
+nav {
+    position: fixed;
+    width: 100%;
+    margin: auto;
+    inset: 0 0 auto 0;
+    width: var(--main_width);
+    z-index: 9999;
+    background-color: var(--clr_bg);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5em;
+    padding: var(--nav_padding);
+    border-bottom: solid 0.1em var(--clr_sub_alt);
+
+    /* For fade animation done in javascript */
+    opacity: 0;
+    pointer-events: none;
+
+    transition:
+        opacity var(--transition_medium) var(--transition_fast),
+        border-color var(--transition_fast),
+        background-color var(--transition_fast);
+}
+
+.nav_left {
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    gap: 1em;
+}
+
+.nav_left li {
+    list-style: none;
+}
+
+.nav_left li a {
+    text-decoration: none;
+    color: var(--clr_txt);
+    font-size: var(--fs_normal);
+    padding: 0.3em 0.8em;
+    border-radius: 5em;
+    text-align: center;
+
+    transition:
+        color var(--transition_fast),
+        background-color var(--transition_fast);
+}
+
+.nav_left li a:not(.active_nav) {
+    font-family: var(--ff_regular);
+}
+
+.nav_left li a.active_nav {
+    font-family: var(--ff_bold);
+    background-color: var(--clr_sub_main);
+}
+
+.nav_left li a:not(.active_nav):hover {
+    background-color: var(--clr_sub_alt);
+}
+
+.nav_right {
+    cursor: pointer;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--clr_sub_main);
+    padding: var(--theme_button_padding);
+    width: calc(var(--fs_normal) * 2.8);
+    border-radius: 10em;
+    aspect-ratio: 1;
+
+    transition: background-color var(--transition_fast);
+}
+
+.nav_right>svg {
+    fill: var(--clr_txt);
+    stroke: var(--clr_txt);
+    stroke-width: 0.5em;
+    stroke-linecap: round;
+    aspect-ratio: 1;
+    position: absolute;
+    width: var(--theme_svg_width);
+
+    opacity: 0;
+
+    transition:
+        rotate var(--transition_medium),
+        opacity var(--transition_fast),
+        fill var(--transition_fast);
+}
+
+
+/* Change the theme logo based on the theme */
+body:not(.dark) .light_svg {
+    opacity: 1;
+    rotate: -360deg;
+}
+
+body.dark .dark_svg {
+    opacity: 1;
+    rotate: 360deg;
+}
 
