@@ -1,6 +1,14 @@
+:root {
+
+}
+
+
 .calculator_app {
     position: relative;
+    padding-inline: 0.8em;
     display: grid;
     justify-content: center;
     align-content: center;
+    grid-template-columns: repeat(4, auto);
+    grid-template-rows: minmax(3em, auto) repeat(4, auto);
 }
