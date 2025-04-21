@@ -1,5 +1,5 @@
 :root {
-    --button_width: 6em;
+    --button_height: 3.5em;
 }
 
 
@@ -18,36 +18,21 @@
     border: none;
     background-color: var(--clr_sub_main);
     border-radius: 99em;
-    width: var(--button_width);
-    padding: 1em 1em;
+    height: var(--button_height);
+    aspect-ratio: 19 / 9;
+    /* padding: 1em 1em; */
+    cursor: pointer;
     font-family: var(--ff_regular);
     font-size: var(--fs_normal);
     color: var(--clr_txt);
-    cursor: pointer;
 
     transition:
         color var(--transition_fast),
         background-color var(--transition_fast);
 }
 
-.calculator_app > button:hover {
-    transition: none;
-    background-color: var(--clr_sub_alt_main);
-}
-
-.calculator_app > button:active {
-    transition: none;
-    background-color: var(--clr_sub_main);
-}
-
-.evaluate_sign {
-    background-color: var(--clr_main);
-    color: var(--clr_bg);
-}
-
-.ac_btn {
+.calculator_app > button.ac_btn {
     grid-column: span 2;
-    width: calc(var(--button_width) * 2);
 }
 
 .output {
@@ -60,4 +45,10 @@
     transition:
         color var(--transition_fast),
         background-color var(--transition_fast);
+}
+
+.output .next {
+    font-family: var(--ff_regular);
+    font-size: var(--fs_large);
+    color: var(--clr_txt);
 }
