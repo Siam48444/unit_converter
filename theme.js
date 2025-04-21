@@ -1,7 +1,6 @@
 const nav = document.getElementById("nav");
 const main = document.getElementById("main");
 const whole_container = document.getElementById("whole_container");
-
 const nav_right = document.getElementById("nav_right");
 
 

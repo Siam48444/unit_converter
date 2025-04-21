@@ -179,7 +179,7 @@ nav {
     transition: background-color var(--transition_fast);
 }
 
-.nav_right>svg {
+.nav_right > svg {
     fill: var(--clr_txt);
     stroke: var(--clr_txt);
     stroke-width: 0.5em;
