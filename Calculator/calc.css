@@ -18,6 +18,7 @@
     border: none;
     background-color: var(--clr_sub_main);
     border-radius: 99em;
+    aspect-ratio: 16 / 9;
     font-family: var(--ff_regular);
     font-size: var(--fs_normal);
     color: var(--clr_txt);
@@ -29,15 +30,18 @@
 }
 
 .calculator_app > button:hover {
+    transition: none;
     background-color: var(--clr_sub_alt_main);
 }
 
 .calculator_app > button:active {
-    background-color: var(--clr_sub_alt);
+    transition: none;
+    background-color: var(--clr_sub_main);
 }
 
-.equal {
+.evaluate_sign {
     background-color: var(--clr_main);
+    color: var(--clr_bg);
 }
 
 .span2 {
