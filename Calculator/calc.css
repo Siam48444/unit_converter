@@ -9,6 +9,23 @@
     display: grid;
     justify-content: center;
     align-content: center;
+    gap: 0.5em;
     grid-template-columns: repeat(4, auto);
-    grid-template-rows: minmax(3em, auto) repeat(4, auto);
+    grid-template-rows: minmax(3em, auto) repeat(6, auto);
+}
+
+.calculator_app button {
+    border: none;
+    background-color: var(--clr_sub_main);
+    height: 3.3em;
+    aspect-ratio: 16 / 9;
+    padding: 0.5em 1em;
+    font-family: var(--ff_medium);
+    font-size: var(--fs_normal);
+    color: var(--clr_txt);
+    cursor: pointer;
+}
+
+.equal {
+    background-color: var(--clr_main);
 }
