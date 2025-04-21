@@ -1,5 +1,5 @@
 :root {
-    --button_height: clamp(2.5em, 5vmin, 4em);
+    --button_height: clamp(2.5em, 5.3vmin, 4.5em);
 }
 
 
@@ -31,14 +31,24 @@
         background-color var(--transition_fast);
 }
 
-.calculator_app > button.ac_btn {
-    grid-column: span 2;
-    width: 100%;
+.calculator_app > button:hover {
+    background-color: var(--clr_sub_alt_main);
+    transition: none;
+}
+
+.calculator_app > button:active {
+    background-color: var(--clr_sub_main);
+    transition: none;
 }
 
 .calculator_app > button.evaluate_button {
-   background-color: var(--clr_main);
-   color: var(--clr_bg);
+    background-color: var(--clr_main);
+    color: var(--clr_bg);
+}
+
+.calculator_app > button.ac_btn {
+    grid-column: span 2;
+    width: 100%;
 }
 
 .output {
