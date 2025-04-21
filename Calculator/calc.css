@@ -36,6 +36,11 @@
     width: 100%;
 }
 
+.calculator_app > button.evaluate_button {
+   background-color: var(--clr_main);
+   color: var(--clr_bg);
+}
+
 .output {
     grid-column: 1 / -1;
     background-color: transparent;
