@@ -25,16 +25,24 @@
     font-size: var(--fs_normal);
     color: var(--clr_txt);
     cursor: pointer;
+
+    transition:
+        color var(--transition_fast),
+        background-color var(--transition_fast);
 }
 
 .calculator_app > button:hover {
     background-color: var(--clr_sub_alt_main);
 }
 
-.calculator_app > button:hover {
-    background-color: var(--clr_sub_alt_main);
+.calculator_app > button:active {
+    background-color: var(--clr_sub_alt);
 }
 
 .equal {
     background-color: var(--clr_main);
+}
+
+.span2 {
+    grid-column: 1 / 3;
 }
