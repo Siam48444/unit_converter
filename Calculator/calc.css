@@ -1,5 +1,5 @@
 :root {
-    --button_height: 3.5em;
+    --button_height: 3.6em;
 }
 
 
@@ -19,7 +19,7 @@
     background-color: var(--clr_sub_main);
     border-radius: 99em;
     height: var(--button_height);
-    aspect-ratio: 19 / 9;
+    aspect-ratio: 22 / 9;
     /* padding: 1em 1em; */
     cursor: pointer;
     font-family: var(--ff_regular);
@@ -40,15 +40,27 @@
     background-color: transparent;
     border-radius: 1em;
     border: solid var(--clr_sub) 0.1em;
-    padding: 0.5em 1em;
-
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: center;
+    
     transition:
         color var(--transition_fast),
         background-color var(--transition_fast);
 }
 
-.output .next {
+.output .previous {
     font-family: var(--ff_regular);
+    font-size: var(--fs_normal);
+    color: var(--clr_txt);
+    line-height: 2;
+}
+
+.output .current {
+    font-family: var(--ff_bold);
     font-size: var(--fs_large);
     color: var(--clr_txt);
+    line-height: 1;
 }
