@@ -20,7 +20,7 @@
     border-radius: 99em;
     height: var(--button_height);
     aspect-ratio: 22 / 9;
-    /* padding: 1em 1em; */
+    padding: 1em;
     cursor: pointer;
     font-family: var(--ff_regular);
     font-size: var(--fs_normal);
@@ -33,6 +33,7 @@
 
 .calculator_app > button.ac_btn {
     grid-column: span 2;
+    width: 100%;
 }
 
 .output {
