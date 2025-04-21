@@ -1,5 +1,5 @@
 :root {
-
+    --button_width: 6em;
 }
 
 
@@ -18,7 +18,8 @@
     border: none;
     background-color: var(--clr_sub_main);
     border-radius: 99em;
-    aspect-ratio: 16 / 9;
+    width: var(--button_width);
+    padding: 1em 1em;
     font-family: var(--ff_regular);
     font-size: var(--fs_normal);
     color: var(--clr_txt);
@@ -44,8 +45,9 @@
     color: var(--clr_bg);
 }
 
-.span2 {
+.ac_btn {
     grid-column: span 2;
+    width: calc(var(--button_width) * 2);
 }
 
 .output {
@@ -54,4 +56,8 @@
     border-radius: 1em;
     border: solid var(--clr_sub) 0.1em;
     padding: 0.5em 1em;
+
+    transition:
+        color var(--transition_fast),
+        background-color var(--transition_fast);
 }
