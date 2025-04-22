@@ -1,5 +1,5 @@
 :root {
-    --button_height: clamp(2.5em, 6vmin, 4.5em);
+    --button_height: clamp(2.5em, 5.5vmin, 4.5em);
     --button_ratio: 19 / 9;
 }
 
@@ -23,8 +23,8 @@
     aspect-ratio: var(--button_ratio);
     padding: 0.8em;
     cursor: pointer;
-    font-family: var(--ff_bold);
-    font-size: var(--fs_normal);
+    font-family: var(--ff_medium);
+    font-size: calc(var(--fs_normal) * 1.1);
     color: var(--clr_txt);
 
     transition:
