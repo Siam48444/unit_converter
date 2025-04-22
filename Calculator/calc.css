@@ -44,6 +44,10 @@
 .calculator_app > button.evaluate_button {
     background-color: var(--clr_main);
     color: var(--clr_bg);
+
+    &:hover {
+        background-color: var(--clr_txt);
+    }
 }
 
 .calculator_app > button.ac_btn {
