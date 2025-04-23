@@ -34,12 +34,10 @@
 
 .calculator_app > button:hover {
     background-color: var(--clr_sub_alt_main);
-    transition: none;
 }
 
 .calculator_app > button:active {
-    background-color: var(--clr_sub_main);
-    transition: none;
+    outline: solid var(--clr_main) 0.05em;
 }
 
 .calculator_app > button.evaluate_button {
