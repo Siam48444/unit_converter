@@ -10,7 +10,7 @@
     display: grid;
     justify-content: center;
     align-content: center;
-    gap: 0.4em;
+    gap: calc(var(--button_height) * 0.1);
     grid-template-columns: repeat(4, auto);
     grid-template-rows: repeat(6, auto);
 }
