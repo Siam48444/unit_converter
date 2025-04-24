@@ -36,13 +36,9 @@ operatorButtons.forEach(button => {
 acButton.addEventListener('click', clear);
 delButton.addEventListener('click', deleteLast);
 percentButton.addEventListener('click', percent);
-
 updateDisplay();
 
 
-function appendNumber(number) {
-    
-}
 
 function updateDisplay() {
     currentOperandText.textContent = currentOperand;

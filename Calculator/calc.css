@@ -88,7 +88,7 @@
 
 .output .previous {
     font-family: var(--ff_regular);
-    font-size: calc(var(--button_font_size) * 0.8);
+    font-size: calc(var(--button_font_size) * 0.9);
     color: var(--clr_txt);
     line-height: 2;
     transition: color var(--transition_fast);
