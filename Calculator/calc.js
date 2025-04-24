@@ -11,17 +11,25 @@ let previousOperand = "";
 let operation;
 
 for (let button of numberButtons) {
-    button.addEventListener("click", () => appendNumber(button.textContent));
+    button.addEventListener("click", () => {
+        const number = button.textContent;
+
+        if (number === "." && currentOperand.includes(".")) {
+            return;
+        } else {
+            currentOperand += number;
+            updateDisplay();
+        }
+    });
 }
 
 for (let button of operatorButtons) {
     button.addEventListener("click", () => {
         if (button.value === "=") {
             button.addEventListener("click", compute);
+        } else {
+            button.addEventListener("click", () => chooseOperation(button.textContent));
         }
-        // else {
-        //     button.addEventListener('click', () => chooseOperation(button.textContent));
-        // }
     });
 }
 
@@ -29,15 +37,6 @@ acButton.addEventListener("click", clear);
 delButton.addEventListener("click", deleteLast);
 percentButton.addEventListener("click", percent);
 updateDisplay();
-
-function appendNumber(number) {
-    if (number === "." && currentOperand.includes(".")) {
-        return;
-    } else {
-        currentOperand += number;
-        updateDisplay();
-    }
-}
 
 function updateDisplay() {
     currentOperandText.textContent = currentOperand;
