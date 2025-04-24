@@ -39,6 +39,9 @@
 .calculator_app > button > svg {
     fill: var(--clr_txt);
     width: calc(var(--button_font_size) * 1.2);
+
+    transition:
+        fill var(--transition_fast);
 }
 
 .calculator_app > button:hover {
