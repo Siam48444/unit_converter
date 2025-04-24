@@ -14,9 +14,8 @@ for (let button of numberButtons) {
     button.addEventListener("click", () => {
         const number = button.textContent;
 
-        if (number === "." && currentOperand.includes(".")) {
-            return;
-        } else {
+        if (number === "." && currentOperand.includes(".")) return;
+        else {
             currentOperand += number;
             updateDisplay();
         }
@@ -28,7 +27,7 @@ for (let button of operatorButtons) {
         if (button.value === "=") {
             button.addEventListener("click", compute);
         } else {
-            button.addEventListener("click", () => chooseOperation(button.textContent));
+            button.addEventListener("click", () => chooseOperation(button.value));
         }
     });
 }
@@ -43,12 +42,11 @@ function updateDisplay() {
     previousOperandText.textContent = previousOperand + (operation || "");
 }
 
-function chooseOperation(op) {
+function chooseOperation(operation) {
     if (currentOperand === "") return;
     if (previousOperand !== "") {
         compute();
     }
-    operation = op;
     previousOperand = currentOperand;
     currentOperand = "";
     updateDisplay();
