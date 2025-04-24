@@ -11,18 +11,18 @@ let previousOperand = "";
 let operation;
 
 for (let button of numberButtons) {
-    button.addEventListener("click", () => {
-        const number = button.textContent;
-    });
+    button.addEventListener("click", () => appendNumber(button.textContent));
 }
 
 for (let button of operatorButtons) {
-    // if (button.textContent === '=') {
-    //     button.addEventListener('click', compute);
-    // } else {
-    //     button.addEventListener('click', () => chooseOperation(button.textContent));
-    // }
-    console.log();
+    button.addEventListener("click", () => {
+        if (button.value === "=") {
+            button.addEventListener("click", compute);
+        }
+        // else {
+        //     button.addEventListener('click', () => chooseOperation(button.textContent));
+        // }
+    });
 }
 
 acButton.addEventListener("click", clear);
