@@ -6,9 +6,9 @@ const acButton = document.querySelector('[data-ac]');
 const delButton = document.querySelector('[data-delete]');
 const percentButton = document.querySelector('[data-percent]');
 
-let currentOperand = '0';
+let currentOperand = '';
 let previousOperand = '';
-let operation = null;
+let operation;
 
 function updateDisplay() {
     currentOperandText.textContent = currentOperand;

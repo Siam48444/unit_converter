@@ -54,11 +54,16 @@
     width: 100%;
 }
 
+.calculator_app > button[data-delete] > svg {
+    fill: var(--clr_txt);
+    width: calc(var(--fs_normal) * 1.4);
+}
+
 .output {
     grid-column: 1 / -1;
     background-color: transparent;
-    border-radius: 1.5em;
     border: solid var(--clr_sub) 0.1em;
+    border-radius: var(--fs_normal);
     padding: var(--fs_normal);
     margin-bottom: var(--fs_normal);
     display: flex;
@@ -66,6 +71,7 @@
     align-items: end;
     justify-content: space-between;
     min-height: calc(var(--button_height) * 2.2);
+    word-wrap: break-word;
     
     transition:
         color var(--transition_fast),
