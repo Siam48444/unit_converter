@@ -12,7 +12,17 @@ let operation;
 
 
 for (let btn of numberButtons) {
-    btn.addEventListener('click', () => appendNumber(btn.textContent));
+    btn.addEventListener('click', () => {
+        const number = btn.textContent;
+
+        if (number === '.' && currentOperand.includes('.')) {
+            return;
+        }
+        else {
+            currentOperand += number;
+            updateDisplay(); 
+        }
+    });
 }
 
 operatorButtons.forEach(button => {
@@ -31,9 +41,7 @@ updateDisplay();
 
 
 function appendNumber(number) {
-    if (number === '.' && currentOperand.includes('.')) return;
-    currentOperand += number;
-    updateDisplay();
+    
 }
 
 function updateDisplay() {
