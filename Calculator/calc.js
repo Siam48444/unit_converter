@@ -10,15 +10,35 @@ let currentOperand = '';
 let previousOperand = '';
 let operation;
 
-function updateDisplay() {
-    currentOperandText.textContent = currentOperand;
-    previousOperandText.textContent = previousOperand + (operation || '');
+
+for (let btn of numberButtons) {
+    btn.addEventListener('click', () => appendNumber(btn.textContent));
 }
+
+operatorButtons.forEach(button => {
+    if (button.textContent === '=') {
+        button.addEventListener('click', compute);
+    } else {
+        button.addEventListener('click', () => chooseOperation(button.textContent));
+    }
+});
+
+acButton.addEventListener('click', clear);
+delButton.addEventListener('click', deleteLast);
+percentButton.addEventListener('click', percent);
+
+updateDisplay();
+
 
 function appendNumber(number) {
     if (number === '.' && currentOperand.includes('.')) return;
     currentOperand += number;
     updateDisplay();
+}
+
+function updateDisplay() {
+    currentOperandText.textContent = currentOperand;
+    previousOperandText.textContent = previousOperand + (operation || '');
 }
 
 function chooseOperation(op) {
@@ -82,21 +102,3 @@ function percent() {
     currentOperand = (parseFloat(currentOperand) / 100).toString();
     updateDisplay();
 }
-
-numberButtons.forEach(button => {
-    button.addEventListener('click', () => appendNumber(button.textContent));
-});
-
-operatorButtons.forEach(button => {
-    if (button.textContent === '=') {
-        button.addEventListener('click', compute);
-    } else {
-        button.addEventListener('click', () => chooseOperation(button.textContent));
-    }
-});
-
-acButton.addEventListener('click', clear);
-delButton.addEventListener('click', deleteLast);
-percentButton.addEventListener('click', percent);
-
-updateDisplay();
