@@ -1,6 +1,7 @@
 :root {
     --button_height: clamp(2.5em, 5.5vmin, 4.5em);
     --button_ratio: 19 / 9;
+    --button_font_size: clamp(0.9em, 1.8vmin, 1.4em);
 }
 
 
@@ -16,6 +17,9 @@
 }
 
 .calculator_app > button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border: none;
     background-color: var(--clr_sub_main);
     border-radius: 99em;
@@ -24,12 +28,17 @@
     padding: 0.8em;
     cursor: pointer;
     font-family: var(--ff_medium);
-    font-size: calc(var(--fs_normal) * 1.1);
+    font-size: var(--button_font_size);
     color: var(--clr_txt);
 
     transition:
         color var(--transition_fast),
         background-color var(--transition_fast);
+}
+
+.calculator_app > button > svg {
+    fill: var(--clr_txt);
+    width: calc(var(--button_font_size) * 1.2);
 }
 
 .calculator_app > button:hover {
@@ -54,23 +63,18 @@
     width: 100%;
 }
 
-.calculator_app > button[data-delete] > svg {
-    fill: var(--clr_txt);
-    width: calc(var(--fs_normal) * 1.4);
-}
-
 .output {
     grid-column: 1 / -1;
     background-color: transparent;
     border: solid var(--clr_sub) 0.1em;
-    border-radius: var(--fs_normal);
-    padding: var(--fs_normal);
-    margin-bottom: var(--fs_normal);
+    border-radius: var(--button_font_size);
+    padding: var(--button_font_size);
+    margin-bottom: var(--button_font_size);
     display: flex;
     flex-direction: column;
     align-items: end;
     justify-content: space-between;
-    min-height: calc(var(--button_height) * 2.2);
+    min-height: calc(2.2 * var(--button_height) + var(--button_font_size));
     word-wrap: break-word;
     
     transition:
@@ -81,7 +85,7 @@
 
 .output .previous {
     font-family: var(--ff_regular);
-    font-size: var(--fs_normal);
+    font-size: calc(var(--button_font_size) * 0.8);
     color: var(--clr_txt);
     line-height: 2;
     transition: color var(--transition_fast);
@@ -89,7 +93,7 @@
 
 .output .current {
     font-family: var(--ff_bold);
-    font-size: var(--fs_large);
+    font-size: calc(var(--button_font_size) * 3);
     color: var(--clr_txt);
     line-height: 1;
     transition: color var(--transition_fast);
