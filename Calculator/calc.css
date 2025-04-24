@@ -64,7 +64,8 @@
     display: flex;
     flex-direction: column;
     align-items: end;
-    justify-content: center;
+    justify-content: space-between;
+    min-height: calc(var(--button_height) * 2.2);
     
     transition:
         color var(--transition_fast),
