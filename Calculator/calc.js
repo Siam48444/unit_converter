@@ -1,58 +1,57 @@
-const previousOperandText = document.querySelector('[data-previous]');
-const currentOperandText = document.querySelector('[data-current]');
-const numberButtons = document.querySelectorAll('[data-number]');
-const operatorButtons = document.querySelectorAll('[data-operator]');
-const acButton = document.querySelector('[data-ac]');
-const delButton = document.querySelector('[data-delete]');
-const percentButton = document.querySelector('[data-percent]');
+const previousOperandText = document.querySelector("[data-previous]");
+const currentOperandText = document.querySelector("[data-current]");
+const numberButtons = document.querySelectorAll("[data-number]");
+const operatorButtons = document.querySelectorAll("[data-operator]");
+const acButton = document.querySelector("[data-ac]");
+const delButton = document.querySelector("[data-delete]");
+const percentButton = document.querySelector("[data-percent]");
 
-let currentOperand = '';
-let previousOperand = '';
+let currentOperand = "";
+let previousOperand = "";
 let operation;
 
-
-for (let btn of numberButtons) {
-    btn.addEventListener('click', () => {
-        const number = btn.textContent;
-
-        if (number === '.' && currentOperand.includes('.')) {
-            return;
-        }
-        else {
-            currentOperand += number;
-            updateDisplay(); 
-        }
+for (let button of numberButtons) {
+    button.addEventListener("click", () => {
+        const number = button.textContent;
     });
 }
 
-operatorButtons.forEach(button => {
-    if (button.textContent === '=') {
-        button.addEventListener('click', compute);
-    } else {
-        button.addEventListener('click', () => chooseOperation(button.textContent));
-    }
-});
+for (let button of operatorButtons) {
+    // if (button.textContent === '=') {
+    //     button.addEventListener('click', compute);
+    // } else {
+    //     button.addEventListener('click', () => chooseOperation(button.textContent));
+    // }
+    console.log();
+}
 
-acButton.addEventListener('click', clear);
-delButton.addEventListener('click', deleteLast);
-percentButton.addEventListener('click', percent);
+acButton.addEventListener("click", clear);
+delButton.addEventListener("click", deleteLast);
+percentButton.addEventListener("click", percent);
 updateDisplay();
 
-
+function appendNumber(number) {
+    if (number === "." && currentOperand.includes(".")) {
+        return;
+    } else {
+        currentOperand += number;
+        updateDisplay();
+    }
+}
 
 function updateDisplay() {
     currentOperandText.textContent = currentOperand;
-    previousOperandText.textContent = previousOperand + (operation || '');
+    previousOperandText.textContent = previousOperand + (operation || "");
 }
 
 function chooseOperation(op) {
-    if (currentOperand === '') return;
-    if (previousOperand !== '') {
+    if (currentOperand === "") return;
+    if (previousOperand !== "") {
         compute();
     }
     operation = op;
     previousOperand = currentOperand;
-    currentOperand = '';
+    currentOperand = "";
     updateDisplay();
 }
 
@@ -63,18 +62,18 @@ function compute() {
     if (isNaN(prev) || isNaN(current)) return;
 
     switch (operation) {
-        case '+':
+        case "+":
             result = prev + current;
             break;
-        case '-':
+        case "-":
             result = prev - current;
             break;
-        case '*':
+        case "*":
             result = prev * current;
             break;
-        case '/':
+        case "/":
             if (current === 0) {
-                result = 'Error';
+                result = "Error";
             } else {
                 result = prev / current;
             }
@@ -85,13 +84,13 @@ function compute() {
 
     currentOperand = result.toString();
     operation = null;
-    previousOperand = '';
+    previousOperand = "";
     updateDisplay();
 }
 
 function clear() {
-    currentOperand = '';
-    previousOperand = '';
+    currentOperand = "";
+    previousOperand = "";
     operation = null;
     updateDisplay();
 }
@@ -102,7 +101,7 @@ function deleteLast() {
 }
 
 function percent() {
-    if (currentOperand === '') return;
+    if (currentOperand === "") return;
     currentOperand = (parseFloat(currentOperand) / 100).toString();
     updateDisplay();
 }
