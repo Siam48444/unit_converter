@@ -67,11 +67,7 @@ function compute() {
     } else if (operation === " × ") {
         result = previous * current;
     } else if (operation === " ÷ ") {
-        if (current === 0) {
-            result = Infinity;
-        } else {
-            result = previous / current;
-        }
+        result = current === 0 ? Infinity : previous / current;
     } else {
         return;
     }
