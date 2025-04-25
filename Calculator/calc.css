@@ -2,6 +2,7 @@
     --button_height: clamp(2.5em, 5.5vmin, 4.5em);
     --button_ratio: 19 / 9;
     --button_font_size: calc(var(--fs_normal) * 1.15);
+    --button_offset: calc(var(--button_height) * 0.05);
 }
 
 .calculator_app {
@@ -55,12 +56,12 @@
     background-color: var(--clr_sub_alt);
 }
 
-.calculator_app button:active {
-    transform: scale(0.9);
+.calculator_app button:hover {
+    box-shadow: 0 var(--button_offset) var(--clr_txt);
 }
 
-.calculator_app button:hover {
-    box-shadow: 0em 0.1em var(--clr_txt);
+.calculator_app button:active {
+    transform: translateY(var(--button_offset));
 }
 
 .output {
