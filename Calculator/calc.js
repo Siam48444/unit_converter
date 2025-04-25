@@ -42,42 +42,40 @@ function updateDisplay() {
     previousOperandText.textContent = previousOperand + (operation || "");
 }
 
-function chooseOperation(operation) {
+function chooseOperation(op) {
     if (currentOperand === "") return;
-    if (previousOperand !== "") {
-        compute();
-    }
+    // if (previousOperand !== "") {
+    //     compute();
+    // }
 
+    operation = op;
     previousOperand = currentOperand;
     currentOperand = "";
     updateDisplay();
+    console.log(operation);
 }
 
 function compute() {
     let result;
     const prev = parseFloat(previousOperand);
     const current = parseFloat(currentOperand);
+
     if (isNaN(prev) || isNaN(current)) return;
 
-    switch (operation) {
-        case "+":
-            result = prev + current;
-            break;
-        case "-":
-            result = prev - current;
-            break;
-        case "*":
-            result = prev * current;
-            break;
-        case "/":
-            if (current === 0) {
-                result = "Error";
-            } else {
-                result = prev / current;
-            }
-            break;
-        default:
-            return;
+    if (operation === "+") {
+        result = prev + current;
+    } else if (operation === "-") {
+        result = prev - current;
+    } else if (operation === "*") {
+        result = prev * current;
+    } else if (operation === "/") {
+        if (current === 0) {
+            result = "Error";
+        } else {
+            result = prev / current;
+        }
+    } else {
+        return;
     }
 
     currentOperand = result.toString();
