@@ -106,5 +106,4 @@ function percent() {
 
     currentOperand = String(parseFloat(currentOperand) / 100);
     updateDisplay();
-    console.log(currentOperand);
 }
