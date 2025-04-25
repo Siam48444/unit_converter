@@ -58,6 +58,8 @@ function compute() {
     const previous = parseFloat(previousOperand);
     const current = parseFloat(currentOperand);
 
+    if (isNaN(previous) || isNaN(current)) return;
+
     if (operation === " + ") {
         result = previous + current;
     } else if (operation === " - ") {
