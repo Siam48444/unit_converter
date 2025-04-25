@@ -77,7 +77,7 @@ function compute() {
 
     currentOperand = String(result);
     previousOperand = "";
-    operation = null;
+    operation = "";
     updateDisplay();
 }
 
