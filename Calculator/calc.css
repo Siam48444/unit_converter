@@ -30,6 +30,7 @@
     font-family: var(--ff_bold);
     font-size: var(--button_font_size);
     color: var(--clr_txt);
+    width: 100%;
 
     transition-property: color, background-color, box-shadow;
     transition-duration: var(--transition_fast);
@@ -37,7 +38,6 @@
 
 .calculator_app button[data-ac] {
     grid-column: span 2;
-    width: 100%;
 }
 
 .calculator_app button svg {
@@ -78,7 +78,6 @@
     align-items: end;
     justify-content: space-between;
     min-height: calc(2.2 * var(--button_height) + var(--button_font_size));
-    word-wrap: break-word;
 
     transition: color var(--transition_fast), border-color var(--transition_fast), background-color var(--transition_fast);
 }
