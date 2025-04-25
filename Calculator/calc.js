@@ -23,13 +23,11 @@ for (let button of numberButtons) {
 }
 
 for (let button of operatorButtons) {
-    button.addEventListener("click", () => {
-        if (button.value === "=") {
-            button.addEventListener("click", compute);
-        } else {
-            button.addEventListener("click", () => chooseOperation(button.value));
-        }
-    });
+    if (button.value === "=") {
+        button.addEventListener("click", compute);
+    } else {
+        button.addEventListener("click", () => chooseOperation(button.value));
+    }
 }
 
 acButton.addEventListener("click", clear);
