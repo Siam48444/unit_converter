@@ -66,7 +66,7 @@ function compute() {
         result = previous * current;
     } else if (operation === " ÷ ") {
         if (current === 0) {
-            result = "Infinity";
+            result = Infinity;
         } else {
             result = previous / current;
         }

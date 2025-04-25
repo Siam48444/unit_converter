@@ -19,7 +19,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    border: solid 0.01em transparent;
+    border: none;
     background-color: var(--clr_sub_main);
     border-radius: 99em;
     height: var(--button_height);
@@ -30,7 +30,8 @@
     font-size: var(--button_font_size);
     color: var(--clr_txt);
 
-    transition: color var(--transition_fast), background-color var(--transition_fast), border-color var(--transition_fast);
+    transition-property: color, background-color, box-shadow;
+    transition-duration: var(--transition_fast);
 }
 
 .calculator_app button[data-ac] {
@@ -59,7 +60,7 @@
 }
 
 .calculator_app button:hover {
-    border-color: var(--clr_txt);
+    box-shadow: 0em 0.1em var(--clr_txt);
 }
 
 .output {
