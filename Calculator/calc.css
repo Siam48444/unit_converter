@@ -82,7 +82,7 @@
     flex-direction: column;
     align-items: end;
     justify-content: space-between;
-    min-height: calc(4 * var(--previous_font_size) + var(--current_font_size) + var(--output_padding));
+    min-height: calc(3.5 * var(--previous_font_size) + var(--current_font_size) + var(--output_padding));
 
     transition: color var(--transition_fast), border-color var(--transition_fast), background-color var(--transition_fast);
 }
