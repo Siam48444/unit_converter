@@ -6,17 +6,22 @@ const acButton = document.querySelector("[data-ac]");
 const delButton = document.querySelector("[data-delete]");
 const percentButton = document.querySelector("[data-percent]");
 
+// Initialize variables for calculator logic
 let currentOperand = "";
 let previousOperand = "";
 let operation = "";
-let justComputed = false;
+let justComputed = false; // Flag to clear current input after a computation
 
+// Handle number button clicks
 for (let button of numberButtons) {
     button.addEventListener("click", () => {
+        // Clear currentOperand if a new number is entered after computing
         if (justComputed) {
             currentOperand = "";
             justComputed = false;
         }
+
+        // Prevent multiple decimals
         if (button.textContent === "." && currentOperand.includes(".")) return;
 
         currentOperand += button.textContent;
@@ -24,30 +29,34 @@ for (let button of numberButtons) {
     });
 }
 
+// Handle operator button clicks (+, −, ×, ÷, =)
 for (let button of operatorButtons) {
     button.addEventListener("click", () => {
         if (button.value === "=") {
-            compute();
-            justComputed = true;
+            compute(); // Perform calculation
+            justComputed = true; // Set flag to clear input on next number entry
         } else {
-            chooseOperation(button.value);
+            chooseOperation(button.value); // Store selected operation
         }
     });
 }
 
+// Add event listeners for clear, delete, and percent buttons
 acButton.addEventListener("click", clear);
 delButton.addEventListener("click", deleteLast);
 percentButton.addEventListener("click", percent);
 
-updateDisplay();
+// Update display with current and previous operands
 function updateDisplay() {
     currentOperandText.textContent = currentOperand;
     previousOperandText.textContent = previousOperand + operation;
 }
 
+// Handle operator selection
 function chooseOperation(op) {
     if (currentOperand === "") return;
 
+    // If already has a previous operand, compute the result first
     if (previousOperand !== "") {
         compute();
     } else {
@@ -58,6 +67,7 @@ function chooseOperation(op) {
     }
 }
 
+// Perform computation based on the current operation
 function compute() {
     let result;
     const previous = parseFloat(previousOperand);
@@ -65,6 +75,7 @@ function compute() {
 
     if (isNaN(previous) || isNaN(current)) return;
 
+    // Handle operations
     if (operation === " + ") {
         result = previous + current;
     } else if (operation === " - ") {
@@ -77,12 +88,14 @@ function compute() {
         return;
     }
 
+    // Update state with result
     currentOperand = String(result);
     previousOperand = "";
     operation = "";
     updateDisplay();
 }
 
+// Clear all input and reset state
 function clear() {
     currentOperand = "";
     previousOperand = "";
@@ -90,6 +103,7 @@ function clear() {
     updateDisplay();
 }
 
+// Delete last character from currentOperand
 function deleteLast() {
     if (currentOperand === "") return;
 
@@ -97,6 +111,7 @@ function deleteLast() {
     updateDisplay();
 }
 
+// Convert currentOperand to percentage
 function percent() {
     if (currentOperand === "") return;
 
