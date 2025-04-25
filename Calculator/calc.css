@@ -3,11 +3,15 @@
     --button_ratio: 2;
     --button_font_size: calc(var(--fs_normal) * 1.15);
     --button_offset: calc(var(--button_height) * 0.04);
+
+    --output_padding: 1em;
+    --current_font_size: calc(var(--button_font_size) * 2.5);
+    --previous_font_size: calc(var(--button_font_size) * 0.9);
 }
 
 .calculator_app {
     position: relative;
-    padding-inline: 0.8em;
+    width: 100%;
     display: grid;
     justify-content: center;
     align-content: center;
@@ -72,28 +76,27 @@
     background-color: transparent;
     border: solid var(--clr_sub) 0.1em;
     border-radius: var(--button_font_size);
-    padding: var(--button_font_size);
+    padding: var(--output_padding);
     margin-bottom: var(--button_font_size);
     display: flex;
     flex-direction: column;
     align-items: end;
     justify-content: space-between;
-    min-height: calc(2.2 * var(--button_height) + var(--button_font_size));
+    min-height: calc(4 * var(--previous_font_size) + var(--current_font_size) + var(--output_padding));
 
     transition: color var(--transition_fast), border-color var(--transition_fast), background-color var(--transition_fast);
 }
 
 .output .previous {
     font-family: var(--ff_regular);
-    font-size: calc(var(--button_font_size) * 0.9);
+    font-size: var(--previous_font_size);
     color: var(--clr_txt);
-    line-height: 2;
     transition: color var(--transition_fast);
 }
 
 .output .current {
     font-family: var(--ff_bold);
-    font-size: calc(var(--button_font_size) * 3);
+    font-size: var(--current_font_size);
     color: var(--clr_txt);
     line-height: 1;
     transition: color var(--transition_fast);
