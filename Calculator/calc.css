@@ -1,8 +1,8 @@
 :root {
-    --button_height: clamp(2.5em, 5.5vmin, 4.5em);
-    --button_ratio: 19 / 9;
+    --button_height: clamp(3em, 6vmin, 4em);
+    --button_ratio: 2;
     --button_font_size: calc(var(--fs_normal) * 1.15);
-    --button_offset: calc(var(--button_height) * 0.05);
+    --button_offset: calc(var(--button_height) * 0.04);
 }
 
 .calculator_app {
@@ -42,9 +42,10 @@
 
 .calculator_app button svg {
     fill: var(--clr_txt);
-    width: calc(var(--button_font_size) * 1.1);
+    width: var(--button_font_size);
     stroke: var(--clr_txt);
-    stroke-width: 0.75em;
+    stroke-width: 1em;
+    stroke-linecap: round;
 
     transition: fill var(--transition_fast);
 }
