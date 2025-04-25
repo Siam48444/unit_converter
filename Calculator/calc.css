@@ -27,7 +27,7 @@
     aspect-ratio: var(--button_ratio);
     padding: 0.8em;
     cursor: pointer;
-    font-family: var(--ff_medium);
+    font-family: var(--ff_bold);
     font-size: var(--button_font_size);
     color: var(--clr_txt);
 
@@ -43,6 +43,8 @@
 .calculator_app button svg {
     fill: var(--clr_txt);
     width: calc(var(--button_font_size) * 1.1);
+    stroke: var(--clr_txt);
+    stroke-width: 0.7em;
 
     transition: fill var(--transition_fast);
 }
