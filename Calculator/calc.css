@@ -33,6 +33,11 @@
     transition: color var(--transition_fast), background-color var(--transition_fast);
 }
 
+.calculator_app button[data-ac] {
+    grid-column: span 2;
+    width: 100%;
+}
+
 .calculator_app button svg {
     fill: var(--clr_txt);
     width: calc(var(--button_font_size) * 1.1);
@@ -40,22 +45,21 @@
     transition: fill var(--transition_fast);
 }
 
-.calculator_app button:active {
-    outline: solid var(--clr_main) 0.05em;
-}
-
 .calculator_app button[value="="] {
     background-color: var(--clr_main);
     color: var(--clr_bg);
 }
 
-.calculator_app button[data-ac] {
-    grid-column: span 2;
-    width: 100%;
-}
-
 .calculator_app button[data-number] {
     background-color: var(--clr_sub_alt);
+}
+
+.calculator_app button:active {
+    transform: scale(0.9);
+}
+
+.calculator_app button:hover {
+    outline: solid 0.01em var(--clr_main);
 }
 
 .output {
