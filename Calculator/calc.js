@@ -61,13 +61,13 @@ function compute() {
 
     if (isNaN(prev) || isNaN(current)) return;
 
-    if (operation === "+") {
+    if (operation === " + ") {
         result = prev + current;
-    } else if (operation === "-") {
+    } else if (operation === " - ") {
         result = prev - current;
-    } else if (operation === "*") {
+    } else if (operation === " × ") {
         result = prev * current;
-    } else if (operation === "/") {
+    } else if (operation === " ÷ ") {
         if (current === 0) {
             result = "Error";
         } else {
@@ -77,9 +77,9 @@ function compute() {
         return;
     }
 
-    currentOperand = result.toString();
-    operation = null;
+    currentOperand = String(result);
     previousOperand = "";
+    operation = null;
     updateDisplay();
 }
 
