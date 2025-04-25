@@ -44,7 +44,7 @@
     fill: var(--clr_txt);
     width: calc(var(--button_font_size) * 1.1);
     stroke: var(--clr_txt);
-    stroke-width: 0.7em;
+    stroke-width: 0.75em;
 
     transition: fill var(--transition_fast);
 }
