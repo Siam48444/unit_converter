@@ -8,7 +8,7 @@ const percentButton = document.querySelector("[data-percent]");
 
 let currentOperand = "";
 let previousOperand = "";
-let operation;
+let operation = null;
 
 for (let button of numberButtons) {
     button.addEventListener("click", () => {
