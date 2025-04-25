@@ -33,8 +33,8 @@ for (let button of operatorButtons) {
 acButton.addEventListener("click", clear);
 delButton.addEventListener("click", deleteLast);
 percentButton.addEventListener("click", percent);
-updateDisplay();
 
+updateDisplay();
 function updateDisplay() {
     currentOperandText.textContent = currentOperand;
     previousOperandText.textContent = previousOperand + operation;
@@ -82,10 +82,9 @@ function compute() {
 }
 
 function clear() {
-    if (currentOperand === "") return;
-
     currentOperand = "";
     previousOperand = "";
+    operation = "";
     updateDisplay();
 }
 
