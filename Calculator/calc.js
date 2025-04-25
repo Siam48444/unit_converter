@@ -89,7 +89,6 @@ function compute() {
 function clear() {
     currentOperand = "";
     previousOperand = "";
-    operation = null;
     updateDisplay();
 }
 
