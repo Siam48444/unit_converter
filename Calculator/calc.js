@@ -42,7 +42,8 @@ function updateDisplay() {
 
 function chooseOperation(op) {
     if (currentOperand === "") return;
-    else if (previousOperand !== "") {
+
+    if (previousOperand !== "") {
         compute();
     } else {
         operation = op;
@@ -54,22 +55,20 @@ function chooseOperation(op) {
 
 function compute() {
     let result;
-    const prev = parseFloat(previousOperand);
+    const previous = parseFloat(previousOperand);
     const current = parseFloat(currentOperand);
 
-    if (isNaN(prev) || isNaN(current)) return;
-
     if (operation === " + ") {
-        result = prev + current;
+        result = previous + current;
     } else if (operation === " - ") {
-        result = prev - current;
+        result = previous - current;
     } else if (operation === " × ") {
-        result = prev * current;
+        result = previous * current;
     } else if (operation === " ÷ ") {
         if (current === 0) {
-            result = "∞";
+            result = "Infinity";
         } else {
-            result = prev / current;
+            result = previous / current;
         }
     } else {
         return;
