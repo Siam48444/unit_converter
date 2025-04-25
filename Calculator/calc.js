@@ -44,15 +44,14 @@ function updateDisplay() {
 
 function chooseOperation(op) {
     if (currentOperand === "") return;
-    // if (previousOperand !== "") {
-    //     compute();
-    // }
+    if (previousOperand !== "") {
+        compute();
+    }
 
     operation = op;
     previousOperand = currentOperand;
     currentOperand = "";
     updateDisplay();
-    console.log(operation);
 }
 
 function compute() {
