@@ -31,7 +31,7 @@
     aspect-ratio: var(--button_ratio);
     padding: 0.8em;
     cursor: pointer;
-    font-family: var(--ff_bold);
+    font-family: var(--ff_medium);
     font-size: var(--button_font_size);
     color: var(--clr_txt);
     width: 100%;
@@ -48,7 +48,7 @@
     fill: var(--clr_txt);
     width: var(--button_font_size);
     stroke: var(--clr_txt);
-    stroke-width: 1em;
+    stroke-width: 0.5em;
     stroke-linecap: round;
 
     transition: fill var(--transition_fast);
