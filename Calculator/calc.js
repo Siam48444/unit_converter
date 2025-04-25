@@ -47,6 +47,7 @@ function chooseOperation(operation) {
     if (previousOperand !== "") {
         compute();
     }
+
     previousOperand = currentOperand;
     currentOperand = "";
     updateDisplay();
