@@ -9,14 +9,18 @@ const percentButton = document.querySelector("[data-percent]");
 let currentOperand = "";
 let previousOperand = "";
 let operation = "";
+let justComputed = false;
 
 for (let button of numberButtons) {
     button.addEventListener("click", () => {
-        if (button.textContent === "." && currentOperand.includes(".")) return;
-        else {
-            currentOperand += button.textContent;
-            updateDisplay();
+        if (justComputed) {
+            currentOperand = "";
+            justComputed = false;
         }
+        if (button.textContent === "." && currentOperand.includes(".")) return;
+
+        currentOperand += button.textContent;
+        updateDisplay();
     });
 }
 
@@ -24,6 +28,7 @@ for (let button of operatorButtons) {
     button.addEventListener("click", () => {
         if (button.value === "=") {
             compute();
+            justComputed = true;
         } else {
             chooseOperation(button.value);
         }
