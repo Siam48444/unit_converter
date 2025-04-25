@@ -6,15 +6,15 @@ const acButton = document.querySelector("[data-ac]");
 const delButton = document.querySelector("[data-delete]");
 const percentButton = document.querySelector("[data-percent]");
 
-// Initialize the constant buttons' values
-document.getElementById("eulerButton").value = Math.E;
-document.getElementById("piButton").value = Math.PI;
-
 // Initialize variables for calculator logic
 let currentOperand = "";
 let previousOperand = "";
 let operation = "";
 let justComputed = false; // Flag to clear current input after a computation
+
+// Initialize the constant buttons' values
+document.getElementById("eulerButton").value = Math.E;
+document.getElementById("piButton").value = Math.PI;
 
 // Handle number button clicks
 for (let button of numberButtons) {
