@@ -87,18 +87,24 @@ function compute() {
 }
 
 function clear() {
+    if (currentOperand === "") return;
+
     currentOperand = "";
     previousOperand = "";
     updateDisplay();
 }
 
 function deleteLast() {
+    if (currentOperand === "") return;
+
     currentOperand = currentOperand.slice(0, -1);
     updateDisplay();
 }
 
 function percent() {
     if (currentOperand === "") return;
-    currentOperand = (parseFloat(currentOperand) / 100).toString();
+
+    currentOperand = String(parseFloat(currentOperand) / 100);
     updateDisplay();
+    console.log(currentOperand);
 }
