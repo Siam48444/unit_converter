@@ -33,9 +33,9 @@ for (let button of numberButtons) {
             constantClicked = false;
         }
 
-        // Prevent multiple decimals
         const number = button.value;
-        if (number === "." && currentOperand.includes(".")) return;
+        // Prevent invalid inputs
+        if (number === "." && (currentOperand.includes(".") || currentOperand === "")) return;
 
         currentOperand += number;
         updateDisplay();
