@@ -11,6 +11,7 @@
 
 .calculator_app {
     position: relative;
+    padding-inline: 1em;
     display: grid;
     justify-content: center;
     align-content: center;
@@ -43,14 +44,19 @@
     fill: var(--clr_txt);
     width: calc(var(--button_font_size) * 1);
     stroke: var(--clr_sub_main);
-    stroke-width: 0.8em;
+    stroke-width: 0.9em;
 
     transition: fill var(--transition_fast);
+}
+
+.calculator_app button[data-ac] {
+    grid-column: span 2;
 }
 
 .calculator_app button[value="="] {
     background-color: var(--clr_main);
     color: var(--clr_bg);
+    grid-column: span 2;
 }
 
 .calculator_app button[data-number] {
@@ -95,4 +101,18 @@
     color: var(--clr_txt);
     line-height: 1;
     transition: color var(--transition_fast);
+}
+
+@media (width <= 600px) {
+    .calculator_app {
+        width: 100%;
+    }
+
+    .calculator_app button {
+        aspect-ratio: auto;
+    }
+
+    .calculator_app button:not([data-ac], [value="="]) {
+        width: 22vw;
+    }
 }
