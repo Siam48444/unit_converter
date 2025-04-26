@@ -22,14 +22,27 @@ document.getElementById("goldenButton").value = String((1 + Math.sqrt(5)) / 2);
 // Handle number button clicks
 for (let button of numberButtons) {
     button.addEventListener("click", () => {
-        appendNumber(button.value);
+        // Clear currentOperand if a new number is entered after computing
+        if (justComputed) {
+            currentOperand = "";
+            justComputed = false;
+        }
+
+        // Prevent multiple decimals
+        const number = button.value;
+        if (number === "." && currentOperand.includes(".")) return;
+
+        currentOperand += number;
+        updateDisplay();
     });
 }
 
 // Handle constant button clicks
 for (let constant of constantButton) {
     constant.addEventListener("click", () => {
-        appendNumber(constant.value);
+        currentOperand = constant.value; // Replace currentOperand with constant value
+        justComputed = false;
+        updateDisplay();
     });
 }
 
@@ -54,21 +67,6 @@ percentButton.addEventListener("click", percent);
 function updateDisplay() {
     currentOperandText.textContent = currentOperand;
     previousOperandText.textContent = previousOperand + operation;
-}
-
-// Append the number to the screen
-function appendNumber(number) {
-    // Clear currentOperand if a new number is entered after computing
-    if (justComputed) {
-        currentOperand = "";
-        justComputed = false;
-    }
-
-    // Prevent multiple decimals
-    if (number === "." && currentOperand.includes(".")) return;
-
-    currentOperand += number;
-    updateDisplay();
 }
 
 // Handle operator selection
