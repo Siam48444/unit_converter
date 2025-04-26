@@ -11,6 +11,7 @@ let currentOperand = "";
 let previousOperand = "";
 let operation = "";
 let justComputed = false; // Flag to clear current input after a computation
+let constantClicked = false; // Flag to lock constant value
 
 // Select and initialize the constant buttons' values
 const constantButton = document.querySelectorAll("[data-constant]");
@@ -23,9 +24,11 @@ document.getElementById("goldenButton").value = String((1 + Math.sqrt(5)) / 2);
 for (let button of numberButtons) {
     button.addEventListener("click", () => {
         // Clear currentOperand if a new number is entered after computing
-        if (justComputed) {
+        // Also prevent number input if constant is clicked
+        if (justComputed || constantClicked) {
             currentOperand = "";
             justComputed = false;
+            constantClicked = false;
         }
 
         // Prevent multiple decimals
@@ -42,6 +45,7 @@ for (let constant of constantButton) {
     constant.addEventListener("click", () => {
         currentOperand = constant.value; // Replace currentOperand with constant value
         justComputed = false;
+        constantClicked = true;
         updateDisplay();
     });
 }
