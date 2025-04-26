@@ -29,7 +29,7 @@ for (let button of numberButtons) {
 // Handle constant button clicks
 for (let constant of constantButton) {
     constant.addEventListener("click", () => {
-        appendConstant(constant.value);
+        appendNumber(constant.value);
     });
 }
 
@@ -50,6 +50,12 @@ acButton.addEventListener("click", clear);
 delButton.addEventListener("click", deleteLast);
 percentButton.addEventListener("click", percent);
 
+// Update display with current and previous operands
+function updateDisplay() {
+    currentOperandText.textContent = currentOperand;
+    previousOperandText.textContent = previousOperand + operation;
+}
+
 // Append the number to the screen
 function appendNumber(number) {
     // Clear currentOperand if a new number is entered after computing
@@ -63,28 +69,6 @@ function appendNumber(number) {
 
     currentOperand += number;
     updateDisplay();
-}
-
-// Append the constant number to the screen
-function appendConstant(constant) {
-    // Clear currentOperand if a new number is entered after computing
-    if (justComputed) {
-        currentOperand = "";
-        justComputed = false;
-    }
-
-    if (currentOperand) {
-        previousOperand = currentOperand;
-        operation = " × ";
-        currentOperand = constant;
-        updateDisplay();
-    }
-}
-
-// Update display with current and previous operands
-function updateDisplay() {
-    currentOperandText.textContent = currentOperand;
-    previousOperandText.textContent = previousOperand + operation;
 }
 
 // Handle operator selection
