@@ -41,10 +41,9 @@
 
 .calculator_app button svg {
     fill: var(--clr_txt);
-    width: var(--button_font_size);
-    stroke: var(--clr_txt);
-    stroke-width: 0.5em;
-    stroke-linecap: round;
+    width: calc(var(--button_font_size) * 1);
+    stroke: var(--clr_sub_main);
+    stroke-width: 0.8em;
 
     transition: fill var(--transition_fast);
 }
