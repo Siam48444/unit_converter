@@ -12,7 +12,9 @@ let previousOperand = "";
 let operation = "";
 let justComputed = false; // Flag to clear current input after a computation
 
-// Initialize the constant buttons' values
+// Select and initialize the constant buttons' values
+const constantButton = document.querySelectorAll("[data-constant]");
+
 document.getElementById("eulerButton").value = String(Math.E);
 document.getElementById("piButton").value = String(Math.PI);
 document.getElementById("goldenButton").value = String((1 + Math.sqrt(5)) / 2);
@@ -20,18 +22,7 @@ document.getElementById("goldenButton").value = String((1 + Math.sqrt(5)) / 2);
 // Handle number button clicks
 for (let button of numberButtons) {
     button.addEventListener("click", () => {
-        // Clear currentOperand if a new number is entered after computing
-        if (justComputed) {
-            currentOperand = "";
-            justComputed = false;
-        }
-
-        // Prevent multiple decimals
-        const number = button.value;
-        if (number === "." && currentOperand.includes(".")) return;
-
-        currentOperand += number;
-        updateDisplay();
+        appendNumber(button.value);
     });
 }
 
@@ -51,6 +42,21 @@ for (let button of operatorButtons) {
 acButton.addEventListener("click", clear);
 delButton.addEventListener("click", deleteLast);
 percentButton.addEventListener("click", percent);
+
+// Append the number to the screen
+function appendNumber(number) {
+    // Clear currentOperand if a new number is entered after computing
+    if (justComputed) {
+        currentOperand = "";
+        justComputed = false;
+    }
+
+    // Prevent multiple decimals
+    if (number === "." && currentOperand.includes(".")) return;
+
+    currentOperand += number;
+    updateDisplay();
+}
 
 // Update display with current and previous operands
 function updateDisplay() {
