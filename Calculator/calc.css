@@ -17,7 +17,7 @@
     align-content: center;
     gap: calc(var(--button_height) * 0.1);
     grid-template-columns: repeat(4, auto);
-    grid-template-rows: repeat(6, auto);
+    grid-template-rows: repeat(7, auto);
 }
 
 .calculator_app button {
@@ -38,10 +38,6 @@
 
     transition-property: color, background-color, box-shadow;
     transition-duration: var(--transition_fast);
-}
-
-.calculator_app button[data-ac] {
-    grid-column: span 2;
 }
 
 .calculator_app button svg {

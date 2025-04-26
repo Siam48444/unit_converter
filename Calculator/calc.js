@@ -16,7 +16,6 @@ let justComputed = false; // Flag to clear current input after a computation
 document.getElementById("eulerButton").value = String(Math.E);
 document.getElementById("piButton").value = String(Math.PI);
 document.getElementById("goldenButton").value = String((1 + Math.sqrt(5)) / 2);
-document.getElementById("root2Button").value = String(Math.sqrt(2));
 
 // Handle number button clicks
 for (let button of numberButtons) {
