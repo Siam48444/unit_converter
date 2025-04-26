@@ -11,7 +11,6 @@
 
 .calculator_app {
     position: relative;
-    width: 100%;
     display: grid;
     justify-content: center;
     align-content: center;
@@ -29,7 +28,7 @@
     border-radius: 99em;
     height: var(--button_height);
     aspect-ratio: var(--button_ratio);
-    padding: 0.8em;
+    padding: 0.5em;
     cursor: pointer;
     font-family: var(--ff_medium);
     font-size: var(--button_font_size);

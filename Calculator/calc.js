@@ -29,7 +29,7 @@ for (let button of numberButtons) {
 // Handle constant button clicks
 for (let constant of constantButton) {
     constant.addEventListener("click", () => {
-        appendNumber(constant.value);
+        appendConstant(constant.value);
     });
 }
 
@@ -63,6 +63,22 @@ function appendNumber(number) {
 
     currentOperand += number;
     updateDisplay();
+}
+
+// Append the constant number to the screen
+function appendConstant(constant) {
+    // Clear currentOperand if a new number is entered after computing
+    if (justComputed) {
+        currentOperand = "";
+        justComputed = false;
+    }
+
+    if (currentOperand) {
+        previousOperand = currentOperand;
+        operation = " × ";
+        currentOperand = constant;
+        updateDisplay();
+    }
 }
 
 // Update display with current and previous operands
