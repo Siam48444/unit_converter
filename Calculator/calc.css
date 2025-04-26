@@ -78,7 +78,8 @@
     justify-content: space-between;
     min-height: calc(3.5 * var(--previous_font_size) + var(--current_font_size) + var(--output_padding));
 
-    transition: color var(--transition_fast), border-color var(--transition_fast), background-color var(--transition_fast);
+    transition-property: color, border-color, background-color;
+    transition-duration: var(--transition_fast);
 }
 
 .output .previous {
