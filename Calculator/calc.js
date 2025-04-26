@@ -26,6 +26,13 @@ for (let button of numberButtons) {
     });
 }
 
+// Handle constant button clicks
+for (let constant of constantButton) {
+    constant.addEventListener("click", () => {
+        appendNumber(constant.value);
+    });
+}
+
 // Handle operator button clicks (+, −, ×, ÷, =)
 for (let button of operatorButtons) {
     button.addEventListener("click", () => {
