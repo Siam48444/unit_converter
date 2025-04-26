@@ -82,12 +82,12 @@ function chooseOperation(op) {
     // If already has a previous operand, compute the result first
     if (previousOperand !== "") {
         compute();
-    } else {
-        operation = op;
-        previousOperand = currentOperand;
-        currentOperand = "";
-        updateDisplay();
     }
+
+    operation = op;
+    previousOperand = currentOperand;
+    currentOperand = "";
+    updateDisplay();
 }
 
 // Perform computation based on the current operation
