@@ -7,6 +7,8 @@
     --output_padding: 1em;
     --current_font_size: calc(var(--button_font_size) * 2.2);
     --previous_font_size: calc(var(--button_font_size) * 0.9);
+
+    --columns: 4;
 }
 
 .calculator_app {
@@ -16,7 +18,7 @@
     justify-content: center;
     align-content: center;
     gap: calc(var(--button_height) * 0.1);
-    grid-template-columns: repeat(4, auto);
+    grid-template-columns: repeat(var(--columns), 1fr);
     grid-template-rows: repeat(7, auto);
 }
 
@@ -29,7 +31,6 @@
     border-radius: 99em;
     height: var(--button_height);
     aspect-ratio: var(--button_ratio);
-    padding: 0.5em;
     cursor: pointer;
     font-family: var(--ff_medium);
     font-size: var(--button_font_size);
@@ -42,7 +43,7 @@
 
 .calculator_app button svg {
     fill: var(--clr_txt);
-    width: calc(var(--button_font_size) * 0.9);
+    width: calc(var(--button_font_size) * 1);
     stroke: var(--clr_sub_main);
     stroke-width: 0.9em;
 
@@ -106,5 +107,9 @@
 @media (width <= 600px) {
     .calculator_app {
         width: 100%;
+    }
+
+    .calculator_app button {
+        aspect-ratio: auto;
     }
 }
