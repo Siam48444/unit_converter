@@ -5,7 +5,7 @@
     --button_offset: calc(var(--button_height) * 0.04);
 
     --output_padding: 1em;
-    --current_font_size: calc(var(--button_font_size) * 2.5);
+    --current_font_size: calc(var(--button_font_size) * 2.2);
     --previous_font_size: calc(var(--button_font_size) * 0.9);
 }
 
@@ -42,7 +42,7 @@
 
 .calculator_app button svg {
     fill: var(--clr_txt);
-    width: calc(var(--button_font_size) * 1);
+    width: calc(var(--button_font_size) * 0.9);
     stroke: var(--clr_sub_main);
     stroke-width: 0.9em;
 
@@ -106,13 +106,5 @@
 @media (width <= 600px) {
     .calculator_app {
         width: 100%;
-    }
-
-    .calculator_app button {
-        aspect-ratio: auto;
-    }
-
-    .calculator_app button:not([data-ac], [value="="]) {
-        width: 22vw;
     }
 }

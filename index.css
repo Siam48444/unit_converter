@@ -6,32 +6,31 @@
     --input_padding: clamp(1.2em, 3vmin, 1.8em) clamp(0.5em, 1.5vmin, 1em);
     --ac_button_padding: clamp(0.8em, 2.2vmin, 1.1em) clamp(1.2em, 3vmin, 1.8em);
     --formula_padding: clamp(0.3em, 0.5vmin, 0.5em) clamp(0.8em, 1vmin, 1.1em);
-    
 }
 
 .unit_converter_app {
-    position: relative; 
+    position: relative;
     padding-inline: 0.8em;
 }
 
 .conversion_category_selector,
 .units_selector {
-    font-family: var(--ff_regular);
+    font-family: var(--ff_medium);
     font-size: var(--fs_normal);
-    color: var(--clr_txt); 
-    padding: var(--selectors_padding); 
-    cursor: pointer;  
+    color: var(--clr_txt);
+    padding: var(--selectors_padding);
+    cursor: pointer;
     border: none;
     border-radius: 10em;
     appearance: none;
     width: 100%;
     background-color: var(--clr_sub_main);
 
-    transition: 
-        color var(--transition_fast),
-        background-color var(--transition_fast);
-    
-    & > option { background-color: var(--clr_sub_main); }
+    transition: color var(--transition_fast), background-color var(--transition_fast);
+
+    & > option {
+        background-color: var(--clr_sub_main);
+    }
 }
 
 .units_selector_section,
@@ -50,7 +49,7 @@
 
 .equal_sign > svg {
     width: 60%;
-    stroke: var(--clr_txt); 
+    stroke: var(--clr_txt);
     stroke-width: 0.4em;
 
     transition: stroke var(--transition_fast);
@@ -83,21 +82,26 @@
     border: none;
     outline: none;
 
-    transition: 
-        color var(--transition_fast);
+    transition: color var(--transition_fast);
 }
 
 .input_output_wrapper:has(:is(.input_box, .output_box):focus-visible)::after {
     background-color: var(--clr_main);
 }
 
-:is(.input_box, .output_box)::placeholder { color: var(--clr_sub); }
-:is(.input_box, .output_box):focus-visible::placeholder { color: transparent; }
+:is(.input_box, .output_box)::placeholder {
+    color: var(--clr_sub);
+}
+:is(.input_box, .output_box):focus-visible::placeholder {
+    color: transparent;
+}
 
-
-.units_selector_section { display: none; }
-.units_selector_section.active_category { display: grid; }
-
+.units_selector_section {
+    display: none;
+}
+.units_selector_section.active_category {
+    display: grid;
+}
 
 .conversion_category_selector_wrapper {
     position: relative;
@@ -108,8 +112,12 @@
     position: relative;
 }
 
-.units_selector_wrapper:first-child { grid-column: 1 / 2; }
-.units_selector_wrapper:last-child { grid-column: 3 / -1; }
+.units_selector_wrapper:first-child {
+    grid-column: 1 / 2;
+}
+.units_selector_wrapper:last-child {
+    grid-column: 3 / -1;
+}
 
 :is(.conversion_category_selector_wrapper, .units_selector_wrapper)::after {
     position: absolute;
@@ -142,21 +150,15 @@
     padding: var(--formula_padding);
     border-radius: 10em;
 
-    transition: 
-        border-color var(--transition_fast),
-        color var(--transition_fast),
-        background-color var(--transition_fast);
-    }
-    
+    transition: border-color var(--transition_fast), color var(--transition_fast), background-color var(--transition_fast);
+}
+
 .formula_text {
     color: var(--clr_txt);
     font-family: var(--ff_regular);
     font-size: var(--fs_normal);
-    
-    transition: 
-        border-color var(--transition_fast),
-        color var(--transition_fast),
-        background-color var(--transition_fast);
+
+    transition: border-color var(--transition_fast), color var(--transition_fast), background-color var(--transition_fast);
 }
 
 .clear_button {
@@ -171,24 +173,14 @@
     color: var(--clr_main);
     cursor: pointer;
 
-    transition:
-        color var(--transition_fast),
-        background-color var(--transition_fast);
+    transition: color var(--transition_fast), background-color var(--transition_fast);
 }
-
-
-
-
-
 
 @media (width >= 1000px) {
     :is(.conversion_category_selector, .units_selector, .clear_button, .nav_right):hover {
         background-color: var(--clr_sub_alt_main);
     }
 }
-
-
-
 
 @media (width <= 800px) {
     .unit_converter_app {
@@ -215,5 +207,4 @@
     main {
         height: auto;
     }
-
 }
