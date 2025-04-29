@@ -56,6 +56,8 @@ for (let constant of constantButton) {
 for (let button of operatorButtons) {
     button.addEventListener("click", () => {
         if (button.value === "=") {
+            if (currentOperand === ".") return;
+
             compute(); // Perform calculation
             justComputed = true; // Set flag to clear input on next number entry
         } else {
