@@ -35,7 +35,7 @@ for (let button of numberButtons) {
 
         const number = button.value;
         // Prevent invalid inputs
-        if (number === "." && (currentOperand.includes(".") || currentOperand === "")) return;
+        if (number === "." && currentOperand.includes(".")) return;
 
         currentOperand += number;
         updateDisplay();
@@ -77,7 +77,7 @@ function updateDisplay() {
 
 // Handle operator selection
 function chooseOperation(op) {
-    if (currentOperand === "") return;
+    if (currentOperand === "" || currentOperand === ".") return;
 
     // If already has a previous operand, compute the result first
     if (previousOperand !== "") {
@@ -136,8 +136,9 @@ function deleteLast() {
 
 // Convert currentOperand to percentage
 function percent() {
-    if (currentOperand === "") return;
+    if (currentOperand === "" || currentOperand === ".") return;
 
     currentOperand = String(parseFloat(currentOperand) / 100);
     updateDisplay();
+    currentOperand = "";
 }

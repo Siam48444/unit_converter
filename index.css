@@ -105,7 +105,7 @@
 
 .conversion_category_selector_wrapper {
     position: relative;
-    margin-bottom: var(--fs_medium);
+    margin-bottom: var(--fs_normal);
 }
 
 .units_selector_wrapper {
